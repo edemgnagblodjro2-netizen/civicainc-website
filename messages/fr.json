@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "platforms": "Plateformes",
+    "why": "Pourquoi CivicAI",
+    "innovation": "Innovation",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "demo": "Demander une démo",
+    "lang": "EN"
+  },
+  "hero": {
+    "badge": "Éditeur de logiciels IA — Québec",
+    "title": "Intelligence artificielle pour les organisations de demain.",
+    "subtitle": "CivicAI développe des plateformes d'IA qui aident les entreprises, les organismes publics et les institutions à automatiser leurs opérations, gouverner leurs données et accélérer leur transformation numérique.",
+    "cta1": "Découvrir nos plateformes",
+    "cta2": "Demander une démonstration"
+  },
+  "platforms": {
+    "title": "Nos plateformes",
+    "subtitle": "Des solutions modulaires, évolutives et intégrées — pensées pour les organisations qui veulent passer à l'action.",
+    "agenthub": {
+      "name": "AgentHub Platform",
+      "tagline": "Plateforme d'intelligence d'entreprise",
+      "desc": "Diagnostics IA, observatoire analytique et gouvernance pour les chambres de commerce, entreprises et institutions. Powered by ATLAS.",
+      "features": ["Parcours IA PME", "Observatoire analytique", "50+ connecteurs", "Agent ATLAS"],
+      "cta": "Découvrir AgentHub"
+    },
+    "nexhire": {
+      "name": "NexHire EIP",
+      "tagline": "Enterprise Intelligence Platform",
+      "desc": "Gouvernance SaaS, optimisation des licences Microsoft 365 et détection des coûts cachés pour les organisations.",
+      "features": ["Gouvernance SaaS", "Optimisation Microsoft 365", "Détection coûts cachés", "ROI IA mesurable"],
+      "cta": "Découvrir NexHire"
+    },
+    "attentezero": {
+      "name": "AttenteZéro",
+      "tagline": "Application mobile communautaire",
+      "desc": "Services communautaires alimentés par l'IA et la géolocalisation — pour les municipalités et organismes publics.",
+      "features": ["Services IA géolocalisés", "Interface mobile native", "Intégration municipale", "Temps réel"],
+      "cta": "Découvrir AttenteZéro"
+    }
+  },
+  "sectors": {
+    "title": "Nous accompagnons",
+    "subtitle": "CivicAI déploie ses plateformes dans des organisations de toutes tailles, à travers les secteurs public et privé.",
+    "items": [
+      { "icon": "🏛️", "label": "Chambres de commerce" },
+      { "icon": "🏢", "label": "Entreprises" },
+      { "icon": "🏙️", "label": "Municipalités" },
+      { "icon": "🏥", "label": "Organismes publics" },
+      { "icon": "🎓", "label": "Éducation" },
+      { "icon": "🏭", "label": "Manufacturiers" }
+    ]
+  },
+  "approach": {
+    "title": "Notre approche",
+    "subtitle": "Un processus structuré, de l'évaluation à la transformation durable.",
+    "steps": [
+      { "num": "01", "title": "Découvrir", "desc": "Diagnostic de maturité IA et analyse complète de l'organisation." },
+      { "num": "02", "title": "Analyser", "desc": "Identification des opportunités et des zones d'amélioration prioritaires." },
+      { "num": "03", "title": "Automatiser", "desc": "Déploiement des outils IA adaptés à vos processus et vos équipes." },
+      { "num": "04", "title": "Mesurer", "desc": "Suivi des indicateurs de performance et calcul du retour sur investissement." },
+      { "num": "05", "title": "Transformer", "desc": "Ancrage durable de l'IA dans la culture et les opérations de l'organisation." }
+    ]
+  },
+  "why": {
+    "title": "Pourquoi CivicAI",
+    "subtitle": "Un éditeur de logiciels québécois, spécialisé dans les plateformes d'intelligence artificielle pour les organisations publiques et privées.",
+    "stats": [
+      { "value": "50+", "label": "Connecteurs disponibles" },
+      { "value": "3", "label": "Plateformes actives" },
+      { "value": "Multi-tenant", "label": "Architecture évolutive" },
+      { "value": "Québec", "label": "Développé localement" }
+    ],
+    "features": [
+      "Architecture cloud sécurisée et multi-tenant",
+      "Agent IA conversationnel intégré (ATLAS)",
+      "Tableau de bord analytique en temps réel",
+      "Connecteurs vers les outils existants (M365, SAP, Salesforce…)",
+      "Gouvernance et conformité intégrées",
+      "Déploiement rapide et accompagnement humain"
+    ]
+  },
+  "vision": {
+    "label": "Notre vision",
+    "quote": "Nous croyons que l'intelligence artificielle doit devenir un outil concret au service des organisations. Notre mission est de créer des plateformes qui permettent aux entreprises, aux institutions publiques et aux organismes de mieux comprendre leurs données, d'automatiser leurs processus et de prendre de meilleures décisions.",
+    "author": "CivicAI Inc. — Trois-Rivières, Québec"
+  },
+  "partners": {
+    "title": "Nos partenaires",
+    "subtitle": "Ils font confiance à CivicAI.",
+    "upcoming_label": "Programme de partenariat en expansion",
+    "upcoming_desc": "Rejoignez l'écosystème CivicAI et accélérez la transformation IA de vos membres."
+  },
+  "cta": {
+    "title": "Prêt à transformer votre organisation ?",
+    "subtitle": "Découvrez comment CivicAI peut accélérer votre transition vers l'intelligence artificielle.",
+    "btn1": "Demander une démonstration",
+    "btn2": "Nous contacter"
+  },
+  "footer": {
+    "tagline": "Plateformes d'intelligence artificielle pour les organisations.",
+    "platforms_title": "Plateformes",
+    "company_title": "Entreprise",
+    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZéro"],
+    "company": ["Pourquoi CivicAI", "Innovation", "Carrières", "Contact"],
+    "legal": "© 2026 CivicAI Inc. Tous droits réservés.",
+    "made": "Développé au Québec, Canada."
+  },
+  "pages": {
+    "platforms": {
+      "title": "Nos plateformes",
+      "subtitle": "Trois plateformes complémentaires pour couvrir l'ensemble des besoins en intelligence artificielle des organisations."
+    },
+    "why": {
+      "title": "Pourquoi CivicAI ?",
+      "subtitle": "Nous ne sommes pas une agence. Nous sommes un éditeur de logiciels.",
+      "editor_title": "Un éditeur, pas une agence",
+      "editor_body": "CivicAI conçoit, développe et maintient ses propres plateformes logicielles. Nos clients obtiennent un produit éprouvé, pas un projet sur mesure fragile.",
+      "values": [
+        { "title": "Plateformes, pas projets", "desc": "Nos produits sont testés, documentés et maintenus en continu." },
+        { "title": "IA embarquée", "desc": "L'intelligence artificielle est au cœur de chaque plateforme, pas un ajout." },
+        { "title": "Résultats mesurables", "desc": "Chaque déploiement inclut des indicateurs de performance et un calcul de ROI." },
+        { "title": "Développé au Québec", "desc": "Une entreprise locale, des équipes accessibles, un accompagnement humain." }
+      ]
+    },
+    "innovation": {
+      "title": "Innovation",
+      "subtitle": "Les projets qui définissent l'avenir de CivicAI.",
+      "projects": [
+        { "name": "AgentHub Platform", "status": "Actif", "desc": "Plateforme IA pour chambres de commerce et entreprises." },
+        { "name": "NexHire EIP", "status": "Actif", "desc": "Intelligence d'entreprise et gouvernance SaaS." },
+        { "name": "AttenteZéro", "status": "En développement", "desc": "Services communautaires intelligents pour les municipalités." },
+        { "name": "Observatoire IA", "status": "Actif", "desc": "Tableau de bord analytique régional de maturité IA." },
+        { "name": "ATLAS Agent", "status": "Actif", "desc": "Agent IA conversationnel pour l'accompagnement organisationnel." },
+        { "name": "Parcours IA PME", "status": "Actif", "desc": "Programme structuré de transformation IA pour les PME." }
+      ]
+    },
+    "careers": {
+      "title": "Carrières",
+      "subtitle": "Rejoignez CivicAI et contribuez à transformer les organisations par l'intelligence artificielle.",
+      "opening": "Nous recrutons activement. Envoyez votre candidature à",
+      "email": "carrieres@civicainc.ca",
+      "roles": [
+        { "title": "Développeur·euse Full Stack", "type": "Temps plein", "location": "Trois-Rivières / Remote" },
+        { "title": "Architecte IA", "type": "Temps plein", "location": "Trois-Rivières / Remote" },
+        { "title": "Chargé·e de compte — Secteur public", "type": "Temps plein", "location": "Québec" }
+      ]
+    },
+    "contact": {
+      "title": "Demander une démonstration",
+      "subtitle": "Découvrez AgentHub Platform ou NexHire EIP en action. Une démonstration personnalisée, sans engagement.",
+      "name": "Nom complet",
+      "org": "Organisation",
+      "email": "Adresse courriel",
+      "message": "Votre message (optionnel)",
+      "submit": "Envoyer la demande",
+      "or": "Ou contactez-nous directement",
+      "address": "Trois-Rivières, Québec, Canada"
+    }
+  }
+}

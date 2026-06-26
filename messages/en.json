@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "platforms": "Platforms",
+    "why": "Why CivicAI",
+    "innovation": "Innovation",
+    "careers": "Careers",
+    "contact": "Contact",
+    "demo": "Book a Demo",
+    "lang": "FR"
+  },
+  "hero": {
+    "badge": "AI Software Publisher — Québec",
+    "title": "Artificial intelligence platforms for tomorrow's organizations.",
+    "subtitle": "CivicAI develops AI platforms that help businesses, public organizations and institutions automate their operations, govern their data and accelerate their digital transformation.",
+    "cta1": "Discover our platforms",
+    "cta2": "Request a demonstration"
+  },
+  "platforms": {
+    "title": "Our platforms",
+    "subtitle": "Modular, scalable and integrated solutions — built for organizations ready to take action.",
+    "agenthub": {
+      "name": "AgentHub Platform",
+      "tagline": "Enterprise intelligence platform",
+      "desc": "AI diagnostics, analytics observatory and governance for chambers of commerce, businesses and institutions. Powered by ATLAS.",
+      "features": ["SME AI Journey", "Analytics Observatory", "50+ connectors", "ATLAS Agent"],
+      "cta": "Discover AgentHub"
+    },
+    "nexhire": {
+      "name": "NexHire EIP",
+      "tagline": "Enterprise Intelligence Platform",
+      "desc": "SaaS governance, Microsoft 365 license optimization and hidden cost detection for organizations.",
+      "features": ["SaaS Governance", "Microsoft 365 Optimization", "Hidden Cost Detection", "Measurable AI ROI"],
+      "cta": "Discover NexHire"
+    },
+    "attentezero": {
+      "name": "AttenteZéro",
+      "tagline": "Community mobile application",
+      "desc": "AI-powered community services with geolocation — for municipalities and public organizations.",
+      "features": ["Geolocated AI Services", "Native Mobile Interface", "Municipal Integration", "Real-time"],
+      "cta": "Discover AttenteZéro"
+    }
+  },
+  "sectors": {
+    "title": "We serve",
+    "subtitle": "CivicAI deploys its platforms across organizations of all sizes, in both public and private sectors.",
+    "items": [
+      { "icon": "🏛️", "label": "Chambers of Commerce" },
+      { "icon": "🏢", "label": "Enterprises" },
+      { "icon": "🏙️", "label": "Municipalities" },
+      { "icon": "🏥", "label": "Public Organizations" },
+      { "icon": "🎓", "label": "Education" },
+      { "icon": "🏭", "label": "Manufacturers" }
+    ]
+  },
+  "approach": {
+    "title": "Our approach",
+    "subtitle": "A structured process from assessment to lasting transformation.",
+    "steps": [
+      { "num": "01", "title": "Discover", "desc": "AI maturity diagnostic and complete organizational assessment." },
+      { "num": "02", "title": "Analyze", "desc": "Identifying opportunities and priority improvement areas." },
+      { "num": "03", "title": "Automate", "desc": "Deploying AI tools tailored to your processes and teams." },
+      { "num": "04", "title": "Measure", "desc": "Tracking performance indicators and calculating return on investment." },
+      { "num": "05", "title": "Transform", "desc": "Embedding AI durably into the culture and operations of the organization." }
+    ]
+  },
+  "why": {
+    "title": "Why CivicAI",
+    "subtitle": "A Québec-based software publisher specializing in AI platforms for public and private organizations.",
+    "stats": [
+      { "value": "50+", "label": "Available connectors" },
+      { "value": "3", "label": "Active platforms" },
+      { "value": "Multi-tenant", "label": "Scalable architecture" },
+      { "value": "Québec", "label": "Locally developed" }
+    ],
+    "features": [
+      "Secure, multi-tenant cloud architecture",
+      "Integrated conversational AI agent (ATLAS)",
+      "Real-time analytics dashboard",
+      "Connectors to existing tools (M365, SAP, Salesforce…)",
+      "Built-in governance and compliance",
+      "Rapid deployment and human support"
+    ]
+  },
+  "vision": {
+    "label": "Our vision",
+    "quote": "We believe that artificial intelligence must become a concrete tool in service of organizations. Our mission is to create platforms that enable businesses, public institutions and organizations to better understand their data, automate their processes and make better decisions.",
+    "author": "CivicAI Inc. — Trois-Rivières, Québec"
+  },
+  "partners": {
+    "title": "Our partners",
+    "subtitle": "Organizations that trust CivicAI.",
+    "upcoming_label": "Partnership program expanding",
+    "upcoming_desc": "Join the CivicAI ecosystem and accelerate the AI transformation of your members."
+  },
+  "cta": {
+    "title": "Ready to transform your organization?",
+    "subtitle": "Discover how CivicAI can accelerate your transition to artificial intelligence.",
+    "btn1": "Request a demonstration",
+    "btn2": "Contact us"
+  },
+  "footer": {
+    "tagline": "Artificial intelligence platforms for organizations.",
+    "platforms_title": "Platforms",
+    "company_title": "Company",
+    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZéro"],
+    "company": ["Why CivicAI", "Innovation", "Careers", "Contact"],
+    "legal": "© 2026 CivicAI Inc. All rights reserved.",
+    "made": "Developed in Québec, Canada."
+  },
+  "pages": {
+    "platforms": {
+      "title": "Our platforms",
+      "subtitle": "Three complementary platforms covering all AI needs for organizations."
+    },
+    "why": {
+      "title": "Why CivicAI?",
+      "subtitle": "We are not an agency. We are a software publisher.",
+      "editor_title": "A publisher, not an agency",
+      "editor_body": "CivicAI designs, develops and maintains its own software platforms. Our clients get a proven product, not a fragile custom project.",
+      "values": [
+        { "title": "Platforms, not projects", "desc": "Our products are continuously tested, documented and maintained." },
+        { "title": "Embedded AI", "desc": "Artificial intelligence is at the core of every platform, not an add-on." },
+        { "title": "Measurable results", "desc": "Every deployment includes performance indicators and ROI calculation." },
+        { "title": "Developed in Québec", "desc": "A local company, accessible teams, human support." }
+      ]
+    },
+    "innovation": {
+      "title": "Innovation",
+      "subtitle": "The projects that define CivicAI's future.",
+      "projects": [
+        { "name": "AgentHub Platform", "status": "Active", "desc": "AI platform for chambers of commerce and businesses." },
+        { "name": "NexHire EIP", "status": "Active", "desc": "Enterprise intelligence and SaaS governance." },
+        { "name": "AttenteZéro", "status": "In development", "desc": "Intelligent community services for municipalities." },
+        { "name": "AI Observatory", "status": "Active", "desc": "Regional AI maturity analytics dashboard." },
+        { "name": "ATLAS Agent", "status": "Active", "desc": "Conversational AI agent for organizational support." },
+        { "name": "SME AI Journey", "status": "Active", "desc": "Structured AI transformation program for SMEs." }
+      ]
+    },
+    "careers": {
+      "title": "Careers",
+      "subtitle": "Join CivicAI and help transform organizations through artificial intelligence.",
+      "opening": "We are actively recruiting. Send your application to",
+      "email": "careers@civicainc.ca",
+      "roles": [
+        { "title": "Full Stack Developer", "type": "Full-time", "location": "Trois-Rivières / Remote" },
+        { "title": "AI Architect", "type": "Full-time", "location": "Trois-Rivières / Remote" },
+        { "title": "Account Executive — Public Sector", "type": "Full-time", "location": "Québec" }
+      ]
+    },
+    "contact": {
+      "title": "Request a demonstration",
+      "subtitle": "See AgentHub Platform or NexHire EIP in action. A personalized demo, no commitment.",
+      "name": "Full name",
+      "org": "Organization",
+      "email": "Email address",
+      "message": "Your message (optional)",
+      "submit": "Send request",
+      "or": "Or contact us directly",
+      "address": "Trois-Rivières, Québec, Canada"
+    }
+  }
+}
