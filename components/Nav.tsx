@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -34,6 +35,7 @@ const PLATFORMS_MENU = [
 
 export default function Nav({ locale }: { locale: string }) {
   const t = useTranslations("nav");
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -254,15 +256,43 @@ export default function Nav({ locale }: { locale: string }) {
           </div>
 
           {/* Other links */}
-          {otherLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium px-3 py-1.5 rounded transition-colors text-slate-600 hover:text-[#0a1730] hover:bg-slate-100 whitespace-nowrap"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {otherLinks.map((l) => {
+            const isContact = l.href === "/contact";
+            const isActive = pathname === `/${locale}${l.href}`;
+
+            if (isContact) {
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="text-sm font-bold text-white px-5 py-1.5 rounded-full whitespace-nowrap ml-2 transition-all hover:opacity-90 active:scale-95 uppercase tracking-wide"
+                  style={{ background: "#7c3aed" }}
+                >
+                  {l.label}
+                </Link>
+              );
+            }
+
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`relative text-sm px-3 py-1.5 whitespace-nowrap transition-colors group ${
+                  isActive
+                    ? "font-semibold text-[#0a1730]"
+                    : "font-medium text-slate-500 hover:text-[#0a1730]"
+                }`}
+              >
+                {l.label}
+                <span
+                  className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full transition-all ${
+                    isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                  }`}
+                  style={{ background: "#7c3aed" }}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
 
