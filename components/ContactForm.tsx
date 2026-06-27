@@ -141,7 +141,8 @@ export default function ContactForm({ labels }: {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-blue-700 hover:bg-blue-800 disabled:opacity-60 text-white font-semibold text-sm py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2"
+        className="w-full disabled:opacity-60 text-white font-semibold text-sm py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2"
+        style={{ background: "#7c3aed" }}
       >
         {status === "loading" ? (
           <>

@@ -213,7 +213,7 @@ export default function HeroBanner() {
                 <Link
                   href={slide.ctaPrimary.href}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-white px-7 py-3.5 rounded-full shadow-lg transition-all hover:opacity-90 active:scale-95"
-                  style={{ background: "#1857e8" }}
+                  style={{ background: "#7c3aed" }}
                 >
                   {ctaLabel} <span>→</span>
                 </Link>
@@ -255,7 +255,7 @@ export default function HeroBanner() {
               <Link
                 href={slide.ctaPrimary.href}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white px-7 py-3.5 rounded-full transition-all hover:opacity-90 active:scale-95"
-                style={{ background: "#1857e8" }}
+                style={{ background: "#7c3aed" }}
               >
                 {ctaLabel} <span>→</span>
               </Link>
@@ -291,7 +291,7 @@ export default function HeroBanner() {
                 <Link
                   href={slide.ctaPrimary.href}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3 rounded-full transition-all hover:opacity-90 active:scale-95"
-                  style={{ background: "#1857e8" }}
+                  style={{ background: "#7c3aed" }}
                 >
                   {ctaLabel} <span>→</span>
                 </Link>

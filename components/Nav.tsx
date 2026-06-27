@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 const PLATFORMS_MENU = [
@@ -34,7 +34,6 @@ const PLATFORMS_MENU = [
 
 export default function Nav({ locale }: { locale: string }) {
   const t = useTranslations("nav");
-  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -46,7 +45,6 @@ export default function Nav({ locale }: { locale: string }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const otherLocale = locale === "fr" ? "en" : "fr";
   const switchLang = () => {
     // Use window.location.pathname directly — most reliable for static export
     // FR pages live at /fr/... and EN pages at /en/...
@@ -188,7 +186,7 @@ export default function Nav({ locale }: { locale: string }) {
             <Link
               href="/contact"
               className="text-sm font-semibold text-white px-5 py-2 rounded-full transition-all hover:opacity-90"
-              style={{ background: "#1857e8" }}
+              style={{ background: "#7c3aed" }}
             >
               {t("demo")}
             </Link>
@@ -432,7 +430,7 @@ export default function Nav({ locale }: { locale: string }) {
               <Link
                 href="/contact"
                 className="text-sm font-semibold text-white px-5 py-2 rounded-full"
-                style={{ background: "#1857e8" }}
+                style={{ background: "#7c3aed" }}
                 onClick={() => setOpen(false)}
               >
                 {t("demo")}

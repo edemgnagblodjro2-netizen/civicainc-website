@@ -57,7 +57,8 @@ export default async function PlatesformesPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all hover:opacity-90"
+                style={{ background: "#7c3aed" }}
               >
                 {t("agenthub_cta")}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +128,8 @@ export default async function PlatesformesPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all hover:opacity-90"
+                style={{ background: "#7c3aed" }}
               >
                 {t("nexhire_cta")}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

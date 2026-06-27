@@ -19,7 +19,8 @@ export default async function ContactCTA() {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0a1730] bg-white px-7 py-3.5 rounded-full transition-all hover:bg-slate-100 active:scale-95"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white px-7 py-3.5 rounded-full transition-all hover:opacity-90 active:scale-95"
+            style={{ background: "#7c3aed" }}
           >
             {t("btn1")} →
           </Link>

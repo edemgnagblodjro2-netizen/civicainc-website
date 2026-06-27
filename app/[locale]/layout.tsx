@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ChatBox from "@/components/ChatBox";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
       <Nav locale={locale} />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ChatBox />
     </NextIntlClientProvider>
   );
 }
