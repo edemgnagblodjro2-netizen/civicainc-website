@@ -9,7 +9,7 @@
     "lang": "FR"
   },
   "hero": {
-    "badge": "AI Software Publisher â€” QuÃ©bec, Canada",
+    "badge": "AI Software Publisher — Québec, Canada",
     "title": "AI infrastructure for organizations that decide.",
     "subtitle": "CivicAI develops artificial intelligence platforms for businesses, public organizations and institutions. Concrete, measurable, deployable tools.",
     "cta1": "Discover our platforms",
@@ -19,7 +19,7 @@
     "sectors_label": "Sectors served",
     "panel_title": "Our platforms",
     "panel_agenthub_tag": "Enterprise intelligence",
-    "panel_agenthub_desc": "AI diagnostics, analytics observatory, governance â€” for chambers of commerce and institutions.",
+    "panel_agenthub_desc": "AI diagnostics, analytics observatory, governance — for chambers of commerce and institutions.",
     "panel_nexhire_tag": "SaaS governance",
     "panel_nexhire_desc": "Microsoft 365 license optimization, hidden cost detection, governance dashboard.",
     "panel_attentezero_tag": "Municipal AI services",
@@ -28,7 +28,7 @@
   "platforms": {
     "title": "Our platforms",
     "subtitle_heading": "Three platforms. One integrated ecosystem.",
-    "subtitle": "Modular, scalable and integrated solutions â€” built for organizations that demand measurable results.",
+    "subtitle": "Modular, scalable and integrated solutions — built for organizations that demand measurable results.",
     "agenthub": {
       "name": "AgentHub Platform",
       "tagline": "Enterprise intelligence",
@@ -44,16 +44,16 @@
       "cta": "Discover NexHire"
     },
     "attentezero": {
-      "name": "AttenteZÃ©ro",
+      "name": "AttenteZéro",
       "tagline": "Municipal AI services",
-      "desc": "AI-powered community services with geolocation â€” for municipalities and public organizations.",
+      "desc": "AI-powered community services with geolocation — for municipalities and public organizations.",
       "features": ["Geolocated services", "Native mobile interface", "Municipal integration", "Real-time availability"],
-      "cta": "Discover AttenteZÃ©ro"
+      "cta": "Discover AttenteZéro"
     }
   },
   "sectors": {
     "title": "Sectors served",
-    "subtitle": "CivicAI operates across public and private organizations throughout QuÃ©bec and Canada.",
+    "subtitle": "CivicAI operates across public and private organizations throughout Québec and Canada.",
     "items": [
       { "icon": "", "label": "Chambers of Commerce" },
       { "icon": "", "label": "Enterprises" },
@@ -77,29 +77,29 @@
   "why": {
     "label": "Why CivicAI",
     "title": "AI infrastructure built to last.",
-    "subtitle": "We are not a consulting agency. We are a software publisher â€” with documented, maintained and scalable products.",
+    "subtitle": "We are not a consulting agency. We are a software publisher — with documented, maintained and scalable products.",
     "pillars": [
       {
         "num": "01",
-        "title": "QuÃ©bec infrastructure",
-        "desc": "Developed in Trois-RiviÃ¨res, for QuÃ©bec and Canadian organizations. Our teams understand the local regulatory framework, public sector realities and the challenges of regional SMEs."
+        "title": "Québec infrastructure",
+        "desc": "Developed in Trois-Rivières, for Québec and Canadian organizations. Our teams understand the local regulatory framework, public sector realities and the challenges of regional SMEs."
       },
       {
         "num": "02",
         "title": "Multi-tenant architecture",
-        "desc": "Built to scale â€” across a chamber, a city, an entire network of organizations. Each client has an isolated, secure and scalable environment without manual intervention."
+        "desc": "Built to scale — across a chamber, a city, an entire network of organizations. Each client has an isolated, secure and scalable environment without manual intervention."
       },
       {
         "num": "03",
         "title": "Measurable AI, not experimental",
-        "desc": "Every deployment includes maturity, performance and governance indicators. Artificial intelligence at CivicAI is a documented delivery â€” not a transformation promise."
+        "desc": "Every deployment includes maturity, performance and governance indicators. Artificial intelligence at CivicAI is a documented delivery — not a transformation promise."
       }
     ]
   },
   "vision": {
     "label": "Our vision",
     "quote": "We believe that artificial intelligence must become a concrete tool in service of organizations. Our mission is to create platforms that enable businesses, public institutions and organizations to better understand their data, automate their processes and make better decisions.",
-    "author": "CivicAI Inc. â€” Trois-RiviÃ¨res, QuÃ©bec"
+    "author": "CivicAI Inc. — Trois-Rivières, Québec"
   },
   "markets": {
     "label": "Markets",
@@ -123,7 +123,7 @@
   },
   "cta": {
     "title": "Ready to take action?",
-    "subtitle": "Discuss your challenges with our team. No commitment â€” a 30-minute conversation is enough to assess the relevance of a deployment.",
+    "subtitle": "Discuss your challenges with our team. No commitment — a 30-minute conversation is enough to assess the relevance of a deployment.",
     "btn1": "Schedule a demonstration",
     "btn2": "Write to us"
   },
@@ -131,10 +131,10 @@
     "tagline": "Artificial intelligence platforms for organizations.",
     "platforms_title": "Platforms",
     "company_title": "Company",
-    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZÃ©ro"],
+    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZéro"],
     "company": ["Why CivicAI", "Innovation", "Careers", "Contact"],
-    "legal": "Â© 2026 CivicAI Inc. All rights reserved.",
-    "made": "Developed in QuÃ©bec, Canada."
+    "legal": "© 2026 CivicAI Inc. All rights reserved.",
+    "made": "Developed in Québec, Canada."
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -153,12 +153,12 @@
         "a": "Yes. NexHire EIP is specifically designed to integrate with the Microsoft 365 ecosystem. AgentHub Platform also includes multi-source connectors compatible with Microsoft environments."
       },
       {
-        "q": "Are you based in QuÃ©bec?",
-        "a": "Yes, CivicAI Inc. is based in Trois-RiviÃ¨res, QuÃ©bec. Our teams understand the QuÃ©bec regulatory framework and local market specifics, while operating at the Canadian scale."
+        "q": "Are you based in Québec?",
+        "a": "Yes, CivicAI Inc. is based in Trois-Rivières, Québec. Our teams understand the Québec regulatory framework and local market specifics, while operating at the Canadian scale."
       },
       {
         "q": "How is data security ensured?",
-        "a": "Our platforms use a multi-tenant architecture with complete data isolation between clients. Each deployment benefits from secure environments compliant with QuÃ©bec public sector requirements."
+        "a": "Our platforms use a multi-tenant architecture with complete data isolation between clients. Each deployment benefits from secure environments compliant with Québec public sector requirements."
       }
     ]
   },
@@ -176,7 +176,7 @@
         { "title": "Platforms, not projects", "desc": "Our products are continuously tested, documented and maintained." },
         { "title": "Embedded AI", "desc": "Artificial intelligence is at the core of every platform, not an add-on." },
         { "title": "Measurable results", "desc": "Every deployment includes performance indicators and rigorous tracking." },
-        { "title": "Developed in QuÃ©bec", "desc": "A local company, accessible teams, human support." }
+        { "title": "Developed in Québec", "desc": "A local company, accessible teams, human support." }
       ]
     },
     "innovation": {
@@ -185,7 +185,7 @@
       "projects": [
         { "name": "AgentHub Platform", "status": "Active", "desc": "AI platform for chambers of commerce and businesses." },
         { "name": "NexHire EIP", "status": "Active", "desc": "Enterprise intelligence and SaaS governance." },
-        { "name": "AttenteZÃ©ro", "status": "In development", "desc": "Intelligent community services for municipalities." },
+        { "name": "AttenteZéro", "status": "In development", "desc": "Intelligent community services for municipalities." },
         { "name": "AI Observatory", "status": "Active", "desc": "Regional AI maturity analytics dashboard." },
         { "name": "ATLAS Agent", "status": "Active", "desc": "Conversational AI agent for organizational support." },
         { "name": "SME AI Journey", "status": "Active", "desc": "Structured AI transformation program for SMEs." }
@@ -197,9 +197,9 @@
       "opening": "We are actively recruiting. Send your application to",
       "email": "contact@nexhire.ca",
       "roles": [
-        { "title": "Full Stack Developer", "type": "Full-time", "location": "Trois-RiviÃ¨res / Remote" },
-        { "title": "AI Architect", "type": "Full-time", "location": "Trois-RiviÃ¨res / Remote" },
-        { "title": "Account Executive â€” Public Sector", "type": "Full-time", "location": "QuÃ©bec" }
+        { "title": "Full Stack Developer", "type": "Full-time", "location": "Trois-Rivières / Remote" },
+        { "title": "AI Architect", "type": "Full-time", "location": "Trois-Rivières / Remote" },
+        { "title": "Account Executive — Public Sector", "type": "Full-time", "location": "Québec" }
       ]
     },
     "contact": {
@@ -211,7 +211,7 @@
       "message": "Your message (optional)",
       "submit": "Send request",
       "or": "Or contact us directly",
-      "address": "Trois-RiviÃ¨res, QuÃ©bec, Canada"
+      "address": "Trois-Rivières, Québec, Canada"
     }
   }
 }
