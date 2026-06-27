@@ -5,7 +5,7 @@ export default async function Hero() {
   const t = await getTranslations("hero");
 
   return (
-    <section className="bg-white">
+    <section className="bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 py-24 lg:py-36">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left */}
@@ -41,67 +41,53 @@ export default async function Hero() {
             </div>
           </div>
 
-          {/* Right — report-style metrics panel */}
+          {/* Right — real product overview */}
           <div className="hidden lg:block">
-            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-              {/* Header */}
-              <div className="border-b border-slate-100 px-6 py-4 flex items-center justify-between">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
-                  AgentHub — Observatoire IA
+            <div className="border border-slate-200 rounded-xl overflow-hidden">
+              <div className="border-b border-slate-100 px-6 py-4">
+                <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
+                  {t("panel_title")}
                 </span>
-                <span className="text-[11px] text-slate-300 font-mono">CCTR · Q2 2026</span>
               </div>
 
-              <div className="p-6">
-                {/* Key metrics */}
-                <div className="grid grid-cols-3 divide-x divide-slate-100 mb-8">
-                  {[
-                    { value: "42", label: "Organisations" },
-                    { value: "58.3", label: "Indice IA moyen", highlight: true },
-                    { value: "×9.9", label: "ROI estimé" },
-                  ].map((m) => (
-                    <div key={m.label} className="text-center px-4 py-2">
-                      <div className={`text-2xl font-bold mb-1 ${m.highlight ? "text-blue-700" : "text-slate-900"}`}>
-                        {m.value}
+              <div className="divide-y divide-slate-100">
+                {[
+                  {
+                    name: "AgentHub Platform",
+                    tag: t("panel_agenthub_tag"),
+                    desc: t("panel_agenthub_desc"),
+                    dot: "bg-blue-700",
+                  },
+                  {
+                    name: "NexHire EIP",
+                    tag: t("panel_nexhire_tag"),
+                    desc: t("panel_nexhire_desc"),
+                    dot: "bg-slate-600",
+                  },
+                  {
+                    name: "AttenteZéro",
+                    tag: t("panel_attentezero_tag"),
+                    desc: t("panel_attentezero_desc"),
+                    dot: "bg-teal-600",
+                  },
+                ].map((p) => (
+                  <div key={p.name} className="px-6 py-5 flex items-start gap-4 hover:bg-slate-50 transition-colors">
+                    <div className={`w-2 h-2 rounded-full ${p.dot} mt-1.5 flex-shrink-0`} />
+                    <div>
+                      <div className="text-sm font-semibold text-slate-900">{p.name}</div>
+                      <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5 mb-1.5">
+                        {p.tag}
                       </div>
-                      <div className="text-[11px] text-slate-400 uppercase tracking-wider">{m.label}</div>
+                      <div className="text-xs text-slate-500 leading-relaxed">{p.desc}</div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
 
-                {/* Dimension bars */}
-                <div>
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-4">
-                    Maturité par dimension
-                  </div>
-                  <div className="space-y-3.5">
-                    {[
-                      { label: "Stratégie", value: 62 },
-                      { label: "Technologies", value: 50 },
-                      { label: "Processus", value: 56 },
-                      { label: "Gouvernance", value: 39 },
-                    ].map((dim) => (
-                      <div key={dim.label} className="flex items-center gap-4">
-                        <span className="text-xs text-slate-500 w-24 flex-shrink-0">{dim.label}</span>
-                        <div className="flex-1 h-1 bg-slate-100 rounded-full">
-                          <div
-                            className="h-full bg-blue-700 rounded-full"
-                            style={{ width: dim.value + "%" }}
-                          />
-                        </div>
-                        <span className="text-xs font-semibold text-slate-500 w-5 text-right tabular-nums">
-                          {dim.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div className="border-t border-slate-100 px-6 py-3.5 bg-slate-50">
+                <span className="text-[11px] text-slate-400">CivicAI Inc. — Trois-Rivières, Québec, Canada</span>
               </div>
             </div>
-
-            <p className="text-[11px] text-slate-400 mt-4 px-1">
-              Données représentatives — Chambre de commerce de Trois-Rivières, 2026
-            </p>
           </div>
         </div>
       </div>

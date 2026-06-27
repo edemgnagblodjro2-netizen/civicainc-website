@@ -9,53 +9,60 @@
     "lang": "FR"
   },
   "hero": {
-    "badge": "AI Software Publisher — Québec",
-    "title": "Artificial intelligence platforms for tomorrow's organizations.",
-    "subtitle": "CivicAI develops AI platforms that help businesses, public organizations and institutions automate their operations, govern their data and accelerate their digital transformation.",
+    "badge": "AI Software Publisher — Québec, Canada",
+    "title": "AI infrastructure for organizations that decide.",
+    "subtitle": "CivicAI develops artificial intelligence platforms for businesses, public organizations and institutions. Concrete, measurable, deployable tools.",
     "cta1": "Discover our platforms",
-    "cta2": "Request a demonstration"
+    "cta2": "Contact us",
+    "panel_title": "Our platforms",
+    "panel_agenthub_tag": "Enterprise intelligence",
+    "panel_agenthub_desc": "AI diagnostics, analytics observatory, governance — for chambers of commerce and institutions.",
+    "panel_nexhire_tag": "SaaS governance",
+    "panel_nexhire_desc": "Microsoft 365 license optimization, hidden cost detection, governance dashboard.",
+    "panel_attentezero_tag": "Municipal AI services",
+    "panel_attentezero_desc": "Intelligent, geolocated community services for municipalities and public organizations."
   },
   "platforms": {
     "title": "Our platforms",
     "subtitle_heading": "Three platforms. One integrated ecosystem.",
-    "subtitle": "Modular, scalable and integrated solutions — built for organizations ready to take action.",
+    "subtitle": "Modular, scalable and integrated solutions — built for organizations that demand measurable results.",
     "agenthub": {
       "name": "AgentHub Platform",
-      "tagline": "Enterprise intelligence platform",
-      "desc": "AI diagnostics, analytics observatory and governance for chambers of commerce, businesses and institutions. Powered by ATLAS.",
-      "features": ["SME AI Journey", "Analytics Observatory", "50+ connectors", "ATLAS Agent"],
+      "tagline": "Enterprise intelligence",
+      "desc": "AI maturity diagnostics, analytics observatory and governance for chambers of commerce, businesses and institutions. Powered by the ATLAS agent.",
+      "features": ["Structured AI journey", "Analytics observatory", "Multi-source connectors", "ATLAS Agent"],
       "cta": "Discover AgentHub"
     },
     "nexhire": {
       "name": "NexHire EIP",
-      "tagline": "Enterprise Intelligence Platform",
-      "desc": "SaaS governance, Microsoft 365 license optimization and hidden cost detection for organizations.",
-      "features": ["SaaS Governance", "Microsoft 365 Optimization", "Hidden Cost Detection", "Measurable AI ROI"],
+      "tagline": "SaaS governance",
+      "desc": "SaaS tools governance, Microsoft 365 license optimization and identification of unjustified costs for organizations.",
+      "features": ["SaaS governance", "Microsoft 365 optimization", "Hidden cost detection", "Performance indicators"],
       "cta": "Discover NexHire"
     },
     "attentezero": {
       "name": "AttenteZéro",
-      "tagline": "Community mobile application",
+      "tagline": "Municipal AI services",
       "desc": "AI-powered community services with geolocation — for municipalities and public organizations.",
-      "features": ["Geolocated AI Services", "Native Mobile Interface", "Municipal Integration", "Real-time"],
+      "features": ["Geolocated services", "Native mobile interface", "Municipal integration", "Real-time availability"],
       "cta": "Discover AttenteZéro"
     }
   },
   "sectors": {
-    "title": "We serve",
-    "subtitle": "CivicAI deploys its platforms across organizations of all sizes, in both public and private sectors.",
+    "title": "Sectors served",
+    "subtitle": "CivicAI operates across public and private organizations throughout Québec and Canada.",
     "items": [
-      { "icon": "🏛️", "label": "Chambers of Commerce" },
-      { "icon": "🏢", "label": "Enterprises" },
-      { "icon": "🏙️", "label": "Municipalities" },
-      { "icon": "🏥", "label": "Public Organizations" },
-      { "icon": "🎓", "label": "Education" },
-      { "icon": "🏭", "label": "Manufacturers" }
+      { "icon": "", "label": "Chambers of Commerce" },
+      { "icon": "", "label": "Enterprises" },
+      { "icon": "", "label": "Municipalities" },
+      { "icon": "", "label": "Public Organizations" },
+      { "icon": "", "label": "Education" },
+      { "icon": "", "label": "Manufacturers" }
     ]
   },
   "approach": {
     "title": "Our approach",
-    "subtitle": "A structured process from assessment to lasting transformation.",
+    "subtitle": "A structured process from initial assessment to lasting transformation.",
     "steps": [
       { "num": "01", "title": "Discover", "desc": "AI maturity diagnostic and complete organizational assessment." },
       { "num": "02", "title": "Analyze", "desc": "Identifying opportunities and priority improvement areas." },
@@ -65,21 +72,25 @@
     ]
   },
   "why": {
-    "title": "Why CivicAI",
-    "subtitle": "A Québec-based software publisher specializing in AI platforms for public and private organizations.",
-    "stats": [
-      { "value": "50+", "label": "Available connectors" },
-      { "value": "3", "label": "Active platforms" },
-      { "value": "Multi-tenant", "label": "Scalable architecture" },
-      { "value": "Québec", "label": "Locally developed" }
-    ],
-    "features": [
-      "Secure, multi-tenant cloud architecture",
-      "Integrated conversational AI agent (ATLAS)",
-      "Real-time analytics dashboard",
-      "Connectors to existing tools (M365, SAP, Salesforce…)",
-      "Built-in governance and compliance",
-      "Rapid deployment and human support"
+    "label": "Why CivicAI",
+    "title": "AI infrastructure built to last.",
+    "subtitle": "We are not a consulting agency. We are a software publisher — with documented, maintained and scalable products.",
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Québec infrastructure",
+        "desc": "Developed in Trois-Rivières, for Québec and Canadian organizations. Our teams understand the local regulatory framework, public sector realities and the challenges of regional SMEs."
+      },
+      {
+        "num": "02",
+        "title": "Multi-tenant architecture",
+        "desc": "Built to scale — across a chamber, a city, an entire network of organizations. Each client has an isolated, secure and scalable environment without manual intervention."
+      },
+      {
+        "num": "03",
+        "title": "Measurable AI, not experimental",
+        "desc": "Every deployment includes maturity, performance and governance indicators. Artificial intelligence at CivicAI is a documented delivery — not a transformation promise."
+      }
     ]
   },
   "vision": {
@@ -87,17 +98,31 @@
     "quote": "We believe that artificial intelligence must become a concrete tool in service of organizations. Our mission is to create platforms that enable businesses, public institutions and organizations to better understand their data, automate their processes and make better decisions.",
     "author": "CivicAI Inc. — Trois-Rivières, Québec"
   },
-  "partners": {
-    "title": "Our partners",
-    "subtitle": "Organizations that trust CivicAI.",
-    "upcoming_label": "Partnership program expanding",
-    "upcoming_desc": "Join the CivicAI ecosystem and accelerate the AI transformation of your members."
+  "markets": {
+    "label": "Markets",
+    "title": "Built for organizations with collective responsibility.",
+    "subtitle": "Our platforms serve institutions that need tools equal to their operational and governance challenges.",
+    "cta": "Schedule a meeting",
+    "items": [
+      {
+        "title": "Chambers of commerce and business associations",
+        "desc": "AI acceleration programs for members, sector observatories, support dashboards and organizational maturity diagnostics."
+      },
+      {
+        "title": "Municipalities and public organizations",
+        "desc": "Intelligent geolocated services, integration with existing systems, data governance and compliance with public sector requirements."
+      },
+      {
+        "title": "Businesses and SMEs in transformation",
+        "desc": "SaaS tools governance, license optimization, AI diagnostics and structured support toward operations automation."
+      }
+    ]
   },
   "cta": {
-    "title": "Ready to transform your organization?",
-    "subtitle": "Discover how CivicAI can accelerate your transition to artificial intelligence.",
-    "btn1": "Request a demonstration",
-    "btn2": "Contact us"
+    "title": "Ready to take action?",
+    "subtitle": "Discuss your challenges with our team. No commitment — a 30-minute conversation is enough to assess the relevance of a deployment.",
+    "btn1": "Schedule a demonstration",
+    "btn2": "Write to us"
   },
   "footer": {
     "tagline": "Artificial intelligence platforms for organizations.",
@@ -121,7 +146,7 @@
       "values": [
         { "title": "Platforms, not projects", "desc": "Our products are continuously tested, documented and maintained." },
         { "title": "Embedded AI", "desc": "Artificial intelligence is at the core of every platform, not an add-on." },
-        { "title": "Measurable results", "desc": "Every deployment includes performance indicators and ROI calculation." },
+        { "title": "Measurable results", "desc": "Every deployment includes performance indicators and rigorous tracking." },
         { "title": "Developed in Québec", "desc": "A local company, accessible teams, human support." }
       ]
     },
