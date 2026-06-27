@@ -48,9 +48,14 @@ export default function Nav({ locale }: { locale: string }) {
 
   const otherLocale = locale === "fr" ? "en" : "fr";
   const switchLang = () => {
-    const path = window.location.pathname;
-    const newPath = path.replace(/^\/(fr|en)(\/|$)/, `/${otherLocale}$2`);
-    window.location.assign(newPath || `/${otherLocale}/`);
+    if (locale === "fr") {
+      // FR n'a pas de préfixe → EN a /en/
+      window.location.assign(`/en${pathname}`);
+    } else {
+      // EN a /en/ → FR n'a pas de préfixe
+      // usePathname() retourne déjà le chemin sans préfixe locale
+      window.location.assign(pathname || "/");
+    }
   };
 
   const openMenu = () => {
