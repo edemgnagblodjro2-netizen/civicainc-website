@@ -12,7 +12,7 @@ export default function Nav({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 4);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -31,42 +31,30 @@ export default function Nav({ locale }: { locale: string }) {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm"
-          : "bg-white"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-150 ${
+        scrolled ? "bg-white border-b border-slate-200" : "bg-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="w-7 h-7 rounded-lg bg-blue-700 flex items-center justify-center">
-            <svg
-              className="w-4 h-4 text-white"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <rect x="2" y="2" width="5" height="5" rx="1" fill="white" opacity="0.9" />
-              <rect x="9" y="2" width="5" height="5" rx="1" fill="white" opacity="0.6" />
-              <rect x="2" y="9" width="5" height="5" rx="1" fill="white" opacity="0.6" />
-              <rect x="9" y="9" width="5" height="5" rx="1" fill="white" opacity="0.9" />
-            </svg>
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <div className="bg-slate-950 px-3 py-1.5">
+            <span className="text-white font-black text-sm tracking-widest uppercase">
+              CivicAI
+            </span>
           </div>
-          <span className="text-slate-900 font-semibold text-sm tracking-tight">
-            CivicAI
-          </span>
-          <span className="text-slate-400 text-xs font-normal hidden sm:inline">
+          <span className="text-slate-400 text-xs font-medium hidden sm:inline tracking-wide">
             Inc.
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1 flex-1">
+        <nav className="hidden md:flex items-center gap-6 flex-1">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="px-3 py-1.5 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md transition-colors"
+              className="text-xs font-semibold text-slate-500 hover:text-slate-900 uppercase tracking-widest transition-colors"
             >
               {l.label}
             </Link>
@@ -74,16 +62,16 @@ export default function Nav({ locale }: { locale: string }) {
         </nav>
 
         {/* Right */}
-        <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+        <div className="hidden md:flex items-center gap-4 flex-shrink-0">
           <button
             onClick={switchLang}
-            className="text-xs font-semibold text-slate-500 hover:text-slate-800 px-2.5 py-1 rounded-md border border-slate-200 hover:border-slate-300 transition-all"
+            className="text-xs font-semibold text-slate-400 hover:text-slate-900 uppercase tracking-widest transition-colors"
           >
             {otherLocale.toUpperCase()}
           </button>
           <Link
             href="/contact"
-            className="text-sm font-semibold bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition-colors"
+            className="text-xs font-semibold bg-slate-950 hover:bg-slate-800 text-white px-4 py-2.5 uppercase tracking-widest transition-colors"
           >
             {t("demo")}
           </Link>
@@ -107,27 +95,24 @@ export default function Nav({ locale }: { locale: string }) {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-slate-100 bg-white px-6 py-5 flex flex-col gap-1">
+        <div className="md:hidden border-t border-slate-100 bg-white px-6 py-6 flex flex-col gap-4">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="py-2.5 px-3 text-sm text-slate-700 hover:bg-slate-50 rounded-md"
+              className="text-xs font-semibold text-slate-500 uppercase tracking-widest"
               onClick={() => setOpen(false)}
             >
               {l.label}
             </Link>
           ))}
-          <div className="flex items-center gap-3 pt-3 mt-2 border-t border-slate-100">
-            <button
-              onClick={switchLang}
-              className="text-xs font-semibold text-slate-500 border border-slate-200 px-2.5 py-1 rounded-md"
-            >
+          <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+            <button onClick={switchLang} className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
               {otherLocale.toUpperCase()}
             </button>
             <Link
               href="/contact"
-              className="text-sm font-semibold bg-blue-700 text-white px-4 py-2 rounded-lg"
+              className="text-xs font-semibold bg-slate-950 text-white px-4 py-2.5 uppercase tracking-widest"
               onClick={() => setOpen(false)}
             >
               {t("demo")}

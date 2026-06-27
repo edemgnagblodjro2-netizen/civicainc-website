@@ -4,91 +4,98 @@ import { Link } from "@/i18n/navigation";
 export default async function Hero() {
   const t = await getTranslations("hero");
 
+  const platforms = [
+    {
+      name: "AgentHub Platform",
+      tag: t("panel_agenthub_tag"),
+      href: "/plateformes#agenthub",
+    },
+    {
+      name: "NexHire EIP",
+      tag: t("panel_nexhire_tag"),
+      href: "/plateformes#nexhire",
+    },
+    {
+      name: "AttenteZéro",
+      tag: t("panel_attentezero_tag"),
+      href: "/plateformes#attentezero",
+    },
+  ];
+
   return (
-    <section className="bg-white border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-6 py-24 lg:py-36">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Left */}
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-[0.18em] mb-8">
+    <section className="bg-slate-950 min-h-[85vh] flex flex-col justify-between pt-16">
+      <div className="max-w-7xl mx-auto px-6 w-full flex-1 flex items-center">
+        <div className="w-full grid lg:grid-cols-2 gap-0 py-20 lg:py-28 items-end">
+          {/* Left — massive typographic statement */}
+          <div className="pr-0 lg:pr-16 border-r-0 lg:border-r border-slate-800">
+            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.2em] mb-10">
               {t("badge")}
             </p>
 
-            <h1 className="text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.0] tracking-tight mb-8">
               {t("title")}
             </h1>
 
-            <p className="text-lg text-slate-500 leading-relaxed max-w-lg mb-10">
+            <p className="text-base text-slate-400 leading-relaxed max-w-sm mb-12">
               {t("subtitle")}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/plateformes"
-                className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors"
-              >
-                {t("cta1")}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+            <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 text-slate-700 text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors"
+                className="inline-flex items-center gap-3 bg-white text-slate-950 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:bg-slate-100 transition-colors"
               >
                 {t("cta2")}
+                <span>→</span>
+              </Link>
+              <Link
+                href="/plateformes"
+                className="inline-flex items-center gap-3 border border-slate-700 text-slate-300 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:border-slate-500 hover:text-white transition-colors"
+              >
+                {t("cta1")}
               </Link>
             </div>
           </div>
 
-          {/* Right — real product overview */}
-          <div className="hidden lg:block">
-            <div className="border border-slate-200 rounded-xl overflow-hidden">
-              <div className="border-b border-slate-100 px-6 py-4">
-                <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
-                  {t("panel_title")}
-                </span>
-              </div>
-
-              <div className="divide-y divide-slate-100">
-                {[
-                  {
-                    name: "AgentHub Platform",
-                    tag: t("panel_agenthub_tag"),
-                    desc: t("panel_agenthub_desc"),
-                    dot: "bg-blue-700",
-                  },
-                  {
-                    name: "NexHire EIP",
-                    tag: t("panel_nexhire_tag"),
-                    desc: t("panel_nexhire_desc"),
-                    dot: "bg-slate-600",
-                  },
-                  {
-                    name: "AttenteZéro",
-                    tag: t("panel_attentezero_tag"),
-                    desc: t("panel_attentezero_desc"),
-                    dot: "bg-teal-600",
-                  },
-                ].map((p) => (
-                  <div key={p.name} className="px-6 py-5 flex items-start gap-4 hover:bg-slate-50 transition-colors">
-                    <div className={`w-2 h-2 rounded-full ${p.dot} mt-1.5 flex-shrink-0`} />
-                    <div>
-                      <div className="text-sm font-semibold text-slate-900">{p.name}</div>
-                      <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5 mb-1.5">
-                        {p.tag}
-                      </div>
-                      <div className="text-xs text-slate-500 leading-relaxed">{p.desc}</div>
+          {/* Right — Marmen-style bordered platform cards */}
+          <div className="pl-0 lg:pl-16 mt-16 lg:mt-0">
+            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.2em] mb-6">
+              {t("panel_title")}
+            </p>
+            <div>
+              {platforms.map((p) => (
+                <Link
+                  key={p.name}
+                  href={p.href}
+                  className="flex items-start justify-between gap-4 border border-slate-800 p-6 mb-0 hover:bg-slate-900 hover:border-slate-600 transition-colors group block"
+                >
+                  <div>
+                    <div className="text-[11px] text-slate-500 uppercase tracking-widest mb-1">
+                      {p.tag}
+                    </div>
+                    <div className="flex items-center gap-3 mt-1">
+                      <span className="text-slate-400 group-hover:text-white transition-colors">→</span>
+                      <span className="text-white font-bold text-base group-hover:underline">
+                        {p.name}
+                      </span>
                     </div>
                   </div>
-                ))}
-              </div>
-
-              <div className="border-t border-slate-100 px-6 py-3.5 bg-slate-50">
-                <span className="text-[11px] text-slate-400">CivicAI Inc. — Trois-Rivières, Québec, Canada</span>
-              </div>
+                </Link>
+              ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <span className="text-[11px] text-slate-600 uppercase tracking-widest">
+            CivicAI Inc. — Trois-Rivières, Québec, Canada
+          </span>
+          <span className="text-[11px] text-slate-600 uppercase tracking-widest hidden sm:inline">
+            Fondé 2024
+          </span>
         </div>
       </div>
     </section>

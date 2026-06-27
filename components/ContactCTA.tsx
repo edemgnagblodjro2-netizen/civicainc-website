@@ -5,30 +5,33 @@ export default async function ContactCTA() {
   const t = await getTranslations("cta");
 
   return (
-    <section className="bg-blue-700 py-24 border-t border-blue-800">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-white tracking-tight mb-4">
-          {t("title")}
-        </h2>
-        <p className="text-xl text-blue-200 leading-relaxed mb-10">
-          {t("subtitle")}
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-blue-50 transition-colors"
-          >
-            {t("btn1")}
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 border border-blue-300/50 text-white hover:bg-white/10 font-semibold text-sm px-6 py-3.5 rounded-xl transition-colors"
-          >
-            {t("btn2")}
-          </Link>
+    <section className="bg-slate-950 border-t border-slate-800 py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+              {t("title")}
+            </h2>
+          </div>
+          <div>
+            <p className="text-slate-400 leading-relaxed mb-8">
+              {t("subtitle")}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 bg-white text-slate-950 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:bg-slate-100 transition-colors"
+              >
+                {t("btn1")} →
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 border border-slate-700 text-slate-300 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:border-slate-500 hover:text-white transition-colors"
+              >
+                {t("btn2")}
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
