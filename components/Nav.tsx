@@ -130,13 +130,22 @@ export default function Nav({ locale }: { locale: string }) {
               </svg>
             </a>
             <span style={{ color: "rgba(255,255,255,0.15)" }}>|</span>
-            <button
-              onClick={switchLang}
-              className="text-xs font-semibold transition-colors hover:text-white"
-              style={{ color: "rgba(255,255,255,0.65)" }}
-            >
-              {otherLocale.toUpperCase()}
-            </button>
+            {/* FR | EN — both always visible */}
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={locale === "en" ? switchLang : undefined}
+                className={`text-xs font-semibold transition-colors ${locale === "fr" ? "text-white cursor-default" : "text-white/50 hover:text-white cursor-pointer"}`}
+              >
+                FR
+              </button>
+              <span className="text-xs" style={{ color: "rgba(255,255,255,0.2)" }}>|</span>
+              <button
+                onClick={locale === "fr" ? switchLang : undefined}
+                className={`text-xs font-semibold transition-colors ${locale === "en" ? "text-white cursor-default" : "text-white/50 hover:text-white cursor-pointer"}`}
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -365,7 +374,7 @@ export default function Nav({ locale }: { locale: string }) {
 
       {/* ── Mobile menu ── */}
       {open && (
-        <div className="md:hidden bg-white border-t border-slate-100 shadow-lg">
+        <div className="md:hidden bg-white border-t border-slate-100 shadow-lg overflow-y-auto" style={{ maxHeight: "calc(100vh - 64px)" }}>
           {/* Segment links */}
           <div className="px-6 py-3 flex flex-wrap gap-x-4 gap-y-1 border-b border-slate-100" style={{ background: "#f8fafc" }}>
             {segments.map((s) => (
@@ -404,9 +413,22 @@ export default function Nav({ locale }: { locale: string }) {
               </Link>
             ))}
             <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
-              <button onClick={() => { switchLang(); setOpen(false); }} className="text-sm font-medium text-slate-400">
-                {otherLocale.toUpperCase()}
-              </button>
+              {/* FR | EN — both always visible on mobile */}
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={locale === "en" ? () => { switchLang(); setOpen(false); } : undefined}
+                  className={`text-sm font-semibold transition-colors ${locale === "fr" ? "text-slate-800 cursor-default" : "text-slate-400 hover:text-slate-700 cursor-pointer"}`}
+                >
+                  FR
+                </button>
+                <span className="text-slate-300 text-sm">|</span>
+                <button
+                  onClick={locale === "fr" ? () => { switchLang(); setOpen(false); } : undefined}
+                  className={`text-sm font-semibold transition-colors ${locale === "en" ? "text-slate-800 cursor-default" : "text-slate-400 hover:text-slate-700 cursor-pointer"}`}
+                >
+                  EN
+                </button>
+              </div>
               <Link
                 href="/contact"
                 className="text-sm font-semibold text-white px-5 py-2 rounded-full"
