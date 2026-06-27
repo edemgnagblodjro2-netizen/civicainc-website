@@ -173,7 +173,26 @@
   "pages": {
     "platforms": {
       "title": "Our platforms",
-      "subtitle": "Three complementary platforms covering all AI needs for organizations."
+      "subtitle": "Three complementary platforms covering all AI needs for organizations.",
+      "badge": "Platforms",
+      "agenthub_journey_title": "AI Journey — ATLAS",
+      "agenthub_journey_steps": [
+        "Diagnostic completed",
+        "Action plan generated",
+        "3 automations identified",
+        "PDF report available"
+      ],
+      "agenthub_cta": "Request an AgentHub Demo",
+      "nexhire_analysis_title": "SaaS Analysis",
+      "nexhire_cta": "Request a NexHire Demo",
+      "nexhire_stats": [
+        { "label": "Active licenses", "value": "34", "sub": "Microsoft 365" },
+        { "label": "Inactive licenses", "value": "6", "sub": "⚠ To optimize" },
+        { "label": "Redundancies detected", "value": "6", "sub": "$9,732/yr" },
+        { "label": "Estimated ROI", "value": "×9.9", "sub": "In 36 days" }
+      ],
+      "attentezero_coming_soon": "In development — Coming soon",
+      "attentezero_caption": "Intelligent services for your citizens"
     },
     "why": {
       "title": "Why CivicAI?",

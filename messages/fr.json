@@ -173,7 +173,26 @@
   "pages": {
     "platforms": {
       "title": "Nos plateformes",
-      "subtitle": "Trois plateformes complémentaires pour couvrir l'ensemble des besoins en intelligence artificielle des organisations."
+      "subtitle": "Trois plateformes complémentaires pour couvrir l'ensemble des besoins en intelligence artificielle des organisations.",
+      "badge": "Plateformes",
+      "agenthub_journey_title": "Parcours IA — ATLAS",
+      "agenthub_journey_steps": [
+        "Diagnostic complété",
+        "Plan d'action généré",
+        "3 automatisations identifiées",
+        "Rapport PDF disponible"
+      ],
+      "agenthub_cta": "Demander une démo AgentHub",
+      "nexhire_analysis_title": "Analyse SaaS",
+      "nexhire_cta": "Demander une démo NexHire",
+      "nexhire_stats": [
+        { "label": "Licences actives", "value": "34", "sub": "Microsoft 365" },
+        { "label": "Licences inactives", "value": "6", "sub": "⚠ À optimiser" },
+        { "label": "Redondances détectées", "value": "6", "sub": "9 732 $/an" },
+        { "label": "ROI estimé", "value": "×9.9", "sub": "En 36 jours" }
+      ],
+      "attentezero_coming_soon": "En développement — Disponible prochainement",
+      "attentezero_caption": "Services intelligents pour vos citoyens"
     },
     "why": {
       "title": "Pourquoi CivicAI ?",

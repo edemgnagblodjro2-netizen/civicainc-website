@@ -48,13 +48,13 @@ export default function Nav({ locale }: { locale: string }) {
 
   const otherLocale = locale === "fr" ? "en" : "fr";
   const switchLang = () => {
-    // usePathname() returns path WITHOUT locale prefix (e.g. "/plateformes")
-    // Pages are always generated at /fr/... and /en/... (static export)
-    const path = pathname === "/" ? "" : pathname;
+    // Use window.location.pathname directly — most reliable for static export
+    // FR pages live at /fr/... and EN pages at /en/...
+    const current = window.location.pathname;
     if (locale === "fr") {
-      window.location.assign(`/en${path}`);
+      window.location.assign(current.replace(/^\/fr/, "/en") || "/en/");
     } else {
-      window.location.assign(`/fr${path}`);
+      window.location.assign(current.replace(/^\/en/, "/fr") || "/fr/");
     }
   };
 
