@@ -24,7 +24,32 @@
     "panel_nexhire_tag": "SaaS governance",
     "panel_nexhire_desc": "Microsoft 365 license optimization, hidden cost detection, governance dashboard.",
     "panel_attentezero_tag": "Municipal AI services",
-    "panel_attentezero_desc": "Intelligent, geolocated community services for municipalities and public organizations."
+    "panel_attentezero_desc": "Intelligent, geolocated community services for municipalities and public organizations.",
+    "slide_gouvernance_badge": "AI Governance",
+    "slide_gouvernance_headline": "Solid governance practices for more reliable, agile and sustainable organizations.",
+    "slide_gouvernance_subtitle": "Transparency · Accountability · Compliance · Performance",
+    "slide_gouvernance_cta": "See AgentHub Platform",
+    "slide_ia_badge": "AI Optimization & Performance",
+    "slide_ia_headline": "Move faster with CivicAI's intelligence.",
+    "slide_ia_subtitle": "Cost reduction. Benefit maximization. Artificial intelligence at the service of your performance.",
+    "slide_ia_cta": "Explore our platforms",
+    "slide_pme_badge": "SMBs · Enterprises · Institutions",
+    "slide_pme_headline": "Your success, our priority.",
+    "slide_pme_subtitle": "Intelligent and accessible AI solutions to propel your organization into the future.",
+    "slide_pme_cta": "Book a demo",
+    "slide_transfo_badge": "Digital transformation",
+    "slide_transfo_headline": "Accelerate your digital transformation with concrete AI solutions.",
+    "slide_transfo_subtitle": "From initial assessment to deployment — CivicAI guides you every step of the way.",
+    "slide_transfo_cta": "Our approach",
+    "why_title": "Why CivicAI?",
+    "why_tag": "Software publisher",
+    "why_rows": [
+      { "icon": "⚡", "label": "Deployment", "value": "In 30 to 90 days" },
+      { "icon": "🔒", "label": "Security", "value": "Multi-tenant isolated" },
+      { "icon": "📊", "label": "Results", "value": "Measurable & documented" },
+      { "icon": "🍁", "label": "Origin", "value": "Built in Québec" }
+    ],
+    "trust_badges": ["AI Governance", "Certified security", "Measurable optimization", "Québec enterprise"]
   },
   "platforms": {
     "title": "Our platforms",
@@ -144,6 +169,13 @@
     "company": ["Why CivicAI", "Innovation", "Careers", "Contact"],
     "legal": "© 2026 CivicAI Inc. All rights reserved.",
     "made": "Developed in Québec, Canada."
+  },
+  "contactForm": {
+    "success_title": "Message sent!",
+    "success_body": "Your request has been received. Our team will get back to you within 24 to 48 hours.",
+    "success_reset": "Send another message",
+    "error_msg": "An error occurred. Please try again or write directly to",
+    "subject": "New demonstration request — CivicAI"
   },
   "faq": {
     "title": "Frequently asked questions",

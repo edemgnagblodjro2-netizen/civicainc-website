@@ -11,6 +11,7 @@ interface Slide {
   id: string;
   type: SlideType;
   badge: string | null;
+  badgeKey?: string;
   headlineKey?: string;
   headline?: string;
   subtitleKey?: string;
@@ -47,40 +48,44 @@ const SLIDES: Slide[] = [
     type: "image",
     imageSrc: "/slide-gouvernance.jpg",
     imageOverlay: "linear-gradient(to right, rgba(5,8,20,1) 0%, rgba(5,8,20,1) 42%, rgba(5,8,20,0.7) 58%, rgba(5,8,20,0.2) 75%, transparent 90%)",
-    badge: "Gouvernance IA",
-    headline: "Des pratiques de gouvernance solides pour des organisations plus fiables, agiles et durables.",
-    subtitle: "Transparence · Responsabilité · Conformité · Performance",
-    ctaPrimary: { label: "Voir AgentHub Platform", href: "/plateformes" },
+    badge: null,
+    badgeKey: "slide_gouvernance_badge",
+    headlineKey: "slide_gouvernance_headline",
+    subtitleKey: "slide_gouvernance_subtitle",
+    ctaPrimary: { labelKey: "slide_gouvernance_cta", href: "/plateformes" },
   },
   {
     id: "ia-performance",
     type: "image",
     imageSrc: "/slide-ia.jpg",
     imageOverlay: "linear-gradient(to right, rgba(3,6,15,1) 0%, rgba(3,6,15,1) 42%, rgba(3,6,15,0.7) 58%, rgba(3,6,15,0.2) 75%, transparent 90%)",
-    badge: "Optimisation & Performance IA",
-    headline: "Allez plus rapidement avec l'IA de CivicAI.",
-    subtitle: "Réduction de coûts. Maximisation des bénéfices. L'intelligence artificielle au service de votre performance.",
-    ctaPrimary: { label: "Découvrir nos plateformes", href: "/plateformes" },
+    badge: null,
+    badgeKey: "slide_ia_badge",
+    headlineKey: "slide_ia_headline",
+    subtitleKey: "slide_ia_subtitle",
+    ctaPrimary: { labelKey: "slide_ia_cta", href: "/plateformes" },
   },
   {
     id: "pme",
     type: "image",
     imageSrc: "/slide-pme.jpg",
     imageOverlay: "linear-gradient(to right, rgba(5,10,28,1) 0%, rgba(5,10,28,1) 42%, rgba(5,10,28,0.7) 58%, rgba(5,10,28,0.2) 75%, transparent 90%)",
-    badge: "PME · Entreprises · Institutions",
-    headline: "Votre succès, notre priorité.",
-    subtitle: "Des solutions IA intelligentes et accessibles pour propulser votre organisation vers l'avenir.",
-    ctaPrimary: { label: "Demander une démo", href: "/contact" },
+    badge: null,
+    badgeKey: "slide_pme_badge",
+    headlineKey: "slide_pme_headline",
+    subtitleKey: "slide_pme_subtitle",
+    ctaPrimary: { labelKey: "slide_pme_cta", href: "/contact" },
   },
   {
     id: "transformation",
     type: "image",
     imageSrc: "/slide-transformation.jpg",
     imageOverlay: "linear-gradient(to right, rgba(5,10,25,1) 0%, rgba(5,10,25,1) 42%, rgba(5,10,25,0.7) 58%, rgba(5,10,25,0.2) 75%, transparent 90%)",
-    badge: "Transformation numérique",
-    headline: "Accélérez votre transformation numérique avec des solutions IA concrètes.",
-    subtitle: "De l'évaluation initiale au déploiement — CivicAI vous accompagne à chaque étape.",
-    ctaPrimary: { label: "Notre approche", href: "/pourquoi" },
+    badge: null,
+    badgeKey: "slide_transfo_badge",
+    headlineKey: "slide_transfo_headline",
+    subtitleKey: "slide_transfo_subtitle",
+    ctaPrimary: { labelKey: "slide_transfo_cta", href: "/pourquoi" },
   },
 ];
 
@@ -150,7 +155,9 @@ export default function HeroBanner() {
   }, [next, paused]);
 
   const slide = SLIDES[current];
-  const badge = slide.id === "main" ? t("badge") : slide.badge;
+  const whyRows = t.raw("why_rows") as { icon: string; label: string; value: string }[];
+  const trustBadges = t.raw("trust_badges") as string[];
+  const badge = slide.id === "main" ? t("badge") : slide.badgeKey ? t(slide.badgeKey as Parameters<typeof t>[0]) : slide.badge;
   const headline = slide.headlineKey ? t(slide.headlineKey as Parameters<typeof t>[0]) : (slide.headline ?? "");
   const subtitle = slide.subtitleKey ? t(slide.subtitleKey as Parameters<typeof t>[0]) : (slide.subtitle ?? "");
   const ctaLabel = slide.ctaPrimary.labelKey ? t(slide.ctaPrimary.labelKey as Parameters<typeof t>[0]) : (slide.ctaPrimary.label ?? "");
@@ -327,23 +334,18 @@ export default function HeroBanner() {
                       style={{ background: "linear-gradient(135deg, #0d1e3a 0%, #1857e8 100%)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
                     >
                       <span className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                        Pourquoi CivicAI ?
+                        {t("why_title")}
                       </span>
                       <span
                         className="text-xs font-semibold px-2.5 py-1 rounded-full"
                         style={{ background: "rgba(255,211,62,0.15)", color: "#ffd23e", border: "1px solid rgba(255,211,62,0.3)" }}
                       >
-                        Éditeur logiciel
+                        {t("why_tag")}
                       </span>
                     </div>
 
                     {/* Feature rows */}
-                    {[
-                      { icon: "⚡", label: "Déploiement", value: "En 30 à 90 jours" },
-                      { icon: "🔒", label: "Sécurité", value: "Multi-tenant isolé" },
-                      { icon: "📊", label: "Résultats", value: "Mesurables & documentés" },
-                      { icon: "🍁", label: "Origine", value: "Développé au Québec" },
-                    ].map((row) => (
+                    {whyRows.map((row) => (
                       <div
                         key={row.label}
                         className="flex items-center justify-between px-6 py-3"
@@ -360,14 +362,14 @@ export default function HeroBanner() {
 
                   {/* Trust badges */}
                   <div className="grid grid-cols-2 gap-2.5 w-full">
-                    {TRUST_BADGES.map((b) => (
+                    {trustBadges.map((label, i) => (
                       <div
-                        key={b.label}
+                        key={label}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-medium text-white/60"
                         style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}
                       >
-                        <span className="text-white/45 flex-shrink-0">{b.icon}</span>
-                        {b.label}
+                        <span className="text-white/45 flex-shrink-0">{TRUST_BADGES[i]?.icon}</span>
+                        {label}
                       </div>
                     ))}
                   </div>

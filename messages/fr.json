@@ -24,7 +24,32 @@
     "panel_nexhire_tag": "Gouvernance SaaS",
     "panel_nexhire_desc": "Optimisation des licences Microsoft 365, détection des coûts cachés, tableau de bord de gouvernance.",
     "panel_attentezero_tag": "Services municipaux IA",
-    "panel_attentezero_desc": "Services communautaires géolocalisés et intelligents pour les municipalités et organismes publics."
+    "panel_attentezero_desc": "Services communautaires géolocalisés et intelligents pour les municipalités et organismes publics.",
+    "slide_gouvernance_badge": "Gouvernance IA",
+    "slide_gouvernance_headline": "Des pratiques de gouvernance solides pour des organisations plus fiables, agiles et durables.",
+    "slide_gouvernance_subtitle": "Transparence · Responsabilité · Conformité · Performance",
+    "slide_gouvernance_cta": "Voir AgentHub Platform",
+    "slide_ia_badge": "Optimisation & Performance IA",
+    "slide_ia_headline": "Allez plus rapidement avec l'IA de CivicAI.",
+    "slide_ia_subtitle": "Réduction de coûts. Maximisation des bénéfices. L'intelligence artificielle au service de votre performance.",
+    "slide_ia_cta": "Découvrir nos plateformes",
+    "slide_pme_badge": "PME · Entreprises · Institutions",
+    "slide_pme_headline": "Votre succès, notre priorité.",
+    "slide_pme_subtitle": "Des solutions IA intelligentes et accessibles pour propulser votre organisation vers l'avenir.",
+    "slide_pme_cta": "Demander une démo",
+    "slide_transfo_badge": "Transformation numérique",
+    "slide_transfo_headline": "Accélérez votre transformation numérique avec des solutions IA concrètes.",
+    "slide_transfo_subtitle": "De l'évaluation initiale au déploiement — CivicAI vous accompagne à chaque étape.",
+    "slide_transfo_cta": "Notre approche",
+    "why_title": "Pourquoi CivicAI ?",
+    "why_tag": "Éditeur logiciel",
+    "why_rows": [
+      { "icon": "⚡", "label": "Déploiement", "value": "En 30 à 90 jours" },
+      { "icon": "🔒", "label": "Sécurité", "value": "Multi-tenant isolé" },
+      { "icon": "📊", "label": "Résultats", "value": "Mesurables & documentés" },
+      { "icon": "🍁", "label": "Origine", "value": "Développé au Québec" }
+    ],
+    "trust_badges": ["Gouvernance IA", "Sécurité certifiée", "Optimisation mesurable", "Entreprise québécoise"]
   },
   "platforms": {
     "title": "Nos plateformes",
@@ -144,6 +169,13 @@
     "company": ["Pourquoi CivicAI", "Innovation", "Carrières", "Contact"],
     "legal": "© 2026 CivicAI Inc. Tous droits réservés.",
     "made": "Développé au Québec, Canada."
+  },
+  "contactForm": {
+    "success_title": "Message envoyé !",
+    "success_body": "Votre demande a bien été reçue. Notre équipe vous répondra dans les 24 à 48 heures.",
+    "success_reset": "Envoyer un autre message",
+    "error_msg": "Une erreur est survenue. Veuillez réessayer ou écrire directement à",
+    "subject": "Nouvelle demande de démonstration — CivicAI"
   },
   "faq": {
     "title": "Questions fréquentes",

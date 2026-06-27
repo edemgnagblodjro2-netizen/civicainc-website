@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -13,6 +14,7 @@ export default function ContactForm({ labels }: {
     submit: string;
   };
 }) {
+  const t = useTranslations("contactForm");
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -25,7 +27,7 @@ export default function ContactForm({ labels }: {
       organization: (form.elements.namedItem("organization") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-      _subject: "Nouvelle demande de démonstration — CivicAI",
+      _subject: t("subject"),
     };
 
     try {
@@ -49,7 +51,6 @@ export default function ContactForm({ labels }: {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center justify-center text-center py-16 px-6 gap-6">
-        {/* Checkmark icon */}
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center"
           style={{ background: "rgba(16,185,129,0.1)", border: "2px solid rgba(16,185,129,0.3)" }}
@@ -63,17 +64,18 @@ export default function ContactForm({ labels }: {
             className="text-xl font-bold text-slate-900 mb-2"
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
           >
-            Message envoyé !
+            {t("success_title")}
           </h3>
           <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-            Votre demande a bien été reçue. Notre équipe vous répondra dans les 24 à 48 heures.
+            {t("success_body")}
           </p>
         </div>
         <button
           onClick={() => setStatus("idle")}
-          className="text-sm font-semibold text-blue-700 hover:underline"
+          className="text-sm font-semibold hover:underline"
+          style={{ color: "#7c3aed" }}
         >
-          Envoyer un autre message
+          {t("success_reset")}
         </button>
       </div>
     );
@@ -89,7 +91,7 @@ export default function ContactForm({ labels }: {
           type="text"
           name="name"
           required
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-400 transition-all"
           placeholder="Marie Tremblay"
         />
       </div>
@@ -101,7 +103,7 @@ export default function ContactForm({ labels }: {
           type="text"
           name="organization"
           required
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-400 transition-all"
           placeholder="Chambre de Commerce de Trois-Rivières"
         />
       </div>
@@ -113,7 +115,7 @@ export default function ContactForm({ labels }: {
           type="email"
           name="email"
           required
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-400 transition-all"
           placeholder="marie@organisation.ca"
         />
       </div>
@@ -124,14 +126,14 @@ export default function ContactForm({ labels }: {
         <textarea
           name="message"
           rows={4}
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all resize-none"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-400 transition-all resize-none"
           placeholder="Décrivez votre organisation et ce que vous cherchez à accomplir…"
         />
       </div>
 
       {status === "error" && (
         <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
-          Une erreur est survenue. Veuillez réessayer ou écrire directement à{" "}
+          {t("error_msg")}{" "}
           <a href="mailto:contact@nexhire.ca" className="underline font-medium">
             contact@nexhire.ca
           </a>.
@@ -150,7 +152,7 @@ export default function ContactForm({ labels }: {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
             </svg>
-            Envoi en cours…
+            {t("success_reset")}
           </>
         ) : labels.submit}
       </button>
