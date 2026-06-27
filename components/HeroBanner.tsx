@@ -80,26 +80,6 @@ const SLIDES: Slide[] = [
     subtitle: "De l'évaluation initiale au déploiement — CivicAI vous accompagne à chaque étape.",
     ctaPrimary: { label: "Notre approche", href: "/pourquoi" },
   },
-  {
-    id: "architec",
-    type: "image",
-    imageSrc: "/slide-architec.png",
-    imageOverlay: "linear-gradient(to right, rgba(3,8,20,0.93) 0%, rgba(3,8,20,0.83) 40%, rgba(3,8,20,0.35) 65%, transparent 85%)",
-    badge: "Architecture IA",
-    headline: "Une infrastructure robuste, sécurisée et évolutive pour votre organisation.",
-    subtitle: "Multi-tenant, conformité garantie, déployé en semaines — pas en années.",
-    ctaPrimary: { label: "Voir nos plateformes", href: "/plateformes" },
-  },
-  {
-    id: "results",
-    type: "image",
-    imageSrc: "/slide-results.jpg",
-    lightBg: true,
-    badge: null,
-    headline: "",
-    subtitle: "",
-    ctaPrimary: { label: "Demander une démo", href: "/contact" },
-  },
 ];
 
 const TRUST_BADGES = [
