@@ -46,10 +46,9 @@ const COMPARE_ROWS = [
 
 export default function WhyCivicAIEditor() {
   const [active, setActive] = useState(0);
-  const pillar = PILLARS[active];
 
   return (
-    <section style={{ background: "#060e1f", padding: "96px 0" }}>
+    <section style={{ background: "#f8fafc", padding: "96px 0" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
 
         {/* Header */}
@@ -62,8 +61,8 @@ export default function WhyCivicAIEditor() {
               letterSpacing: "0.12em",
               textTransform: "uppercase" as const,
               color: "#1857e8",
-              background: "rgba(24,87,232,0.1)",
-              border: "1px solid rgba(24,87,232,0.2)",
+              background: "rgba(24,87,232,0.08)",
+              border: "1px solid rgba(24,87,232,0.18)",
               padding: "4px 14px",
               borderRadius: "100px",
               marginBottom: "18px",
@@ -75,20 +74,20 @@ export default function WhyCivicAIEditor() {
             style={{
               fontSize: "clamp(28px, 3.5vw, 46px)",
               fontWeight: 800,
-              color: "white",
+              color: "#0a1730",
               lineHeight: 1.15,
               fontFamily: "var(--font-poppins), sans-serif",
               maxWidth: "560px",
             }}
           >
             Un éditeur,{" "}
-            <span style={{ color: "rgba(255,255,255,0.35)" }}>pas une agence.</span>
+            <span style={{ color: "#94a3b8" }}>pas une agence.</span>
           </h2>
           <p
             style={{
               marginTop: "16px",
               fontSize: "15px",
-              color: "rgba(255,255,255,0.45)",
+              color: "#64748b",
               maxWidth: "480px",
               lineHeight: 1.7,
             }}
@@ -114,12 +113,12 @@ export default function WhyCivicAIEditor() {
                   overflow: "hidden",
                   borderRadius: "22px",
                   cursor: isActive ? "default" : "pointer",
-                  background: isActive ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.03)",
+                  background: isActive ? "white" : "#f1f5f9",
                   border: isActive
-                    ? `1px solid ${p.accent}50`
-                    : "1px solid rgba(255,255,255,0.07)",
+                    ? `1px solid ${p.accent}40`
+                    : "1px solid #e2e8f0",
                   boxShadow: isActive
-                    ? `0 0 0 1px ${p.accent}20, 0 32px 80px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08)`
+                    ? `0 0 0 1px ${p.accent}15, 0 20px 60px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04)`
                     : "none",
                   transition: `max-width ${EASE}, border-color ${EASE}, box-shadow ${EASE}, background ${EASE}`,
                 }}
@@ -149,7 +148,7 @@ export default function WhyCivicAIEditor() {
                     fontWeight: 900,
                     lineHeight: 1,
                     color: p.accent,
-                    opacity: 0.07,
+                    opacity: 0.06,
                     fontFamily: "var(--font-poppins), sans-serif",
                     userSelect: "none" as const,
                     pointerEvents: "none" as const,
@@ -178,7 +177,7 @@ export default function WhyCivicAIEditor() {
                         height: "7px",
                         borderRadius: "50%",
                         background: p.accent,
-                        boxShadow: `0 0 10px ${p.accent}`,
+                        boxShadow: `0 0 8px ${p.accent}80`,
                       }}
                     />
                     <span
@@ -198,7 +197,7 @@ export default function WhyCivicAIEditor() {
                     style={{
                       fontSize: "32px",
                       fontWeight: 800,
-                      color: "white",
+                      color: "#0a1730",
                       lineHeight: 1.1,
                       marginBottom: "16px",
                       fontFamily: "var(--font-poppins), sans-serif",
@@ -208,7 +207,7 @@ export default function WhyCivicAIEditor() {
                     {p.title}
                   </h3>
 
-                  <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(255,255,255,0.52)", maxWidth: "360px" }}>
+                  <p style={{ fontSize: "15px", lineHeight: 1.8, color: "#64748b", maxWidth: "360px" }}>
                     {p.desc}
                   </p>
 
@@ -223,7 +222,7 @@ export default function WhyCivicAIEditor() {
                             width: j === active ? "22px" : "6px",
                             height: "6px",
                             borderRadius: "3px",
-                            background: j === active ? p.accent : "rgba(255,255,255,0.18)",
+                            background: j === active ? p.accent : "#cbd5e1",
                             border: "none",
                             padding: 0,
                             cursor: "pointer",
@@ -240,9 +239,9 @@ export default function WhyCivicAIEditor() {
                           width: "34px",
                           height: "34px",
                           borderRadius: "50%",
-                          border: "1px solid rgba(255,255,255,0.12)",
-                          background: "rgba(255,255,255,0.05)",
-                          color: active === 0 ? "rgba(255,255,255,0.2)" : "white",
+                          border: "1px solid #e2e8f0",
+                          background: "#f8fafc",
+                          color: active === 0 ? "#cbd5e1" : "#0a1730",
                           cursor: active === 0 ? "not-allowed" : "pointer",
                           display: "flex",
                           alignItems: "center",
@@ -262,8 +261,8 @@ export default function WhyCivicAIEditor() {
                           height: "34px",
                           borderRadius: "50%",
                           border: "none",
-                          background: active === PILLARS.length - 1 ? "rgba(255,255,255,0.06)" : p.accent,
-                          color: active === PILLARS.length - 1 ? "rgba(255,255,255,0.2)" : "white",
+                          background: active === PILLARS.length - 1 ? "#e2e8f0" : p.accent,
+                          color: active === PILLARS.length - 1 ? "#94a3b8" : "white",
                           cursor: active === PILLARS.length - 1 ? "not-allowed" : "pointer",
                           display: "flex",
                           alignItems: "center",
@@ -295,7 +294,7 @@ export default function WhyCivicAIEditor() {
                     pointerEvents: isActive ? "none" : "auto",
                   }}
                 >
-                  <div style={{ width: "3px", height: "28px", background: p.accent, borderRadius: "2px", opacity: 0.65 }} />
+                  <div style={{ width: "3px", height: "28px", background: p.accent, borderRadius: "2px", opacity: 0.5 }} />
                   <span style={{ fontSize: "11px", fontWeight: 800, color: p.accent, letterSpacing: "0.1em" }}>
                     {p.num}
                   </span>
@@ -303,7 +302,7 @@ export default function WhyCivicAIEditor() {
                     style={{
                       fontSize: "11px",
                       fontWeight: 600,
-                      color: "rgba(255,255,255,0.4)",
+                      color: "#94a3b8",
                       writingMode: "vertical-rl" as const,
                       textOrientation: "mixed" as const,
                       transform: "rotate(180deg)",
@@ -331,8 +330,8 @@ export default function WhyCivicAIEditor() {
                   borderRadius: "16px",
                   overflow: "hidden",
                   cursor: "pointer",
-                  border: isActive ? `1px solid ${p.accent}44` : "1px solid rgba(255,255,255,0.07)",
-                  background: isActive ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.03)",
+                  border: isActive ? `1px solid ${p.accent}40` : "1px solid #e2e8f0",
+                  background: isActive ? "white" : "#f1f5f9",
                   transition: "border-color 400ms, background 400ms",
                 }}
               >
@@ -341,12 +340,12 @@ export default function WhyCivicAIEditor() {
                   <span style={{ fontSize: "12px", fontWeight: 700, color: p.accent, flexShrink: 0, letterSpacing: "0.08em" }}>
                     {p.num}
                   </span>
-                  <span style={{ fontSize: "15px", fontWeight: 700, color: "white", flex: 1, fontFamily: "var(--font-poppins), sans-serif" }}>
+                  <span style={{ fontSize: "15px", fontWeight: 700, color: "#0a1730", flex: 1, fontFamily: "var(--font-poppins), sans-serif" }}>
                     {p.title.replace("\n", " ")}
                   </span>
                   <span
                     style={{
-                      color: "rgba(255,255,255,0.3)",
+                      color: "#94a3b8",
                       fontSize: "20px",
                       transform: isActive ? "rotate(45deg)" : "rotate(0deg)",
                       transition: "transform 300ms cubic-bezier(.22,1,.36,1)",
@@ -358,7 +357,7 @@ export default function WhyCivicAIEditor() {
                   </span>
                 </div>
                 <div style={{ maxHeight: isActive ? "200px" : "0", overflow: "hidden", transition: "max-height 500ms cubic-bezier(.22,1,.36,1)" }}>
-                  <p style={{ fontSize: "14px", lineHeight: 1.75, color: "rgba(255,255,255,0.52)", padding: "16px 22px 22px 43px", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+                  <p style={{ fontSize: "14px", lineHeight: 1.75, color: "#64748b", padding: "16px 22px 22px 43px", borderTop: "1px solid #e2e8f0" }}>
                     {p.desc}
                   </p>
                 </div>
@@ -371,27 +370,27 @@ export default function WhyCivicAIEditor() {
         <div
           style={{
             marginTop: "64px",
-            background: "rgba(255,255,255,0.03)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            background: "white",
+            border: "1px solid #e2e8f0",
             borderRadius: "22px",
             padding: "40px",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "28px" }}>
-            <div style={{ height: "1px", flex: 1, background: "rgba(255,255,255,0.07)" }} />
+            <div style={{ height: "1px", flex: 1, background: "#e2e8f0" }} />
             <span
               style={{
                 fontSize: "11px",
                 fontWeight: 700,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase" as const,
-                color: "rgba(255,255,255,0.25)",
+                color: "#94a3b8",
                 whiteSpace: "nowrap",
               }}
             >
               CivicAI vs Agence traditionnelle
             </span>
-            <div style={{ height: "1px", flex: 1, background: "rgba(255,255,255,0.07)" }} />
+            <div style={{ height: "1px", flex: 1, background: "#e2e8f0" }} />
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1.5fr", gap: "10px", marginBottom: "12px", padding: "0 4px" }}>
@@ -399,7 +398,7 @@ export default function WhyCivicAIEditor() {
             <div style={{ textAlign: "center", fontSize: "11px", fontWeight: 700, color: "#1857e8", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
               CivicAI Inc.
             </div>
-            <div style={{ textAlign: "center", fontSize: "11px", fontWeight: 700, color: "rgba(255,255,255,0.25)", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+            <div style={{ textAlign: "center", fontSize: "11px", fontWeight: 700, color: "#94a3b8", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
               Agence
             </div>
           </div>
@@ -410,14 +409,14 @@ export default function WhyCivicAIEditor() {
                 key={row.label}
                 style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1.5fr", gap: "10px", alignItems: "center" }}
               >
-                <span style={{ fontSize: "12px", fontWeight: 600, color: "rgba(255,255,255,0.35)", letterSpacing: "0.04em" }}>
+                <span style={{ fontSize: "12px", fontWeight: 600, color: "#64748b", letterSpacing: "0.04em" }}>
                   {row.label}
                 </span>
                 <div
                   style={{
-                    background: "rgba(24,87,232,0.15)",
-                    border: "1px solid rgba(24,87,232,0.25)",
-                    color: "#6fa3ff",
+                    background: "rgba(24,87,232,0.07)",
+                    border: "1px solid rgba(24,87,232,0.18)",
+                    color: "#1857e8",
                     fontSize: "12px",
                     fontWeight: 600,
                     padding: "8px 14px",
@@ -429,9 +428,9 @@ export default function WhyCivicAIEditor() {
                 </div>
                 <div
                   style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    color: "rgba(255,255,255,0.25)",
+                    background: "#f8fafc",
+                    border: "1px solid #e2e8f0",
+                    color: "#94a3b8",
                     fontSize: "12px",
                     padding: "8px 14px",
                     borderRadius: "10px",
