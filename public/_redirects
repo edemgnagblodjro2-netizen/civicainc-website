@@ -1,1 +1,10 @@
-/  /fr/  302
+# Redirect root to FR locale
+/   /fr/   302
+
+# Redirect non-prefixed pages to FR locale
+/plateformes    /fr/plateformes/    302
+/pourquoi       /fr/pourquoi/       302
+/contact        /fr/contact/        302
+/innovation     /fr/innovation/     302
+/carrieres      /fr/carrieres/      302
+/actualites     /fr/actualites/     302

@@ -48,13 +48,13 @@ export default function Nav({ locale }: { locale: string }) {
 
   const otherLocale = locale === "fr" ? "en" : "fr";
   const switchLang = () => {
+    // usePathname() returns path WITHOUT locale prefix (e.g. "/plateformes")
+    // Pages are always generated at /fr/... and /en/... (static export)
+    const path = pathname === "/" ? "" : pathname;
     if (locale === "fr") {
-      // FR n'a pas de préfixe → EN a /en/
-      window.location.assign(`/en${pathname}`);
+      window.location.assign(`/en${path}`);
     } else {
-      // EN a /en/ → FR n'a pas de préfixe
-      // usePathname() retourne déjà le chemin sans préfixe locale
-      window.location.assign(pathname || "/");
+      window.location.assign(`/fr${path}`);
     }
   };
 
