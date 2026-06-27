@@ -40,15 +40,13 @@ export default async function ContactPage() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
-                  LinkedIn
+                  Téléphone
                 </div>
                 <a
-                  href="https://linkedin.com/company/civicainc"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+19058097798"
                   className="text-blue-700 font-medium hover:underline text-sm"
                 >
-                  linkedin.com/company/civicainc
+                  905 809-7798
                 </a>
               </div>
             </div>
