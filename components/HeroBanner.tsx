@@ -71,14 +71,14 @@ const SLIDES: Slide[] = [
     ctaPrimary: { label: "Demander une démo", href: "/contact" },
   },
   {
-    id: "results",
+    id: "transformation",
     type: "image",
-    imageSrc: "/slide-results.jpg",
-    lightBg: true,
-    badge: null,
-    headline: "",
-    subtitle: "",
-    ctaPrimary: { label: "Demander une démo", href: "/contact" },
+    imageSrc: "/slide-transformation.jpg",
+    imageOverlay: "linear-gradient(to right, rgba(5,10,25,0.92) 0%, rgba(5,10,25,0.82) 40%, rgba(5,10,25,0.3) 65%, transparent 85%)",
+    badge: "Transformation numérique",
+    headline: "Accélérez votre transformation numérique avec des solutions IA concrètes.",
+    subtitle: "De l'évaluation initiale au déploiement — CivicAI vous accompagne à chaque étape.",
+    ctaPrimary: { label: "Notre approche", href: "/pourquoi" },
   },
 ];
 

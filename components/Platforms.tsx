@@ -5,16 +5,18 @@ const PLATFORM_COLORS = [
   { bg: "#1857e8", gradient: "linear-gradient(135deg, #1857e8 0%, #3b82f6 100%)" },
   { bg: "#6366f1", gradient: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)" },
   { bg: "#0891b2", gradient: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)" },
+  { bg: "#059669", gradient: "linear-gradient(135deg, #059669 0%, #10b981 100%)" },
 ];
 
 export default async function Platforms() {
   const t = await getTranslations("platforms");
 
-  const keys = ["agenthub", "nexhire", "attentezero"] as const;
+  const keys = ["agenthub", "nexhire", "attentezero", "nexhire_ca"] as const;
   const hrefs: Record<string, string> = {
     agenthub: "/plateformes#agenthub",
     nexhire: "/plateformes#nexhire",
     attentezero: "/plateformes#attentezero",
+    nexhire_ca: "/plateformes#nexhire-ca",
   };
 
   const platforms = keys.map((key, i) => ({
@@ -55,7 +57,7 @@ export default async function Platforms() {
         </div>
 
         {/* Platform cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {platforms.map((p) => (
             <div
               key={p.id}

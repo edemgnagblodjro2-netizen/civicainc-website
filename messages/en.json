@@ -27,7 +27,7 @@
   },
   "platforms": {
     "title": "Our platforms",
-    "subtitle_heading": "Three platforms. One integrated ecosystem.",
+    "subtitle_heading": "Four platforms. One integrated ecosystem.",
     "subtitle": "Modular, scalable and integrated solutions — built for organizations that demand measurable results.",
     "agenthub": {
       "name": "AgentHub Platform",
@@ -49,6 +49,13 @@
       "desc": "AI-powered community services with geolocation — for municipalities and public organizations.",
       "features": ["Geolocated services", "Native mobile interface", "Municipal integration", "Real-time availability"],
       "cta": "Discover AttenteZéro"
+    },
+    "nexhire_ca": {
+      "name": "NexHire.ca",
+      "tagline": "AI Recruitment Platform",
+      "desc": "Intelligent candidate-employer matching platform. Job postings, application tracking with Kamba, AI profile scoring and professional conversational feed.",
+      "features": ["Job postings & applications", "Integrated Kamba tracking", "AI profile scoring", "Conversational feed & certificates"],
+      "cta": "Discover NexHire.ca"
     }
   },
   "sectors": {
