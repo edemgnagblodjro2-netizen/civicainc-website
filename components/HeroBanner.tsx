@@ -32,7 +32,7 @@ const SLIDES: Slide[] = [
     id: "main",
     type: "image",
     imageSrc: "/slide-hero.jpg",
-    imageOverlay: "linear-gradient(to right, rgba(5,8,20,0.88) 0%, rgba(5,8,20,0.75) 45%, rgba(5,8,20,0.3) 70%, transparent 90%)",
+    imageOverlay: "linear-gradient(to right, rgba(5,8,20,1) 0%, rgba(5,8,20,1) 42%, rgba(5,8,20,0.7) 58%, rgba(5,8,20,0.2) 75%, transparent 90%)",
     badge: null,
     headlineKey: "title",
     subtitleKey: "subtitle",
@@ -46,7 +46,7 @@ const SLIDES: Slide[] = [
     id: "gouvernance",
     type: "image",
     imageSrc: "/slide-gouvernance.jpg",
-    imageOverlay: "linear-gradient(to right, rgba(5,8,20,0.92) 0%, rgba(5,8,20,0.82) 40%, rgba(5,8,20,0.35) 65%, transparent 85%)",
+    imageOverlay: "linear-gradient(to right, rgba(5,8,20,1) 0%, rgba(5,8,20,1) 42%, rgba(5,8,20,0.7) 58%, rgba(5,8,20,0.2) 75%, transparent 90%)",
     badge: "Gouvernance IA",
     headline: "Des pratiques de gouvernance solides pour des organisations plus fiables, agiles et durables.",
     subtitle: "Transparence · Responsabilité · Conformité · Performance",
@@ -56,7 +56,7 @@ const SLIDES: Slide[] = [
     id: "ia-performance",
     type: "image",
     imageSrc: "/slide-ia.jpg",
-    imageOverlay: "linear-gradient(to right, rgba(3,6,15,0.93) 0%, rgba(3,6,15,0.83) 40%, rgba(3,6,15,0.4) 65%, transparent 85%)",
+    imageOverlay: "linear-gradient(to right, rgba(3,6,15,1) 0%, rgba(3,6,15,1) 42%, rgba(3,6,15,0.7) 58%, rgba(3,6,15,0.2) 75%, transparent 90%)",
     badge: "Optimisation & Performance IA",
     headline: "Allez plus rapidement avec l'IA de CivicAI.",
     subtitle: "Réduction de coûts. Maximisation des bénéfices. L'intelligence artificielle au service de votre performance.",
@@ -66,7 +66,7 @@ const SLIDES: Slide[] = [
     id: "pme",
     type: "image",
     imageSrc: "/slide-pme.jpg",
-    imageOverlay: "linear-gradient(to right, rgba(5,10,28,0.92) 0%, rgba(5,10,28,0.82) 40%, rgba(5,10,28,0.3) 65%, transparent 85%)",
+    imageOverlay: "linear-gradient(to right, rgba(5,10,28,1) 0%, rgba(5,10,28,1) 42%, rgba(5,10,28,0.7) 58%, rgba(5,10,28,0.2) 75%, transparent 90%)",
     badge: "PME · Entreprises · Institutions",
     headline: "Votre succès, notre priorité.",
     subtitle: "Des solutions IA intelligentes et accessibles pour propulser votre organisation vers l'avenir.",
@@ -76,7 +76,7 @@ const SLIDES: Slide[] = [
     id: "transformation",
     type: "image",
     imageSrc: "/slide-transformation.jpg",
-    imageOverlay: "linear-gradient(to right, rgba(5,10,25,0.92) 0%, rgba(5,10,25,0.82) 40%, rgba(5,10,25,0.3) 65%, transparent 85%)",
+    imageOverlay: "linear-gradient(to right, rgba(5,10,25,1) 0%, rgba(5,10,25,1) 42%, rgba(5,10,25,0.7) 58%, rgba(5,10,25,0.2) 75%, transparent 90%)",
     badge: "Transformation numérique",
     headline: "Accélérez votre transformation numérique avec des solutions IA concrètes.",
     subtitle: "De l'évaluation initiale au déploiement — CivicAI vous accompagne à chaque étape.",
@@ -156,12 +156,10 @@ export default function HeroBanner() {
   const ctaLabel = slide.ctaPrimary.labelKey ? t(slide.ctaPrimary.labelKey as Parameters<typeof t>[0]) : (slide.ctaPrimary.label ?? "");
   const ctaSecLabel = slide.ctaSecondary?.labelKey ? t(slide.ctaSecondary.labelKey as Parameters<typeof t>[0]) : slide.ctaSecondary?.label;
 
-  const minH = "calc(100vh - 144px)";
-
   return (
     <section
       className="relative overflow-hidden"
-      style={{ height: "calc(100vh - 144px)", minHeight: "560px" }}
+      style={{ height: "100vh", minHeight: "560px" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -173,7 +171,7 @@ export default function HeroBanner() {
             src={slide.imageSrc}
             alt={badge ?? ""}
             fill
-            className="object-cover object-center"
+            className="object-cover object-right"
             sizes="100vw"
             priority={false}
           />
