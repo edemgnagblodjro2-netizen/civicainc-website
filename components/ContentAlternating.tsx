@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 const SECTIONS = [
   {
@@ -14,18 +15,9 @@ const SECTIONS = [
     cta: "Découvrir AgentHub →",
     href: "/plateformes" as const,
     imageRight: false,
+    imageSrc: "/content-agenthub.jpg",
     gradient: "linear-gradient(145deg, #0d1e3a 0%, #1857e8 70%, #6366f1 100%)",
-    svgIcon: (
-      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="opacity-40">
-        <rect x="15" y="30" width="90" height="65" rx="6" stroke="white" strokeWidth="1.5" fill="rgba(255,255,255,0.05)" />
-        <line x1="15" y1="50" x2="105" y2="50" stroke="white" strokeWidth="1" strokeOpacity="0.3" />
-        <rect x="25" y="60" width="25" height="25" rx="3" fill="rgba(255,255,255,0.15)" />
-        <rect x="58" y="60" width="35" height="10" rx="2" fill="rgba(255,255,255,0.2)" />
-        <rect x="58" y="75" width="25" height="10" rx="2" fill="rgba(255,255,255,0.12)" />
-        <circle cx="85" cy="25" r="14" fill="#1857e8" stroke="white" strokeWidth="1.5" />
-        <path d="M79 25 L83 29 L91 21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
+    overlay: "linear-gradient(to right, rgba(13,30,58,0.6) 0%, rgba(24,87,232,0.35) 100%)",
   },
   {
     tag: "PME & Chambres de commerce",
@@ -40,16 +32,9 @@ const SECTIONS = [
     cta: "Voir notre programme →",
     href: "/pourquoi" as const,
     imageRight: true,
+    imageSrc: "/content-pme.jpg",
     gradient: "linear-gradient(145deg, #08253a 0%, #0891b2 70%, #22d3ee 100%)",
-    svgIcon: (
-      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="opacity-40">
-        <rect x="10" y="55" width="30" height="50" rx="3" stroke="white" strokeWidth="1.5" fill="rgba(255,255,255,0.05)" />
-        <rect x="45" y="35" width="30" height="70" rx="3" stroke="white" strokeWidth="1.5" fill="rgba(255,255,255,0.08)" />
-        <rect x="80" y="45" width="30" height="60" rx="3" stroke="white" strokeWidth="1.5" fill="rgba(255,255,255,0.05)" />
-        <path d="M20 45 C35 30 50 22 65 15 C80 8 95 25 105 35" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeOpacity="0.6" />
-        <circle cx="65" cy="15" r="5" fill="white" fillOpacity="0.6" />
-      </svg>
-    ),
+    overlay: "linear-gradient(to right, rgba(8,37,58,0.55) 0%, rgba(8,145,178,0.35) 100%)",
   },
 ];
 
@@ -57,40 +42,58 @@ export default function ContentAlternating() {
   return (
     <section className="w-full">
       {SECTIONS.map((sec) => (
-        <div key={sec.tag} className="grid md:grid-cols-2" style={{ minHeight: "420px" }}>
+        <div key={sec.tag} className="grid md:grid-cols-2" style={{ minHeight: "440px" }}>
 
           {/* Visual panel */}
           <div
-            className={`relative overflow-hidden flex items-center justify-center ${sec.imageRight ? "md:order-2" : "md:order-1"}`}
-            style={{ background: sec.gradient, minHeight: "320px" }}
+            className={`relative overflow-hidden ${sec.imageRight ? "md:order-2" : "md:order-1"}`}
+            style={{ minHeight: "340px" }}
           >
+            {/* Fallback gradient */}
+            <div className="absolute inset-0" style={{ background: sec.gradient }} />
+
+            {/* Real image */}
+            <Image
+              src={sec.imageSrc}
+              alt={sec.tag}
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+
+            {/* Brand overlay */}
+            <div className="absolute inset-0" style={{ background: sec.overlay }} />
+
             {/* Grid overlay */}
             <div
-              className="absolute inset-0 opacity-15"
+              className="absolute inset-0 opacity-10"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px)",
+                  "linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px)",
                 backgroundSize: "32px 32px",
               }}
             />
-            {/* Glow */}
-            <div
-              className="absolute -bottom-12 -right-12 w-64 h-64 pointer-events-none"
-              style={{ background: "radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%)" }}
-            />
-            {/* Icon art */}
-            <div className="relative z-10">
-              {sec.svgIcon}
-            </div>
+
             {/* Tag badge */}
-            <div className="absolute top-6 left-6">
+            <div className="absolute top-6 left-6 z-10">
               <span
                 className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
-                style={{ background: "rgba(255,211,62,0.2)", color: "#ffd23e", border: "1px solid rgba(255,211,62,0.4)" }}
+                style={{
+                  background: "rgba(0,0,0,0.45)",
+                  color: "#ffd23e",
+                  border: "1px solid rgba(255,211,62,0.4)",
+                  backdropFilter: "blur(8px)",
+                }}
               >
                 {sec.tag}
               </span>
             </div>
+
+            {/* Bottom decorative bar */}
+            <div
+              className="absolute bottom-0 inset-x-0 h-1"
+              style={{ background: "linear-gradient(to right, #1857e8, #6366f1)" }}
+            />
           </div>
 
           {/* Text panel */}

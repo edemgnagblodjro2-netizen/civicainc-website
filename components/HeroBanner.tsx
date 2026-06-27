@@ -20,6 +20,7 @@ interface Slide {
   // image slides
   imageSrc?: string;
   imageOverlay?: string;
+  lightBg?: boolean;
   // gradient/svg slides
   gradient?: string;
   glow?: string;
@@ -79,6 +80,16 @@ const SLIDES: Slide[] = [
     gradient: "linear-gradient(145deg, #05080f 0%, #0e0b2a 50%, #2d2a6e 100%)",
     glow: "rgba(99,102,241,0.38)",
     rightVisual: "svg-securite",
+  },
+  {
+    id: "results",
+    type: "image",
+    imageSrc: "/slide-results.jpg",
+    lightBg: true,
+    badge: null,
+    headline: "",
+    subtitle: "",
+    ctaPrimary: { label: "Demander une démo", href: "/contact" },
   },
 ];
 
@@ -175,7 +186,9 @@ export default function HeroBanner() {
             sizes="100vw"
             priority={false}
           />
-          <div className="absolute inset-0" style={{ background: slide.imageOverlay }} />
+          {!slide.lightBg && slide.imageOverlay && (
+            <div className="absolute inset-0" style={{ background: slide.imageOverlay }} />
+          )}
         </>
       ) : (
         <>
@@ -200,34 +213,55 @@ export default function HeroBanner() {
       )}
 
       {/* ── Content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:py-20 flex flex-col" style={{ minHeight: minH }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-14 flex flex-col" style={{ minHeight: minH }}>
 
         {slide.type === "image" ? (
-          /* Full-bleed image slide: text anchored bottom-left */
+          /* Full-bleed image slide */
+          slide.lightBg ? (
+            /* Light-background slide: image has embedded text, show only CTA at bottom */
+            <div className="flex-1 flex items-end justify-center pb-8">
+              <div key={`txt-${animKey}`} style={{ animation: "fadeSlideIn 0.55s ease both" }}>
+                <Link
+                  href={slide.ctaPrimary.href}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white px-7 py-3.5 rounded-full shadow-lg transition-all hover:opacity-90 active:scale-95"
+                  style={{ background: "#1857e8" }}
+                >
+                  {ctaLabel} <span>→</span>
+                </Link>
+              </div>
+            </div>
+          ) : (
+          /* Dark image slide: text anchored left */
           <div className="flex-1 flex items-center">
             <div
               key={`txt-${animKey}`}
               className="max-w-xl"
               style={{ animation: "fadeSlideIn 0.55s ease both" }}
             >
-              <div
-                className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full border text-xs font-semibold text-white/80"
-                style={{ borderColor: "rgba(255,255,255,0.2)", background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)" }}
-              >
-                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#ffd23e", boxShadow: "0 0 6px #ffd23e80" }} />
-                {badge}
-              </div>
+              {badge && (
+                <div
+                  className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full border text-xs font-semibold text-white/80"
+                  style={{ borderColor: "rgba(255,255,255,0.2)", background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)" }}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#ffd23e", boxShadow: "0 0 6px #ffd23e80" }} />
+                  {badge}
+                </div>
+              )}
 
-              <h1
-                className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-5"
-                style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-              >
-                {headline}
-              </h1>
+              {headline && (
+                <h1
+                  className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-5"
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+                >
+                  {headline}
+                </h1>
+              )}
 
-              <p className="text-base lg:text-lg leading-relaxed mb-8 max-w-md" style={{ color: "rgba(255,255,255,0.65)" }}>
-                {subtitle}
-              </p>
+              {subtitle && (
+                <p className="text-base lg:text-lg leading-relaxed mb-8 max-w-md" style={{ color: "rgba(255,255,255,0.65)" }}>
+                  {subtitle}
+                </p>
+              )}
 
               <Link
                 href={slide.ctaPrimary.href}
@@ -238,6 +272,7 @@ export default function HeroBanner() {
               </Link>
             </div>
           </div>
+          )
         ) : (
           /* Gradient slide: 2-column layout */
           <div className="flex-1 grid lg:grid-cols-2 gap-14 items-center">
@@ -356,8 +391,8 @@ export default function HeroBanner() {
           </div>
         )}
 
-        {/* Sector chips — bottom of all slides */}
-        <div className="mt-10 pt-6 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+        {/* Sector chips — bottom of all slides except light-bg */}
+        {!slide.lightBg && <div className="mt-10 pt-6 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
           <p
             className="text-xs uppercase tracking-widest mb-3"
             style={{ color: slide.type === "image" ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.3)" }}
@@ -380,25 +415,33 @@ export default function HeroBanner() {
               </span>
             ))}
           </div>
-        </div>
+        </div>}
       </div>
 
       {/* Prev / Next arrows */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-white/20"
-        style={{ background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.15)", backdropFilter: "blur(6px)" }}
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-all"
+        style={{
+          background: slide.lightBg ? "rgba(255,255,255,0.85)" : "rgba(0,0,0,0.3)",
+          border: slide.lightBg ? "1px solid rgba(0,0,0,0.12)" : "1px solid rgba(255,255,255,0.15)",
+          backdropFilter: "blur(6px)",
+        }}
         aria-label="Précédent"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><polyline points="15 18 9 12 15 6" /></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={slide.lightBg ? "#0a1730" : "white"} strokeWidth="2" strokeLinecap="round"><polyline points="15 18 9 12 15 6" /></svg>
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-white/20"
-        style={{ background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.15)", backdropFilter: "blur(6px)" }}
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-all"
+        style={{
+          background: slide.lightBg ? "rgba(255,255,255,0.85)" : "rgba(0,0,0,0.3)",
+          border: slide.lightBg ? "1px solid rgba(0,0,0,0.12)" : "1px solid rgba(255,255,255,0.15)",
+          backdropFilter: "blur(6px)",
+        }}
         aria-label="Suivant"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><polyline points="9 18 15 12 9 6" /></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={slide.lightBg ? "#0a1730" : "white"} strokeWidth="2" strokeLinecap="round"><polyline points="9 18 15 12 9 6" /></svg>
       </button>
 
       {/* Dots */}
@@ -412,7 +455,9 @@ export default function HeroBanner() {
               width: i === current ? "28px" : "8px",
               height: "8px",
               borderRadius: "4px",
-              background: i === current ? "#ffd23e" : "rgba(255,255,255,0.3)",
+              background: slide.lightBg
+                ? (i === current ? "#1857e8" : "rgba(0,0,0,0.25)")
+                : (i === current ? "#ffd23e" : "rgba(255,255,255,0.3)"),
               transition: "all 0.35s ease",
             }}
           />

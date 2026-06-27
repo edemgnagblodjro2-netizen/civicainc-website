@@ -1,217 +1,217 @@
-{
+﻿{
   "nav": {
     "platforms": "Plateformes",
     "why": "Pourquoi CivicAI",
     "innovation": "Innovation",
-    "careers": "Carrières",
+    "careers": "CarriÃ¨res",
     "contact": "Contact",
-    "demo": "Demander une démo",
+    "demo": "Demander une dÃ©mo",
     "lang": "EN"
   },
   "hero": {
-    "badge": "Éditeur de logiciels IA — Québec, Canada",
-    "title": "Infrastructure IA pour les organisations qui décident.",
-    "subtitle": "CivicAI développe des plateformes d'intelligence artificielle pour les entreprises, les organismes publics et les institutions. Des outils concrets, mesurables et déployables.",
-    "cta1": "Découvrir nos plateformes",
+    "badge": "Ã‰diteur de logiciels IA â€” QuÃ©bec, Canada",
+    "title": "Infrastructure IA pour les organisations qui dÃ©cident.",
+    "subtitle": "CivicAI dÃ©veloppe des plateformes d'intelligence artificielle pour les entreprises, les organismes publics et les institutions. Des outils concrets, mesurables et dÃ©ployables.",
+    "cta1": "DÃ©couvrir nos plateformes",
     "cta2": "Nous contacter",
-    "cta_demo": "Demander une démo",
+    "cta_demo": "Demander une dÃ©mo",
     "cta_platforms": "Voir nos plateformes",
     "sectors_label": "Secteurs servis",
     "panel_title": "Nos plateformes",
     "panel_agenthub_tag": "Intelligence d'entreprise",
-    "panel_agenthub_desc": "Diagnostic IA, observatoire analytique, gouvernance — pour les chambres de commerce et les institutions.",
+    "panel_agenthub_desc": "Diagnostic IA, observatoire analytique, gouvernance â€” pour les chambres de commerce et les institutions.",
     "panel_nexhire_tag": "Gouvernance SaaS",
-    "panel_nexhire_desc": "Optimisation des licences Microsoft 365, détection des coûts cachés, tableau de bord de gouvernance.",
+    "panel_nexhire_desc": "Optimisation des licences Microsoft 365, dÃ©tection des coÃ»ts cachÃ©s, tableau de bord de gouvernance.",
     "panel_attentezero_tag": "Services municipaux IA",
-    "panel_attentezero_desc": "Services communautaires géolocalisés et intelligents pour les municipalités et organismes publics."
+    "panel_attentezero_desc": "Services communautaires gÃ©olocalisÃ©s et intelligents pour les municipalitÃ©s et organismes publics."
   },
   "platforms": {
     "title": "Nos plateformes",
-    "subtitle_heading": "Trois plateformes. Un écosystème intégré.",
-    "subtitle": "Des solutions modulaires, évolutives et intégrées — conçues pour les organisations qui veulent des résultats mesurables.",
+    "subtitle_heading": "Trois plateformes. Un Ã©cosystÃ¨me intÃ©grÃ©.",
+    "subtitle": "Des solutions modulaires, Ã©volutives et intÃ©grÃ©es â€” conÃ§ues pour les organisations qui veulent des rÃ©sultats mesurables.",
     "agenthub": {
       "name": "AgentHub Platform",
       "tagline": "Intelligence d'entreprise",
-      "desc": "Diagnostics de maturité IA, observatoire analytique et gouvernance pour les chambres de commerce, entreprises et institutions. Propulsé par l'agent ATLAS.",
-      "features": ["Parcours IA structuré", "Observatoire analytique", "Connecteurs multi-sources", "Agent ATLAS"],
-      "cta": "Découvrir AgentHub"
+      "desc": "Diagnostics de maturitÃ© IA, observatoire analytique et gouvernance pour les chambres de commerce, entreprises et institutions. PropulsÃ© par l'agent ATLAS.",
+      "features": ["Parcours IA structurÃ©", "Observatoire analytique", "Connecteurs multi-sources", "Agent ATLAS"],
+      "cta": "DÃ©couvrir AgentHub"
     },
     "nexhire": {
       "name": "NexHire EIP",
       "tagline": "Gouvernance SaaS",
-      "desc": "Gouvernance des outils SaaS, optimisation des licences Microsoft 365 et identification des coûts non justifiés pour les organisations.",
-      "features": ["Gouvernance SaaS", "Optimisation Microsoft 365", "Détection des coûts cachés", "Indicateurs de performance"],
-      "cta": "Découvrir NexHire"
+      "desc": "Gouvernance des outils SaaS, optimisation des licences Microsoft 365 et identification des coÃ»ts non justifiÃ©s pour les organisations.",
+      "features": ["Gouvernance SaaS", "Optimisation Microsoft 365", "DÃ©tection des coÃ»ts cachÃ©s", "Indicateurs de performance"],
+      "cta": "DÃ©couvrir NexHire"
     },
     "attentezero": {
-      "name": "AttenteZéro",
+      "name": "AttenteZÃ©ro",
       "tagline": "Services municipaux IA",
-      "desc": "Services communautaires alimentés par l'IA et la géolocalisation — pour les municipalités et organismes publics.",
-      "features": ["Services géolocalisés", "Interface mobile native", "Intégration municipale", "Disponibilité en temps réel"],
-      "cta": "Découvrir AttenteZéro"
+      "desc": "Services communautaires alimentÃ©s par l'IA et la gÃ©olocalisation â€” pour les municipalitÃ©s et organismes publics.",
+      "features": ["Services gÃ©olocalisÃ©s", "Interface mobile native", "IntÃ©gration municipale", "DisponibilitÃ© en temps rÃ©el"],
+      "cta": "DÃ©couvrir AttenteZÃ©ro"
     }
   },
   "sectors": {
     "title": "Secteurs servis",
-    "subtitle": "CivicAI intervient dans les organisations publiques et privées à travers le Québec et le Canada.",
+    "subtitle": "CivicAI intervient dans les organisations publiques et privÃ©es Ã  travers le QuÃ©bec et le Canada.",
     "items": [
       { "icon": "", "label": "Chambres de commerce" },
       { "icon": "", "label": "Entreprises" },
-      { "icon": "", "label": "Municipalités" },
+      { "icon": "", "label": "MunicipalitÃ©s" },
       { "icon": "", "label": "Organismes publics" },
-      { "icon": "", "label": "Éducation" },
+      { "icon": "", "label": "Ã‰ducation" },
       { "icon": "", "label": "Manufacturiers" }
     ]
   },
   "approach": {
     "title": "Notre approche",
-    "subtitle": "Un processus structuré, de l'évaluation initiale à l'ancrage durable.",
+    "subtitle": "Un processus structurÃ©, de l'Ã©valuation initiale Ã  l'ancrage durable.",
     "steps": [
-      { "num": "01", "title": "Découvrir", "desc": "Diagnostic de maturité IA et analyse complète de l'organisation." },
-      { "num": "02", "title": "Analyser", "desc": "Identification des opportunités et des zones d'amélioration prioritaires." },
-      { "num": "03", "title": "Automatiser", "desc": "Déploiement des outils IA adaptés aux processus et aux équipes." },
+      { "num": "01", "title": "DÃ©couvrir", "desc": "Diagnostic de maturitÃ© IA et analyse complÃ¨te de l'organisation." },
+      { "num": "02", "title": "Analyser", "desc": "Identification des opportunitÃ©s et des zones d'amÃ©lioration prioritaires." },
+      { "num": "03", "title": "Automatiser", "desc": "DÃ©ploiement des outils IA adaptÃ©s aux processus et aux Ã©quipes." },
       { "num": "04", "title": "Mesurer", "desc": "Suivi des indicateurs de performance et calcul du retour sur investissement." },
-      { "num": "05", "title": "Transformer", "desc": "Ancrage durable de l'IA dans la culture et les opérations de l'organisation." }
+      { "num": "05", "title": "Transformer", "desc": "Ancrage durable de l'IA dans la culture et les opÃ©rations de l'organisation." }
     ]
   },
   "why": {
     "label": "Pourquoi CivicAI",
     "title": "Une infrastructure IA construite pour durer.",
-    "subtitle": "Nous ne sommes pas une agence de conseil. Nous sommes un éditeur de logiciels — avec des produits documentés, maintenus et évolutifs.",
+    "subtitle": "Nous ne sommes pas une agence de conseil. Nous sommes un Ã©diteur de logiciels â€” avec des produits documentÃ©s, maintenus et Ã©volutifs.",
     "pillars": [
       {
         "num": "01",
-        "title": "Infrastructure québécoise",
-        "desc": "Développé à Trois-Rivières, pour les organisations québécoises et canadiennes. Nos équipes comprennent le cadre réglementaire local, les réalités du secteur public et les enjeux des PME régionales."
+        "title": "Infrastructure quÃ©bÃ©coise",
+        "desc": "DÃ©veloppÃ© Ã  Trois-RiviÃ¨res, pour les organisations quÃ©bÃ©coises et canadiennes. Nos Ã©quipes comprennent le cadre rÃ©glementaire local, les rÃ©alitÃ©s du secteur public et les enjeux des PME rÃ©gionales."
       },
       {
         "num": "02",
         "title": "Architecture multi-tenant",
-        "desc": "Conçu pour être déployé à grande échelle — dans une chambre, une ville, un réseau d'organisations. Chaque client dispose d'un environnement isolé, sécurisé et évolutif sans intervention manuelle."
+        "desc": "ConÃ§u pour Ãªtre dÃ©ployÃ© Ã  grande Ã©chelle â€” dans une chambre, une ville, un rÃ©seau d'organisations. Chaque client dispose d'un environnement isolÃ©, sÃ©curisÃ© et Ã©volutif sans intervention manuelle."
       },
       {
         "num": "03",
-        "title": "IA mesurable, pas expérimentale",
-        "desc": "Chaque déploiement inclut des indicateurs de maturité, de performance et de gouvernance. L'intelligence artificielle chez CivicAI est une livraison documentée — pas une promesse de transformation."
+        "title": "IA mesurable, pas expÃ©rimentale",
+        "desc": "Chaque dÃ©ploiement inclut des indicateurs de maturitÃ©, de performance et de gouvernance. L'intelligence artificielle chez CivicAI est une livraison documentÃ©e â€” pas une promesse de transformation."
       }
     ]
   },
   "vision": {
     "label": "Notre vision",
-    "quote": "Nous croyons que l'intelligence artificielle doit devenir un outil concret au service des organisations. Notre mission est de créer des plateformes qui permettent aux entreprises, aux institutions publiques et aux organismes de mieux comprendre leurs données, d'automatiser leurs processus et de prendre de meilleures décisions.",
-    "author": "CivicAI Inc. — Trois-Rivières, Québec"
+    "quote": "Nous croyons que l'intelligence artificielle doit devenir un outil concret au service des organisations. Notre mission est de crÃ©er des plateformes qui permettent aux entreprises, aux institutions publiques et aux organismes de mieux comprendre leurs donnÃ©es, d'automatiser leurs processus et de prendre de meilleures dÃ©cisions.",
+    "author": "CivicAI Inc. â€” Trois-RiviÃ¨res, QuÃ©bec"
   },
   "markets": {
-    "label": "Marchés",
-    "title": "Conçu pour les organisations qui ont une responsabilité collective.",
-    "subtitle": "Nos plateformes s'adressent aux institutions qui ont besoin d'outils à la hauteur de leurs enjeux opérationnels et de gouvernance.",
+    "label": "MarchÃ©s",
+    "title": "ConÃ§u pour les organisations qui ont une responsabilitÃ© collective.",
+    "subtitle": "Nos plateformes s'adressent aux institutions qui ont besoin d'outils Ã  la hauteur de leurs enjeux opÃ©rationnels et de gouvernance.",
     "cta": "Planifier une rencontre",
     "items": [
       {
         "title": "Chambres de commerce et associations d'affaires",
-        "desc": "Programmes d'accélération IA pour les membres, observatoires sectoriels, tableaux de bord d'accompagnement et diagnostic de maturité organisationnelle."
+        "desc": "Programmes d'accÃ©lÃ©ration IA pour les membres, observatoires sectoriels, tableaux de bord d'accompagnement et diagnostic de maturitÃ© organisationnelle."
       },
       {
-        "title": "Municipalités et organismes publics",
-        "desc": "Services géolocalisés intelligents, intégration aux systèmes existants, gouvernance des données et conformité aux exigences du secteur public."
+        "title": "MunicipalitÃ©s et organismes publics",
+        "desc": "Services gÃ©olocalisÃ©s intelligents, intÃ©gration aux systÃ¨mes existants, gouvernance des donnÃ©es et conformitÃ© aux exigences du secteur public."
       },
       {
         "title": "Entreprises et PME en transformation",
-        "desc": "Gouvernance des outils SaaS, optimisation des licences, diagnostic IA et accompagnement structuré vers l'automatisation des opérations."
+        "desc": "Gouvernance des outils SaaS, optimisation des licences, diagnostic IA et accompagnement structurÃ© vers l'automatisation des opÃ©rations."
       }
     ]
   },
   "cta": {
-    "title": "Prêt à passer à l'action ?",
-    "subtitle": "Discutez de vos enjeux avec notre équipe. Aucun engagement — une conversation de 30 minutes suffit pour évaluer la pertinence d'un déploiement.",
-    "btn1": "Planifier une démonstration",
-    "btn2": "Nous écrire"
+    "title": "PrÃªt Ã  passer Ã  l'action ?",
+    "subtitle": "Discutez de vos enjeux avec notre Ã©quipe. Aucun engagement â€” une conversation de 30 minutes suffit pour Ã©valuer la pertinence d'un dÃ©ploiement.",
+    "btn1": "Planifier une dÃ©monstration",
+    "btn2": "Nous Ã©crire"
   },
   "footer": {
     "tagline": "Plateformes d'intelligence artificielle pour les organisations.",
     "platforms_title": "Plateformes",
     "company_title": "Entreprise",
-    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZéro"],
-    "company": ["Pourquoi CivicAI", "Innovation", "Carrières", "Contact"],
-    "legal": "© 2026 CivicAI Inc. Tous droits réservés.",
-    "made": "Développé au Québec, Canada."
+    "platforms": ["AgentHub Platform", "NexHire EIP", "AttenteZÃ©ro"],
+    "company": ["Pourquoi CivicAI", "Innovation", "CarriÃ¨res", "Contact"],
+    "legal": "Â© 2026 CivicAI Inc. Tous droits rÃ©servÃ©s.",
+    "made": "DÃ©veloppÃ© au QuÃ©bec, Canada."
   },
   "faq": {
-    "title": "Questions fréquentes",
+    "title": "Questions frÃ©quentes",
     "subtitle": "Tout ce que vous devez savoir avant de nous contacter.",
     "items": [
       {
-        "q": "À quels types d'organisations s'adressent vos plateformes ?",
-        "a": "Nos plateformes s'adressent aux chambres de commerce, aux municipalités, aux entreprises en transformation numérique et aux organismes publics. Toute organisation ayant des enjeux de gouvernance IA, d'optimisation SaaS ou de services à la communauté peut bénéficier de nos solutions."
+        "q": "Ã€ quels types d'organisations s'adressent vos plateformes ?",
+        "a": "Nos plateformes s'adressent aux chambres de commerce, aux municipalitÃ©s, aux entreprises en transformation numÃ©rique et aux organismes publics. Toute organisation ayant des enjeux de gouvernance IA, d'optimisation SaaS ou de services Ã  la communautÃ© peut bÃ©nÃ©ficier de nos solutions."
       },
       {
-        "q": "Comment se passe un déploiement ?",
-        "a": "Nous commençons par un diagnostic de maturité IA. Ensuite, nous vous proposons un plan de déploiement adapté à votre contexte. Nos plateformes sont modulaires et peuvent être déployées progressivement, sans perturber vos opérations."
+        "q": "Comment se passe un dÃ©ploiement ?",
+        "a": "Nous commenÃ§ons par un diagnostic de maturitÃ© IA. Ensuite, nous vous proposons un plan de dÃ©ploiement adaptÃ© Ã  votre contexte. Nos plateformes sont modulaires et peuvent Ãªtre dÃ©ployÃ©es progressivement, sans perturber vos opÃ©rations."
       },
       {
         "q": "Vos plateformes sont-elles compatibles avec Microsoft 365 ?",
-        "a": "Oui. NexHire EIP est spécifiquement conçu pour s'intégrer à l'écosystème Microsoft 365. AgentHub Platform inclut également des connecteurs multi-sources compatibles avec les environnements Microsoft."
+        "a": "Oui. NexHire EIP est spÃ©cifiquement conÃ§u pour s'intÃ©grer Ã  l'Ã©cosystÃ¨me Microsoft 365. AgentHub Platform inclut Ã©galement des connecteurs multi-sources compatibles avec les environnements Microsoft."
       },
       {
-        "q": "Êtes-vous basés au Québec ?",
-        "a": "Oui, CivicAI Inc. est basée à Trois-Rivières, Québec. Nos équipes comprennent le cadre réglementaire québécois et les spécificités du marché local, tout en intervenant à l'échelle canadienne."
+        "q": "ÃŠtes-vous basÃ©s au QuÃ©bec ?",
+        "a": "Oui, CivicAI Inc. est basÃ©e Ã  Trois-RiviÃ¨res, QuÃ©bec. Nos Ã©quipes comprennent le cadre rÃ©glementaire quÃ©bÃ©cois et les spÃ©cificitÃ©s du marchÃ© local, tout en intervenant Ã  l'Ã©chelle canadienne."
       },
       {
-        "q": "Comment est assurée la sécurité des données ?",
-        "a": "Nos plateformes utilisent une architecture multi-tenant avec isolation complète des données entre les clients. Chaque déploiement bénéficie d'environnements sécurisés, conformes aux exigences du secteur public québécois."
+        "q": "Comment est assurÃ©e la sÃ©curitÃ© des donnÃ©es ?",
+        "a": "Nos plateformes utilisent une architecture multi-tenant avec isolation complÃ¨te des donnÃ©es entre les clients. Chaque dÃ©ploiement bÃ©nÃ©ficie d'environnements sÃ©curisÃ©s, conformes aux exigences du secteur public quÃ©bÃ©cois."
       }
     ]
   },
   "pages": {
     "platforms": {
       "title": "Nos plateformes",
-      "subtitle": "Trois plateformes complémentaires pour couvrir l'ensemble des besoins en intelligence artificielle des organisations."
+      "subtitle": "Trois plateformes complÃ©mentaires pour couvrir l'ensemble des besoins en intelligence artificielle des organisations."
     },
     "why": {
       "title": "Pourquoi CivicAI ?",
-      "subtitle": "Nous ne sommes pas une agence. Nous sommes un éditeur de logiciels.",
-      "editor_title": "Un éditeur, pas une agence",
-      "editor_body": "CivicAI conçoit, développe et maintient ses propres plateformes logicielles. Nos clients obtiennent un produit éprouvé, pas un projet sur mesure fragile.",
+      "subtitle": "Nous ne sommes pas une agence. Nous sommes un Ã©diteur de logiciels.",
+      "editor_title": "Un Ã©diteur, pas une agence",
+      "editor_body": "CivicAI conÃ§oit, dÃ©veloppe et maintient ses propres plateformes logicielles. Nos clients obtiennent un produit Ã©prouvÃ©, pas un projet sur mesure fragile.",
       "values": [
-        { "title": "Plateformes, pas projets", "desc": "Nos produits sont testés, documentés et maintenus en continu." },
-        { "title": "IA embarquée", "desc": "L'intelligence artificielle est au cœur de chaque plateforme, pas un ajout." },
-        { "title": "Résultats mesurables", "desc": "Chaque déploiement inclut des indicateurs de performance et un suivi rigoureux." },
-        { "title": "Développé au Québec", "desc": "Une entreprise locale, des équipes accessibles, un accompagnement humain." }
+        { "title": "Plateformes, pas projets", "desc": "Nos produits sont testÃ©s, documentÃ©s et maintenus en continu." },
+        { "title": "IA embarquÃ©e", "desc": "L'intelligence artificielle est au cÅ“ur de chaque plateforme, pas un ajout." },
+        { "title": "RÃ©sultats mesurables", "desc": "Chaque dÃ©ploiement inclut des indicateurs de performance et un suivi rigoureux." },
+        { "title": "DÃ©veloppÃ© au QuÃ©bec", "desc": "Une entreprise locale, des Ã©quipes accessibles, un accompagnement humain." }
       ]
     },
     "innovation": {
       "title": "Innovation",
-      "subtitle": "Les projets qui définissent l'avenir de CivicAI.",
+      "subtitle": "Les projets qui dÃ©finissent l'avenir de CivicAI.",
       "projects": [
         { "name": "AgentHub Platform", "status": "Actif", "desc": "Plateforme IA pour chambres de commerce et entreprises." },
         { "name": "NexHire EIP", "status": "Actif", "desc": "Intelligence d'entreprise et gouvernance SaaS." },
-        { "name": "AttenteZéro", "status": "En développement", "desc": "Services communautaires intelligents pour les municipalités." },
-        { "name": "Observatoire IA", "status": "Actif", "desc": "Tableau de bord analytique de maturité IA." },
+        { "name": "AttenteZÃ©ro", "status": "En dÃ©veloppement", "desc": "Services communautaires intelligents pour les municipalitÃ©s." },
+        { "name": "Observatoire IA", "status": "Actif", "desc": "Tableau de bord analytique de maturitÃ© IA." },
         { "name": "ATLAS Agent", "status": "Actif", "desc": "Agent IA conversationnel pour l'accompagnement organisationnel." },
-        { "name": "Parcours IA PME", "status": "Actif", "desc": "Programme structuré de transformation IA pour les PME." }
+        { "name": "Parcours IA PME", "status": "Actif", "desc": "Programme structurÃ© de transformation IA pour les PME." }
       ]
     },
     "careers": {
-      "title": "Carrières",
-      "subtitle": "Rejoignez CivicAI et contribuez à transformer les organisations par l'intelligence artificielle.",
-      "opening": "Nous recrutons activement. Envoyez votre candidature à",
-      "email": "carrieres@civicainc.ca",
+      "title": "CarriÃ¨res",
+      "subtitle": "Rejoignez CivicAI et contribuez Ã  transformer les organisations par l'intelligence artificielle.",
+      "opening": "Nous recrutons activement. Envoyez votre candidature Ã ",
+      "email": "contact@nexhire.ca",
       "roles": [
-        { "title": "Développeur·euse Full Stack", "type": "Temps plein", "location": "Trois-Rivières / Remote" },
-        { "title": "Architecte IA", "type": "Temps plein", "location": "Trois-Rivières / Remote" },
-        { "title": "Chargé·e de compte — Secteur public", "type": "Temps plein", "location": "Québec" }
+        { "title": "DÃ©veloppeurÂ·euse Full Stack", "type": "Temps plein", "location": "Trois-RiviÃ¨res / Remote" },
+        { "title": "Architecte IA", "type": "Temps plein", "location": "Trois-RiviÃ¨res / Remote" },
+        { "title": "ChargÃ©Â·e de compte â€” Secteur public", "type": "Temps plein", "location": "QuÃ©bec" }
       ]
     },
     "contact": {
-      "title": "Demander une démonstration",
-      "subtitle": "Découvrez AgentHub Platform ou NexHire EIP en action. Une démonstration personnalisée, sans engagement.",
+      "title": "Demander une dÃ©monstration",
+      "subtitle": "DÃ©couvrez AgentHub Platform ou NexHire EIP en action. Une dÃ©monstration personnalisÃ©e, sans engagement.",
       "name": "Nom complet",
       "org": "Organisation",
       "email": "Adresse courriel",
       "message": "Votre message (optionnel)",
       "submit": "Envoyer la demande",
       "or": "Ou contactez-nous directement",
-      "address": "Trois-Rivières, Québec, Canada"
+      "address": "Trois-RiviÃ¨res, QuÃ©bec, Canada"
     }
   }
 }
