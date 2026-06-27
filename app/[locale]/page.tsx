@@ -1,5 +1,4 @@
-import Hero from "@/components/Hero";
-import HeroSlider from "@/components/HeroSlider";
+import HeroBanner from "@/components/HeroBanner";
 import Platforms from "@/components/Platforms";
 import SplitPromo from "@/components/SplitPromo";
 import Sectors from "@/components/Sectors";
@@ -15,8 +14,7 @@ import ContactCTA from "@/components/ContactCTA";
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <HeroSlider />
+      <HeroBanner />
       <Platforms />
       <SplitPromo />
       <Sectors />
