@@ -2,11 +2,11 @@ import { Link } from "@/i18n/navigation";
 
 const NEWS = [
   {
-    badge: "Communiqué de presse",
+    badge: "Lancement",
     badgeColor: "#0a1730",
-    title: "CivicAI s'associe avec la Chambre de commerce de Trois-Rivières pour accélérer la transformation IA des PME québécoises",
+    title: "CivicAI dévoile AgentHub Platform — une solution de gouvernance IA conçue pour les chambres de commerce et les PME québécoises",
     date: "24 juin 2026",
-    href: "/contact" as const,
+    href: "/plateformes" as const,
   },
   {
     badge: "Mise à jour produit",
@@ -16,11 +16,11 @@ const NEWS = [
     href: "/plateformes" as const,
   },
   {
-    badge: "Reconnaissance",
+    badge: "Entreprise",
     badgeColor: "#0891b2",
-    title: "CivicAI sélectionnée parmi les entreprises technologiques québécoises à surveiller en 2026 par le réseau IA Québec",
+    title: "CivicAI Inc. officiellement constituée et enregistrée au Registre des entreprises du Québec — Une firme 100% québécoise dédiée à l'IA responsable",
     date: "3 juin 2026",
-    href: "/innovation" as const,
+    href: "/pourquoi" as const,
   },
 ];
 
