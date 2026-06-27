@@ -4,8 +4,8 @@ export default async function ContactPage() {
   const t = await getTranslations("pages.contact");
 
   return (
-    <section className="bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+    <section className="bg-white min-h-screen" style={{ paddingTop: "144px" }}>
+      <div className="max-w-7xl mx-auto px-6 pb-20">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left */}
           <div>

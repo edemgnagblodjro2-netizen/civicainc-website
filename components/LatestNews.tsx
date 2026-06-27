@@ -6,21 +6,21 @@ const NEWS = [
     badgeColor: "#0a1730",
     title: "CivicAI dévoile AgentHub Platform — une solution de gouvernance IA conçue pour les chambres de commerce et les PME québécoises",
     date: "24 juin 2026",
-    href: "/plateformes" as const,
+    href: "/actualites" as const,
   },
   {
     badge: "Mise à jour produit",
     badgeColor: "#1857e8",
     title: "AgentHub Platform 2.0 — Nouveau tableau de bord de gouvernance IA avec gestion multi-tenant et rapports d'impact automatisés",
     date: "15 juin 2026",
-    href: "/plateformes" as const,
+    href: "/actualites" as const,
   },
   {
     badge: "Entreprise",
     badgeColor: "#0891b2",
     title: "CivicAI Inc. officiellement constituée et enregistrée au Registre des entreprises du Québec — Une firme 100% québécoise dédiée à l'IA responsable",
     date: "3 juin 2026",
-    href: "/pourquoi" as const,
+    href: "/actualites" as const,
   },
 ];
 

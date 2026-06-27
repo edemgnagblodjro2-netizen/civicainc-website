@@ -27,9 +27,9 @@ export default async function Partners() {
           {items.map((item, i) => {
             const color = MARKET_COLORS[i % MARKET_COLORS.length];
             return (
-              <div key={item.title} className="bg-slate-50 rounded-2xl p-7 hover:shadow-md transition-shadow">
+              <div key={item.title} className="bg-slate-50 rounded-2xl p-7 hover:shadow-md transition-shadow text-center">
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 font-bold text-xl text-white flex-shrink-0"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 font-bold text-xl text-white mx-auto"
                   style={{ background: color }}
                 >
                   {["🏛", "🏙", "🏢"][i]}
@@ -40,7 +40,7 @@ export default async function Partners() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-slate-500 text-sm leading-relaxed text-left">{item.desc}</p>
               </div>
             );
           })}

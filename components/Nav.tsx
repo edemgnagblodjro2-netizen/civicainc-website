@@ -74,6 +74,7 @@ export default function Nav({ locale }: { locale: string }) {
   const otherLinks = [
     { href: "/pourquoi" as const, label: t("why") },
     { href: "/innovation" as const, label: t("innovation") },
+    { href: "/actualites" as const, label: t("actualites") },
     { href: "/carrieres" as const, label: t("careers") },
     { href: "/contact" as const, label: t("contact") },
   ];
