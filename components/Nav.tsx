@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
 
 const PLATFORMS_MENU = [
@@ -35,7 +35,6 @@ const PLATFORMS_MENU = [
 export default function Nav({ locale }: { locale: string }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
-  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -48,7 +47,11 @@ export default function Nav({ locale }: { locale: string }) {
   }, []);
 
   const otherLocale = locale === "fr" ? "en" : "fr";
-  const switchLang = () => router.push(pathname, { locale: otherLocale as "fr" | "en" });
+  const switchLang = () => {
+    const path = window.location.pathname;
+    const newPath = path.replace(/^\/(fr|en)(\/|$)/, `/${otherLocale}$2`);
+    window.location.assign(newPath || `/${otherLocale}/`);
+  };
 
   const openMenu = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
