@@ -30,7 +30,9 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: "main",
-    type: "hero",
+    type: "image",
+    imageSrc: "/slide-hero.jpg",
+    imageOverlay: "linear-gradient(to right, rgba(5,8,20,0.88) 0%, rgba(5,8,20,0.75) 45%, rgba(5,8,20,0.3) 70%, transparent 90%)",
     badge: null,
     headlineKey: "title",
     subtitleKey: "subtitle",
