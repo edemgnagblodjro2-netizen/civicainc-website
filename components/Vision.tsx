@@ -6,14 +6,8 @@ export default async function Vision() {
   return (
     <section
       className="relative overflow-hidden py-20 px-6"
-      style={{ background: "linear-gradient(135deg, #0f0600 0%, #1c0a00 45%, #100800 100%)" }}
+      style={{ background: "#ffffff" }}
     >
-      {/* Subtle ambient glow */}
-      <div
-        className="absolute top-0 left-0 w-96 h-96 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%)" }}
-      />
-
       <div className="relative max-w-5xl mx-auto">
         {/* Label */}
         <div className="flex items-center gap-2.5 mb-7">
@@ -22,7 +16,7 @@ export default async function Vision() {
           </svg>
           <span
             className="text-sm font-semibold uppercase tracking-widest"
-            style={{ color: "rgba(255,255,255,0.55)" }}
+            style={{ color: "rgba(10,23,48,0.45)" }}
           >
             {t("label")} :
           </span>
@@ -30,19 +24,19 @@ export default async function Vision() {
 
         {/* Headline */}
         <h2
-          className="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-none tracking-tight mb-8 text-white"
-          style={{ fontFamily: "var(--font-poppins), sans-serif", letterSpacing: "-0.02em" }}
+          className="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-none tracking-tight mb-8"
+          style={{ fontFamily: "var(--font-poppins), sans-serif", letterSpacing: "-0.02em", color: "#0a1730" }}
         >
           {t("headline")}
         </h2>
 
         {/* Divider */}
-        <div className="border-t mb-8" style={{ borderColor: "rgba(255,255,255,0.12)" }} />
+        <div className="border-t mb-8" style={{ borderColor: "rgba(10,23,48,0.12)" }} />
 
         {/* Body */}
         <p
           className="text-base lg:text-lg leading-relaxed max-w-3xl"
-          style={{ color: "rgba(255,255,255,0.65)" }}
+          style={{ color: "rgba(10,23,48,0.6)" }}
         >
           {t("quote")}
         </p>
@@ -50,7 +44,7 @@ export default async function Vision() {
         {/* Author */}
         <p
           className="mt-8 text-sm font-medium"
-          style={{ color: "rgba(255,255,255,0.3)" }}
+          style={{ color: "rgba(10,23,48,0.35)" }}
         >
           — {t("author")}
         </p>
