@@ -314,46 +314,50 @@ export default function HeroBanner() {
               style={{ animation: "fadeSlideIn 0.6s ease both" }}
             >
               {slide.rightVisual === "testimonial" ? (
-                <div className="flex flex-col items-end gap-5 w-full max-w-sm">
-                  {/* Testimonial card */}
-                  <div className="w-full rounded-2xl overflow-hidden shadow-2xl">
+                <div className="flex flex-col gap-4 w-full max-w-sm">
+
+                  {/* Value proposition card */}
+                  <div
+                    className="w-full rounded-2xl overflow-hidden shadow-2xl"
+                    style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}
+                  >
+                    {/* Card header */}
                     <div
-                      className="h-44 relative flex flex-col items-center justify-end pb-4"
-                      style={{ background: "linear-gradient(150deg, #1e3a5f 0%, #1857e8 60%, #6366f1 100%)" }}
+                      className="px-6 py-4 flex items-center justify-between"
+                      style={{ background: "linear-gradient(135deg, #0d1e3a 0%, #1857e8 100%)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
                     >
-                      <div
-                        className="absolute inset-0 opacity-20"
-                        style={{
-                          backgroundImage: "linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px)",
-                          backgroundSize: "24px 24px",
-                        }}
-                      />
-                      <div className="relative z-10">
-                        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
-                          <circle cx="44" cy="30" r="18" fill="rgba(255,255,255,0.22)" />
-                          <path d="M6 88 C6 62 22 54 44 54 C66 54 82 62 82 88" fill="rgba(255,255,255,0.16)" />
-                        </svg>
-                      </div>
-                      <div
-                        className="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full"
+                      <span className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                        Pourquoi CivicAI ?
+                      </span>
+                      <span
+                        className="text-xs font-semibold px-2.5 py-1 rounded-full"
                         style={{ background: "rgba(255,211,62,0.15)", color: "#ffd23e", border: "1px solid rgba(255,211,62,0.3)" }}
                       >
-                        CCI Régionale
-                      </div>
+                        Éditeur logiciel
+                      </span>
                     </div>
-                    <div className="p-5" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                      <p className="text-white/80 text-sm leading-relaxed mb-4 italic">
-                        &ldquo;La gouvernance IA de CivicAI nous a permis de reprendre le contrôle de nos outils SaaS et de réduire nos coûts de licence en moins de 90 jours.&rdquo;
-                      </p>
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0" style={{ background: "#1857e8" }}>MC</div>
-                        <div>
-                          <p className="text-white text-xs font-semibold">Marie-Claude T.</p>
-                          <p className="text-white/40 text-xs">Directrice numérique — Chambre de commerce</p>
+
+                    {/* Feature rows */}
+                    {[
+                      { icon: "⚡", label: "Déploiement", value: "En 30 à 90 jours" },
+                      { icon: "🔒", label: "Sécurité", value: "Multi-tenant isolé" },
+                      { icon: "📊", label: "Résultats", value: "Mesurables & documentés" },
+                      { icon: "🍁", label: "Origine", value: "Développé au Québec" },
+                    ].map((row) => (
+                      <div
+                        key={row.label}
+                        className="flex items-center justify-between px-6 py-3"
+                        style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span className="text-base leading-none">{row.icon}</span>
+                          <span className="text-white/50 text-xs font-medium">{row.label}</span>
                         </div>
+                        <span className="text-white text-xs font-semibold">{row.value}</span>
                       </div>
-                    </div>
+                    ))}
                   </div>
+
                   {/* Trust badges */}
                   <div className="grid grid-cols-2 gap-2.5 w-full">
                     {TRUST_BADGES.map((b) => (
