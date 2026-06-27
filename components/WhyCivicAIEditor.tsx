@@ -380,9 +380,9 @@ export default function WhyCivicAIEditor() {
             <div style={{ height: "1px", flex: 1, background: "#e2e8f0" }} />
             <span
               style={{
-                fontSize: "11px",
+                fontSize: "12px",
                 fontWeight: 700,
-                letterSpacing: "0.12em",
+                letterSpacing: "0.10em",
                 textTransform: "uppercase" as const,
                 color: "#94a3b8",
                 whiteSpace: "nowrap",
@@ -393,12 +393,12 @@ export default function WhyCivicAIEditor() {
             <div style={{ height: "1px", flex: 1, background: "#e2e8f0" }} />
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1.5fr", gap: "10px", marginBottom: "12px", padding: "0 4px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1.5fr", gap: "10px", marginBottom: "14px", padding: "0 4px" }}>
             <div />
-            <div style={{ textAlign: "center", fontSize: "11px", fontWeight: 700, color: "#1857e8", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+            <div style={{ textAlign: "center", fontSize: "13px", fontWeight: 700, color: "#1857e8", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>
               CivicAI Inc.
             </div>
-            <div style={{ textAlign: "center", fontSize: "11px", fontWeight: 700, color: "#94a3b8", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+            <div style={{ textAlign: "center", fontSize: "13px", fontWeight: 700, color: "#94a3b8", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>
               Agence
             </div>
           </div>
@@ -409,7 +409,7 @@ export default function WhyCivicAIEditor() {
                 key={row.label}
                 style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1.5fr", gap: "10px", alignItems: "center" }}
               >
-                <span style={{ fontSize: "12px", fontWeight: 600, color: "#64748b", letterSpacing: "0.04em" }}>
+                <span style={{ fontSize: "14px", fontWeight: 600, color: "#64748b" }}>
                   {row.label}
                 </span>
                 <div
@@ -417,9 +417,9 @@ export default function WhyCivicAIEditor() {
                     background: "rgba(24,87,232,0.07)",
                     border: "1px solid rgba(24,87,232,0.18)",
                     color: "#1857e8",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     fontWeight: 600,
-                    padding: "8px 14px",
+                    padding: "10px 16px",
                     borderRadius: "10px",
                     textAlign: "center",
                   }}
@@ -431,8 +431,8 @@ export default function WhyCivicAIEditor() {
                     background: "#f8fafc",
                     border: "1px solid #e2e8f0",
                     color: "#94a3b8",
-                    fontSize: "12px",
-                    padding: "8px 14px",
+                    fontSize: "14px",
+                    padding: "10px 16px",
                     borderRadius: "10px",
                     textAlign: "center",
                   }}
