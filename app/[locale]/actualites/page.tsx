@@ -8,10 +8,9 @@ const ARTICLES = [
     badge: "Lancement",
     badgeColor: "#0a1730",
     date: "24 juin 2026",
-    image: "/content-agenthub.jpg",
+    image: "/news-agenthub-launch.jpg",
     imageFallback: "linear-gradient(135deg, #0a1730 0%, #1857e8 100%)",
     title: "CivicAI dévoile AgentHub Platform — une solution de gouvernance IA conçue pour les chambres de commerce et les PME québécoises",
-    excerpt: "CivicAI Inc. annonce le lancement officiel d'AgentHub Platform, sa solution phare de gouvernance de l'intelligence artificielle pour les organisations québécoises.",
     body: "CivicAI Inc. annonce le lancement officiel d'AgentHub Platform, sa solution phare de gouvernance de l'intelligence artificielle. Conçue spécifiquement pour les chambres de commerce, les associations d'affaires et les PME québécoises, la plateforme offre un diagnostic de maturité IA structuré, un observatoire analytique multi-sources et un tableau de bord de gouvernance en temps réel.\n\nAgentHub Platform est propulsée par ATLAS, l'agent IA conversationnel de CivicAI, qui accompagne les organisations à chaque étape de leur parcours de transformation numérique. Disponible dès maintenant en accès pilote.",
     href: "/plateformes" as const,
     ctaLabel: "Découvrir AgentHub Platform",
@@ -21,10 +20,9 @@ const ARTICLES = [
     badge: "Mise à jour produit",
     badgeColor: "#1857e8",
     date: "15 juin 2026",
-    image: "/slide-ia.jpg",
+    image: "/news-agenthub-2.jpg",
     imageFallback: "linear-gradient(135deg, #1857e8 0%, #6366f1 100%)",
     title: "AgentHub Platform 2.0 — Nouveau tableau de bord de gouvernance IA avec gestion multi-tenant et rapports d'impact automatisés",
-    excerpt: "La version 2.0 d'AgentHub Platform introduit un tableau de bord entièrement repensé, une architecture multi-tenant renforcée et des rapports d'impact automatisés.",
     body: "CivicAI déploie la version 2.0 d'AgentHub Platform avec des améliorations majeures : un nouveau tableau de bord de gouvernance IA entièrement repensé, une architecture multi-tenant renforcée pour les réseaux d'organisations, et des rapports d'impact automatisés générés à partir des données de performance.\n\nCette mise à jour intègre également des connecteurs natifs avec les environnements Microsoft 365 et des outils d'analyse comparative inter-organisations pour les chambres de commerce membres.",
     href: "/plateformes" as const,
     ctaLabel: "Voir les plateformes",
@@ -34,10 +32,9 @@ const ARTICLES = [
     badge: "Entreprise",
     badgeColor: "#0891b2",
     date: "3 juin 2026",
-    image: "/slide-gouvernance.jpg",
+    image: "/news-civicai-enregistrement.jpg",
     imageFallback: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
     title: "CivicAI Inc. officiellement constituée et enregistrée au Registre des entreprises du Québec — Une firme 100% québécoise dédiée à l'IA responsable",
-    excerpt: "CivicAI Inc. est désormais officiellement enregistrée au REQ. Basée à Trois-Rivières, la firme s'engage à développer des plateformes IA responsables pour le Québec et le Canada.",
     body: "CivicAI Inc. est officiellement constituée et enregistrée au Registre des entreprises du Québec (REQ). Basée à Trois-Rivières, la firme se positionne comme un éditeur de logiciels IA 100% québécois, dédié au développement de plateformes d'intelligence artificielle responsables pour les entreprises, les organismes publics et les institutions.\n\nCivicAI Inc. s'engage à respecter le cadre réglementaire québécois en matière de protection des données et de gouvernance de l'IA, tout en contribuant à l'écosystème technologique régional.",
     href: "/pourquoi" as const,
     ctaLabel: "En savoir plus sur CivicAI",
@@ -49,27 +46,44 @@ export default function ActualitesPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section
-        className="bg-slate-50 border-b border-slate-100 pb-14"
-        style={{ paddingTop: "144px" }}
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3">
+      {/* Hero — image équipe en fond */}
+      <section className="relative overflow-hidden" style={{ paddingTop: "144px", minHeight: "420px" }}>
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/news-equipe-civicai.jpg"
+            alt="Équipe CivicAI"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(to right, rgba(10,23,48,0.92) 0%, rgba(10,23,48,0.75) 50%, rgba(10,23,48,0.4) 100%)" }}
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <span
+            className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1.5 mb-6"
+            style={{ background: "rgba(24,87,232,0.25)", color: "#93b4ff", border: "1px solid rgba(24,87,232,0.35)" }}
+          >
             Actualités
-          </div>
+          </span>
           <h1
-            className="text-5xl font-bold text-[#0a1730] tracking-tight mb-4"
+            className="text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5 max-w-2xl"
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
           >
             Dernières nouvelles
           </h1>
-          <p className="text-xl text-slate-500 leading-relaxed max-w-2xl">
+          <p className="text-white/60 text-xl leading-relaxed max-w-xl">
             Suivez l&apos;actualité de CivicAI Inc. — lancements, mises à jour produit et jalons d&apos;entreprise.
           </p>
         </div>
       </section>
 
+      {/* Articles */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16">
 
@@ -85,10 +99,9 @@ export default function ActualitesPage() {
                   className="object-cover"
                 />
               </div>
-              {/* Overlay gradient */}
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(to right, rgba(10,23,48,0.3) 0%, transparent 60%)" }}
+                style={{ background: "linear-gradient(to right, rgba(10,23,48,0.25) 0%, transparent 60%)" }}
               />
             </div>
 
@@ -98,7 +111,7 @@ export default function ActualitesPage() {
                 <div className="flex items-center gap-4 mb-6">
                   <span
                     className="text-xs font-bold uppercase tracking-widest px-3 py-1.5 text-white"
-                    style={{ background: featured.badgeColor, opacity: 0.9, border: "1px solid rgba(255,255,255,0.15)" }}
+                    style={{ border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.08)" }}
                   >
                     {featured.badge}
                   </span>
@@ -141,7 +154,7 @@ export default function ActualitesPage() {
                 className="flex flex-col rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-shadow"
               >
                 {/* Image */}
-                <div className="relative h-52 flex-shrink-0" style={{ background: article.imageFallback }}>
+                <div className="relative h-56 flex-shrink-0" style={{ background: article.imageFallback }}>
                   <div className="absolute inset-0">
                     <Image
                       src={article.image}
@@ -150,6 +163,11 @@ export default function ActualitesPage() {
                       className="object-cover"
                     />
                   </div>
+                  {/* Dark gradient at bottom for readability */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-24"
+                    style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)" }}
+                  />
                   {/* Badge overlay */}
                   <div className="absolute top-4 left-4">
                     <span
@@ -159,12 +177,14 @@ export default function ActualitesPage() {
                       {article.badge}
                     </span>
                   </div>
+                  {/* Date overlay at bottom */}
+                  <time className="absolute bottom-4 left-4 text-xs text-white/70 font-medium">
+                    {article.date}
+                  </time>
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-col flex-1 p-8">
-                  <time className="text-xs text-slate-400 mb-3">{article.date}</time>
-
                   <h2
                     className="text-xl font-bold text-[#0a1730] leading-snug mb-4"
                     style={{ fontFamily: "var(--font-poppins), sans-serif" }}
@@ -182,7 +202,7 @@ export default function ActualitesPage() {
 
                   <Link
                     href={article.href}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 self-start transition-all hover:opacity-90"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 self-start rounded-full transition-all hover:opacity-90"
                     style={{ background: article.badgeColor }}
                   >
                     {article.ctaLabel} →
