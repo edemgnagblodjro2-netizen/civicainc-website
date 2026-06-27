@@ -31,7 +31,7 @@ export default async function Hero() {
         style={{ background: "radial-gradient(circle, rgba(24,87,232,0.07) 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(85vh-7rem)]">
           {/* Left — headline + CTAs */}
           <div>
@@ -72,95 +72,101 @@ export default async function Hero() {
             </div>
           </div>
 
-          {/* Right — platform dashboard card */}
-          <div className="flex justify-center lg:justify-end">
-            <div
-              className="w-full max-w-md rounded-2xl p-6 shadow-2xl"
-              style={{
-                background: "rgba(255,255,255,0.055)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                backdropFilter: "blur(20px)",
-              }}
-            >
-              {/* Card header */}
-              <div className="flex items-center justify-between mb-5">
-                <div>
-                  <p className="text-white/40 text-xs mb-0.5">AgentHub Platform</p>
-                  <p className="text-white font-semibold text-sm">Tableau de bord IA</p>
-                </div>
-                <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400/50" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/50" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
-                </div>
-              </div>
+          {/* Right — human trust card */}
+          <div className="flex flex-col items-center lg:items-end gap-5">
 
-              {/* Stats row */}
-              <div className="grid grid-cols-3 gap-3 mb-5">
-                {[
-                  { label: "Maturité IA", value: "78%" },
-                  { label: "Licences", value: "92%" },
-                  { label: "ROI mesuré", value: "65%" },
-                ].map((s) => (
-                  <div
-                    key={s.label}
-                    className="rounded-xl p-3 text-center"
-                    style={{ background: "rgba(255,255,255,0.06)" }}
-                  >
-                    <div className="text-xl font-bold text-white mb-0.5">{s.value}</div>
-                    <div className="text-white/35 text-xs">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Progress bars */}
-              <div className="space-y-3.5 mb-5">
-                {[
-                  { label: "Gouvernance SaaS", percent: 88 },
-                  { label: "Diagnostic IA", percent: 72 },
-                  { label: "Économies documentées", percent: 95, accent: true },
-                ].map((item) => (
-                  <div key={item.label}>
-                    <div className="flex justify-between text-xs mb-1.5">
-                      <span className="text-white/50">{item.label}</span>
-                      <span className="text-white/70 font-medium">{item.percent}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full" style={{ background: "rgba(255,255,255,0.07)" }}>
-                      <div
-                        className="h-1.5 rounded-full"
-                        style={{
-                          width: `${item.percent}%`,
-                          background: item.accent ? "#ffd23e" : "#1857e8",
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Activity list */}
+            {/* Testimonial card */}
+            <div className="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl">
+              {/* Person photo area */}
               <div
-                className="pt-4 border-t space-y-2.5"
-                style={{ borderColor: "rgba(255,255,255,0.08)" }}
+                className="h-52 relative flex flex-col items-center justify-end pb-5"
+                style={{ background: "linear-gradient(150deg, #1e3a5f 0%, #1857e8 60%, #6366f1 100%)" }}
               >
-                {[
-                  "3 rapports d'impact générés",
-                  "12 licences Microsoft optimisées",
-                  "Agent ATLAS actif",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <div
-                      className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: "rgba(24,87,232,0.3)" }}
-                    >
-                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                        <path d="M1.5 4L3 5.5L6.5 2.5" stroke="#1857e8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="text-white/50 text-xs">{item}</span>
-                  </div>
-                ))}
+                {/* Subtle grid */}
+                <div
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage: "linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px)",
+                    backgroundSize: "24px 24px",
+                  }}
+                />
+                {/* SVG person silhouette */}
+                <div className="relative z-10">
+                  <svg width="96" height="96" viewBox="0 0 96 96" fill="none">
+                    <circle cx="48" cy="34" r="20" fill="rgba(255,255,255,0.25)" />
+                    <path d="M8 96 C8 68 24 60 48 60 C72 60 88 68 88 96" fill="rgba(255,255,255,0.18)" />
+                  </svg>
+                </div>
+                {/* Badge */}
+                <div
+                  className="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full"
+                  style={{ background: "rgba(255,211,62,0.15)", color: "#ffd23e", border: "1px solid rgba(255,211,62,0.3)" }}
+                >
+                  CCI Régionale
+                </div>
               </div>
+
+              {/* Quote */}
+              <div className="p-6" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderTop: "none" }}>
+                <p className="text-white/85 text-sm leading-relaxed mb-5 italic">
+                  &ldquo;La gouvernance IA de CivicAI nous a permis de reprendre le contrôle de nos outils SaaS et de réduire nos coûts de licence en moins de 90 jours.&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                    style={{ background: "#1857e8" }}
+                  >
+                    MC
+                  </div>
+                  <div>
+                    <p className="text-white text-xs font-semibold">Marie-Claude T.</p>
+                    <p className="text-white/45 text-xs">Directrice numérique — Chambre de commerce</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust badges grid */}
+            <div className="w-full max-w-sm grid grid-cols-2 gap-3">
+              {[
+                {
+                  icon: (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  ),
+                  label: "Gouvernance IA",
+                },
+                {
+                  icon: (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  ),
+                  label: "Sécurité certifiée",
+                },
+                {
+                  icon: (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                  ),
+                  label: "Optimisation mesurable",
+                },
+                {
+                  icon: <span className="text-sm leading-none">🍁</span>,
+                  label: "Entreprise québécoise",
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-medium text-white/65"
+                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}
+                >
+                  <span className="text-white/50 flex-shrink-0">{item.icon}</span>
+                  {item.label}
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default async function CarrieresPage() {
   return (
     <>
       {/* Hero — bento 2-panel */}
-      <section className="w-full">
+      <section className="w-full" style={{ paddingTop: "144px" }}>
         <div className="grid md:grid-cols-2">
           {/* Left: navy */}
           <div

@@ -17,13 +17,11 @@ export default async function InnovationPage() {
   const t = await getTranslations("pages.innovation");
   const projects = t.raw("projects") as { name: string; status: string; desc: string }[];
 
-  const featured = projects.slice(0, 4);
-
   return (
     <>
       {/* ─── Bento hero grid ─── */}
-      <section className="w-full">
-        <div className="grid md:grid-cols-2 min-h-[calc(100vh-64px)]">
+      <section className="w-full" style={{ paddingTop: "144px" }}>
+        <div className="grid md:grid-cols-2 min-h-[calc(100vh-144px)]">
 
           {/* Panel 1 — navy, main pitch */}
           <div

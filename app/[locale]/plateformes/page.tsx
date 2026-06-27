@@ -15,7 +15,7 @@ export default async function PlatesformesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-50 border-b border-slate-100 py-20">
+      <section className="bg-slate-50 border-b border-slate-100 pb-20" style={{ paddingTop: "164px" }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
             <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3">
