@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import ContactForm from "@/components/ContactForm";
 
 export default async function ContactPage() {
   const t = await getTranslations("pages.contact");
@@ -58,70 +59,15 @@ export default async function ContactPage() {
             <h2 className="text-xl font-bold text-slate-900 mb-6">
               {t("title")}
             </h2>
-            <form
-              action="https://formsubmit.co/contact@nexhire.ca"
-              method="POST"
-              className="space-y-4"
-            >
-              {/* FormSubmit config — no spam page, no captcha */}
-              <input type="hidden" name="_subject" value="Nouvelle demande de démonstration — CivicAI" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://civicainc.ca/fr/contact" />
-              <div>
-                <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
-                  {t("name")} *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
-                  placeholder="Marie Tremblay"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
-                  {t("org")} *
-                </label>
-                <input
-                  type="text"
-                  name="organization"
-                  required
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
-                  placeholder="Chambre de Commerce de Trois-Rivières"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
-                  {t("email")} *
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all"
-                  placeholder="marie@organisation.ca"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
-                  {t("message")}
-                </label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all resize-none"
-                  placeholder="Décrivez votre organisation et ce que vous cherchez à accomplir…"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm py-3.5 rounded-xl transition-colors"
-              >
-                {t("submit")}
-              </button>
-            </form>
+            <ContactForm
+              labels={{
+                name: t("name"),
+                org: t("org"),
+                email: t("email"),
+                message: t("message"),
+                submit: t("submit"),
+              }}
+            />
           </div>
         </div>
       </div>
