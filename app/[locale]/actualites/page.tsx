@@ -84,7 +84,7 @@ export default function ActualitesPage() {
       </section>
 
       {/* Articles */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ background: "#f8fafc" }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16">
 
           {/* Featured article */}
@@ -145,46 +145,28 @@ export default function ActualitesPage() {
             </div>
           </article>
 
-          {/* Secondary articles */}
+          {/* Secondary articles — sans image, fond blanc cassé */}
           <div className="grid md:grid-cols-2 gap-8">
             {rest.map((article) => (
               <article
                 key={article.id}
                 id={article.id}
-                className="flex flex-col rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-shadow"
+                className="flex flex-col rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow"
+                style={{ background: "#f8fafc" }}
               >
-                {/* Image */}
-                <div className="relative h-56 flex-shrink-0" style={{ background: article.imageFallback }}>
-                  <div className="absolute inset-0">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  {/* Dark gradient at bottom for readability */}
-                  <div
-                    className="absolute inset-x-0 bottom-0 h-24"
-                    style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)" }}
-                  />
-                  {/* Badge overlay */}
-                  <div className="absolute top-4 left-4">
-                    <span
-                      className="text-xs font-bold uppercase tracking-widest px-3 py-1.5 text-white"
-                      style={{ background: article.badgeColor }}
-                    >
-                      {article.badge}
-                    </span>
-                  </div>
-                  {/* Date overlay at bottom */}
-                  <time className="absolute bottom-4 left-4 text-xs text-white/70 font-medium">
-                    {article.date}
-                  </time>
+                {/* Header: badge + date */}
+                <div className="flex items-center gap-3 px-8 pt-8 pb-4">
+                  <span
+                    className="text-xs font-bold uppercase tracking-widest px-3 py-1.5 text-white rounded-sm"
+                    style={{ background: article.badgeColor }}
+                  >
+                    {article.badge}
+                  </span>
+                  <time className="text-xs text-slate-400 font-medium">{article.date}</time>
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col flex-1 p-8">
+                <div className="flex flex-col flex-1 px-8 pb-8">
                   <h2
                     className="text-xl font-bold text-[#0a1730] leading-snug mb-4"
                     style={{ fontFamily: "var(--font-poppins), sans-serif" }}
