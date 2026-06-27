@@ -11,6 +11,22 @@ export const metadata: Metadata = {
   description:
     "CivicAI développe des plateformes d'IA pour les entreprises, institutions et organismes publics.",
   metadataBase: new URL("https://civicainc.ca"),
+  icons: {
+    icon: [
+      { url: "/logo-civicai.png", type: "image/png" },
+    ],
+    apple: { url: "/logo-civicai.png", type: "image/png" },
+    shortcut: "/logo-civicai.png",
+  },
+  openGraph: {
+    title: "CivicAI Inc. — Plateformes d'intelligence artificielle",
+    description: "CivicAI développe des plateformes d'IA pour les entreprises, institutions et organismes publics.",
+    url: "https://civicainc.ca",
+    siteName: "CivicAI Inc.",
+    images: [{ url: "/logo-civicai.png" }],
+    locale: "fr_CA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
