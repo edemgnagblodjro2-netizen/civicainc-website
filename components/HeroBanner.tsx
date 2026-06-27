@@ -71,17 +71,6 @@ const SLIDES: Slide[] = [
     ctaPrimary: { label: "Demander une démo", href: "/contact" },
   },
   {
-    id: "securite",
-    type: "gradient",
-    badge: "Sécurité TI",
-    headline: "Architecture sécurisée et certifiée pour le secteur public québécois.",
-    subtitle: "Multi-tenant isolé, conformité garantie, protection des données — la confiance comme fondation.",
-    ctaPrimary: { label: "Pourquoi CivicAI", href: "/pourquoi" },
-    gradient: "linear-gradient(145deg, #05080f 0%, #0e0b2a 50%, #2d2a6e 100%)",
-    glow: "rgba(99,102,241,0.38)",
-    rightVisual: "svg-securite",
-  },
-  {
     id: "results",
     type: "image",
     imageSrc: "/slide-results.jpg",
@@ -170,13 +159,13 @@ export default function HeroBanner() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ minHeight: minH }}
+      style={{ height: "calc(100vh - 144px)", minHeight: "560px" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {/* ── Background: gradient or image ── */}
       {slide.type === "image" && slide.imageSrc ? (
-        <>
+        <div className="absolute inset-0">
           <Image
             key={`img-${slide.id}`}
             src={slide.imageSrc}
@@ -189,7 +178,7 @@ export default function HeroBanner() {
           {!slide.lightBg && slide.imageOverlay && (
             <div className="absolute inset-0" style={{ background: slide.imageOverlay }} />
           )}
-        </>
+        </div>
       ) : (
         <>
           <div className="absolute inset-0 transition-all duration-1000" style={{ background: slide.gradient }} />
@@ -213,7 +202,7 @@ export default function HeroBanner() {
       )}
 
       {/* ── Content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-14 flex flex-col" style={{ minHeight: minH }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-14 flex flex-col h-full">
 
         {slide.type === "image" ? (
           /* Full-bleed image slide */

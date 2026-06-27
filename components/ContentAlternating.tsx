@@ -40,29 +40,32 @@ const SECTIONS = [
 
 export default function ContentAlternating() {
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden">
       {SECTIONS.map((sec) => (
-        <div key={sec.tag} className="grid md:grid-cols-2" style={{ minHeight: "440px" }}>
+        <div key={sec.tag} className="grid md:grid-cols-2 items-stretch" style={{ minHeight: "460px" }}>
 
           {/* Visual panel */}
           <div
             className={`relative overflow-hidden ${sec.imageRight ? "md:order-2" : "md:order-1"}`}
-            style={{ minHeight: "340px" }}
+            style={{ minHeight: "320px" }}
           >
-            {/* Fallback gradient */}
-            <div className="absolute inset-0" style={{ background: sec.gradient }} />
+            {/* Absolute fill layer */}
+            <div className="absolute inset-0">
+              {/* Fallback gradient */}
+              <div className="absolute inset-0" style={{ background: sec.gradient }} />
 
-            {/* Real image */}
-            <Image
-              src={sec.imageSrc}
-              alt={sec.tag}
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+              {/* Real image */}
+              <Image
+                src={sec.imageSrc}
+                alt={sec.tag}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
 
-            {/* Brand overlay */}
-            <div className="absolute inset-0" style={{ background: sec.overlay }} />
+              {/* Brand overlay */}
+              <div className="absolute inset-0" style={{ background: sec.overlay }} />
+            </div>
 
             {/* Grid overlay */}
             <div

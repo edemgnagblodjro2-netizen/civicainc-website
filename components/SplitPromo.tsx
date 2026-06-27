@@ -4,35 +4,37 @@ import Image from "next/image";
 export default function SplitPromo() {
   return (
     <section className="w-full overflow-hidden">
-      <div className="grid md:grid-cols-2" style={{ minHeight: "500px" }}>
+      <div className="grid md:grid-cols-2 items-stretch" style={{ minHeight: "500px" }}>
 
         {/* Left — person photo panel */}
-        {/* Save your photo as: public/promo-person.jpg */}
         <div className="relative overflow-hidden" style={{ minHeight: "420px" }}>
 
-          {/* Fallback gradient (visible while image loads or if missing) */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(145deg, #060e1f 0%, #0d2152 50%, #1857e8 100%)" }}
-          />
+          {/* Absolute fill layer */}
+          <div className="absolute inset-0">
+            {/* Fallback gradient */}
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(145deg, #060e1f 0%, #0d2152 50%, #1857e8 100%)" }}
+            />
 
-          {/* Person photo — fill the panel */}
-          <Image
-            src="/promo-person.jpg"
-            alt="Professionnelle CivicAI"
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+            {/* Person photo */}
+            <Image
+              src="/promo-person.jpg"
+              alt="Professionnelle CivicAI"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
 
-          {/* Dark overlay — brand tone + readability */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(6,14,31,0.25) 0%, rgba(6,14,31,0.05) 40%, rgba(6,14,31,0.55) 80%, rgba(6,14,31,0.88) 100%)",
-            }}
-          />
+            {/* Dark overlay */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(6,14,31,0.25) 0%, rgba(6,14,31,0.05) 40%, rgba(6,14,31,0.55) 80%, rgba(6,14,31,0.88) 100%)",
+              }}
+            />
+          </div>
 
           {/* Left edge: subtle blue glow */}
           <div
