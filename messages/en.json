@@ -17,6 +17,7 @@
   },
   "platforms": {
     "title": "Our platforms",
+    "subtitle_heading": "Three platforms. One integrated ecosystem.",
     "subtitle": "Modular, scalable and integrated solutions — built for organizations ready to take action.",
     "agenthub": {
       "name": "AgentHub Platform",

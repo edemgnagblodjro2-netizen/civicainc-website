@@ -40,11 +40,11 @@ export default async function Platforms() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-[0.18em] mb-3">
             {t("title")}
-          </div>
+          </p>
           <h2 className="text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            {t("title")}
+            {t("subtitle_heading") || "Trois plateformes. Un écosystème."}
           </h2>
           <p className="text-lg text-slate-500 leading-relaxed">{t("subtitle")}</p>
         </div>

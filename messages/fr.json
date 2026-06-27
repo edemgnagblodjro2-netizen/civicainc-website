@@ -17,6 +17,7 @@
   },
   "platforms": {
     "title": "Nos plateformes",
+    "subtitle_heading": "Trois plateformes. Un écosystème intégré.",
     "subtitle": "Des solutions modulaires, évolutives et intégrées — pensées pour les organisations qui veulent passer à l'action.",
     "agenthub": {
       "name": "AgentHub Platform",
