@@ -59,10 +59,15 @@ export default async function ContactPage() {
               {t("title")}
             </h2>
             <form
-              action="https://formspree.io/f/contact-civicainc"
+              action="https://formsubmit.co/contact@nexhire.ca"
               method="POST"
               className="space-y-4"
             >
+              {/* FormSubmit config — no spam page, no captcha */}
+              <input type="hidden" name="_subject" value="Nouvelle demande de démonstration — CivicAI" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://civicainc.ca/fr/contact" />
               <div>
                 <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
                   {t("name")} *
