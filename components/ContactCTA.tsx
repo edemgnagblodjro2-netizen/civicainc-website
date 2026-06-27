@@ -5,33 +5,31 @@ export default async function ContactCTA() {
   const t = await getTranslations("cta");
 
   return (
-    <section className="bg-slate-950 border-t border-slate-800 py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              {t("title")}
-            </h2>
-          </div>
-          <div>
-            <p className="text-slate-400 leading-relaxed mb-8">
-              {t("subtitle")}
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 bg-white text-slate-950 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:bg-slate-100 transition-colors"
-              >
-                {t("btn1")} →
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 border border-slate-700 text-slate-300 text-xs font-bold px-6 py-3.5 uppercase tracking-widest hover:border-slate-500 hover:text-white transition-colors"
-              >
-                {t("btn2")}
-              </Link>
-            </div>
-          </div>
+    <section className="py-24" style={{ background: "#0a1730" }}>
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h2
+          className="text-4xl lg:text-5xl font-bold text-white mb-6"
+          style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+        >
+          {t("title")}
+        </h2>
+        <p className="text-white/55 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          {t("subtitle")}
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0a1730] bg-white px-7 py-3.5 rounded-full transition-all hover:bg-slate-100 active:scale-95"
+          >
+            {t("btn1")} →
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 px-7 py-3.5 rounded-full border transition-all hover:bg-white/10 hover:text-white"
+            style={{ borderColor: "rgba(255,255,255,0.2)" }}
+          >
+            {t("btn2")}
+          </Link>
         </div>
       </div>
     </section>

@@ -1,29 +1,43 @@
 import { getTranslations } from "next-intl/server";
 
+const COLORS = ["#1857e8", "#6366f1", "#8b5cf6", "#0ea5e9", "#10b981", "#f59e0b"];
+
 export default async function Sectors() {
   const t = await getTranslations("sectors");
   const items = t.raw("items") as { icon: string; label: string }[];
 
   return (
-    <section className="bg-slate-50 py-16 border-t border-slate-100">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col sm:flex-row sm:items-baseline gap-6 sm:gap-12">
-          <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-[0.2em] flex-shrink-0">
+        <div className="mb-12">
+          <span
+            className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4"
+            style={{ background: "var(--sky, #eaf1ff)", color: "var(--blue, #1857e8)" }}
+          >
             {t("title")}
-          </p>
-          <div className="flex flex-wrap gap-x-8 gap-y-2">
-            {items.map((item, i) => (
-              <span
+          </span>
+          <p className="text-slate-500 text-base max-w-md">{t("subtitle")}</p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {items.map((item, i) => {
+            const color = COLORS[i % COLORS.length];
+            return (
+              <div
                 key={item.label}
-                className="text-sm font-medium text-slate-600"
+                className="rounded-2xl p-5 flex flex-col items-center text-center gap-3 transition-all hover:-translate-y-1 hover:shadow-md cursor-default"
+                style={{ background: `${color}14`, border: `1.5px solid ${color}30` }}
               >
-                {item.label}
-                {i < items.length - 1 && (
-                  <span className="text-slate-300 ml-8 hidden sm:inline">·</span>
-                )}
-              </span>
-            ))}
-          </div>
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center text-white font-bold text-base flex-shrink-0"
+                  style={{ background: color }}
+                >
+                  {item.label[0]}
+                </div>
+                <span className="text-sm font-semibold text-[#0a1730] leading-snug">{item.label}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

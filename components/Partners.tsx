@@ -1,45 +1,59 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
+const MARKET_COLORS = ["#1857e8", "#6366f1", "#0891b2"];
+
 export default async function Partners() {
   const t = await getTranslations("markets");
   const items = t.raw("items") as { title: string; desc: string }[];
 
   return (
-    <section className="bg-white py-24 border-t border-slate-100">
+    <section className="py-24 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left */}
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-[0.18em] mb-3">
-              {t("label")}
-            </p>
-            <h2 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">
-              {t("title")}
-            </h2>
-            <p className="text-lg text-slate-500 leading-relaxed mb-8">
-              {t("subtitle")}
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"
-            >
-              {t("cta")}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
+        <div className="text-center mb-14">
+          <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 bg-slate-100 text-slate-500">
+            {t("label")}
+          </span>
+          <h2
+            className="text-4xl lg:text-5xl font-bold text-[#0a1730] mb-4"
+            style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+          >
+            {t("title")}
+          </h2>
+          <p className="text-slate-500 text-base max-w-xl mx-auto">{t("subtitle")}</p>
+        </div>
 
-          {/* Right — market segments */}
-          <div className="divide-y divide-slate-100">
-            {items.map((m) => (
-              <div key={m.title} className="py-6 first:pt-0">
-                <h3 className="text-base font-semibold text-slate-900 mb-1.5">{m.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{m.desc}</p>
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {items.map((item, i) => {
+            const color = MARKET_COLORS[i % MARKET_COLORS.length];
+            return (
+              <div key={item.title} className="bg-slate-50 rounded-2xl p-7 hover:shadow-md transition-shadow">
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 font-bold text-xl text-white flex-shrink-0"
+                  style={{ background: color }}
+                >
+                  {["🏛", "🏙", "🏢"][i]}
+                </div>
+                <h3
+                  className="text-lg font-bold text-[#0a1730] mb-3"
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3 rounded-full transition-all hover:opacity-90"
+            style={{ background: "#1857e8" }}
+          >
+            {t("cta")} →
+          </Link>
         </div>
       </div>
     </section>

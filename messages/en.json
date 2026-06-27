@@ -14,6 +14,9 @@
     "subtitle": "CivicAI develops artificial intelligence platforms for businesses, public organizations and institutions. Concrete, measurable, deployable tools.",
     "cta1": "Discover our platforms",
     "cta2": "Contact us",
+    "cta_demo": "Book a Demo",
+    "cta_platforms": "Explore our platforms",
+    "sectors_label": "Sectors served",
     "panel_title": "Our platforms",
     "panel_agenthub_tag": "Enterprise intelligence",
     "panel_agenthub_desc": "AI diagnostics, analytics observatory, governance — for chambers of commerce and institutions.",
@@ -132,6 +135,32 @@
     "company": ["Why CivicAI", "Innovation", "Careers", "Contact"],
     "legal": "© 2026 CivicAI Inc. All rights reserved.",
     "made": "Developed in Québec, Canada."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before reaching out.",
+    "items": [
+      {
+        "q": "What types of organizations do your platforms serve?",
+        "a": "Our platforms serve chambers of commerce, municipalities, businesses undergoing digital transformation, and public organizations. Any organization dealing with AI governance, SaaS optimization, or community services can benefit from our solutions."
+      },
+      {
+        "q": "How does a deployment work?",
+        "a": "We start with an AI maturity diagnostic. Then we propose a deployment plan tailored to your context. Our platforms are modular and can be deployed progressively, without disrupting your operations."
+      },
+      {
+        "q": "Are your platforms compatible with Microsoft 365?",
+        "a": "Yes. NexHire EIP is specifically designed to integrate with the Microsoft 365 ecosystem. AgentHub Platform also includes multi-source connectors compatible with Microsoft environments."
+      },
+      {
+        "q": "Are you based in Québec?",
+        "a": "Yes, CivicAI Inc. is based in Trois-Rivières, Québec. Our teams understand the Québec regulatory framework and local market specifics, while operating at the Canadian scale."
+      },
+      {
+        "q": "How is data security ensured?",
+        "a": "Our platforms use a multi-tenant architecture with complete data isolation between clients. Each deployment benefits from secure environments compliant with Québec public sector requirements."
+      }
+    ]
   },
   "pages": {
     "platforms": {

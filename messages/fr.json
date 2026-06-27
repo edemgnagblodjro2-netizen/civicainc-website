@@ -14,6 +14,9 @@
     "subtitle": "CivicAI développe des plateformes d'intelligence artificielle pour les entreprises, les organismes publics et les institutions. Des outils concrets, mesurables et déployables.",
     "cta1": "Découvrir nos plateformes",
     "cta2": "Nous contacter",
+    "cta_demo": "Demander une démo",
+    "cta_platforms": "Voir nos plateformes",
+    "sectors_label": "Secteurs servis",
     "panel_title": "Nos plateformes",
     "panel_agenthub_tag": "Intelligence d'entreprise",
     "panel_agenthub_desc": "Diagnostic IA, observatoire analytique, gouvernance — pour les chambres de commerce et les institutions.",
@@ -132,6 +135,32 @@
     "company": ["Pourquoi CivicAI", "Innovation", "Carrières", "Contact"],
     "legal": "© 2026 CivicAI Inc. Tous droits réservés.",
     "made": "Développé au Québec, Canada."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir avant de nous contacter.",
+    "items": [
+      {
+        "q": "À quels types d'organisations s'adressent vos plateformes ?",
+        "a": "Nos plateformes s'adressent aux chambres de commerce, aux municipalités, aux entreprises en transformation numérique et aux organismes publics. Toute organisation ayant des enjeux de gouvernance IA, d'optimisation SaaS ou de services à la communauté peut bénéficier de nos solutions."
+      },
+      {
+        "q": "Comment se passe un déploiement ?",
+        "a": "Nous commençons par un diagnostic de maturité IA. Ensuite, nous vous proposons un plan de déploiement adapté à votre contexte. Nos plateformes sont modulaires et peuvent être déployées progressivement, sans perturber vos opérations."
+      },
+      {
+        "q": "Vos plateformes sont-elles compatibles avec Microsoft 365 ?",
+        "a": "Oui. NexHire EIP est spécifiquement conçu pour s'intégrer à l'écosystème Microsoft 365. AgentHub Platform inclut également des connecteurs multi-sources compatibles avec les environnements Microsoft."
+      },
+      {
+        "q": "Êtes-vous basés au Québec ?",
+        "a": "Oui, CivicAI Inc. est basée à Trois-Rivières, Québec. Nos équipes comprennent le cadre réglementaire québécois et les spécificités du marché local, tout en intervenant à l'échelle canadienne."
+      },
+      {
+        "q": "Comment est assurée la sécurité des données ?",
+        "a": "Nos plateformes utilisent une architecture multi-tenant avec isolation complète des données entre les clients. Chaque déploiement bénéficie d'environnements sécurisés, conformes aux exigences du secteur public québécois."
+      }
+    ]
   },
   "pages": {
     "platforms": {

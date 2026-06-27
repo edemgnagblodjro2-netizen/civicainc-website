@@ -16,3 +16,14 @@ body {
   background: #ffffff;
   color: #0f172a;
 }
+
+:root {
+  --navy: #0a1730;
+  --blue: #1857e8;
+  --sky: #eaf1ff;
+  --accent: #ffd23e;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-poppins), var(--font-geist), system-ui, sans-serif;
+}
