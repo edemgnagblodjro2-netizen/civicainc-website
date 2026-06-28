@@ -29,6 +29,57 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://civicainc.ca/#organization",
+      name: "CivicAI Inc.",
+      url: "https://civicainc.ca",
+      logo: "https://civicainc.ca/logo-civicai.png",
+      description: "Éditeur de logiciels d'intelligence artificielle pour les entreprises, institutions publiques et organismes québécois.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Trois-Rivières",
+        addressRegion: "QC",
+        addressCountry: "CA",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-905-809-7798",
+        contactType: "customer service",
+        email: "contact@nexhire.ca",
+        availableLanguage: ["French", "English"],
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/civicai-inc-aa2282314/",
+        "https://x.com/startup_aya",
+      ],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://civicainc.ca/plateformes#agenthub",
+      name: "AgentHub Platform",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+      provider: { "@id": "https://civicainc.ca/#organization" },
+      description: "Plateforme de gouvernance IA pour les chambres de commerce et organisations québécoises.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://civicainc.ca/plateformes#nexhire",
+      name: "NexHire EIP",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+      provider: { "@id": "https://civicainc.ca/#organization" },
+      description: "Plateforme d'intelligence d'entreprise et gouvernance SaaS Microsoft 365.",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -36,6 +87,12 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={bodyClass}>
         {children}
       </body>
