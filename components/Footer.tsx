@@ -26,8 +26,8 @@ const FOOTER_LINKS = [
     items: [
       { label: "Sécurité & conformité", href: "/pourquoi" as const },
       { label: "Centre d'aide", href: "/contact" as const },
-      { label: "Politique de confidentialité", href: "/contact" as const },
-      { label: "Conditions d'utilisation", href: "/contact" as const },
+      { label: "Politique de confidentialité", href: "/politique-confidentialite" as const },
+      { label: "Conditions d'utilisation", href: "/conditions-utilisation" as const },
     ],
   },
   {
