@@ -15,8 +15,8 @@ const FOOTER_LINKS = [
   {
     col: "Entreprise",
     items: [
+      { label: "À propos", href: "/a-propos" as const },
       { label: "Pourquoi CivicAI", href: "/pourquoi" as const },
-      { label: "Innovation", href: "/innovation" as const },
       { label: "Carrières", href: "/carrieres" as const },
       { label: "Contact", href: "/contact" as const },
     ],
