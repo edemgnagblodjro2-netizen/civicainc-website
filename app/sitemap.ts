@@ -8,6 +8,9 @@ const locales = ["fr", "en"] as const;
 const pages = [
   { path: "", priority: 1.0, changeFrequency: "weekly" as const },
   { path: "/plateformes", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/agenthub", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/nexhire", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/attentezero", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/pourquoi", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/actualites", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/innovation", priority: 0.7, changeFrequency: "monthly" as const },

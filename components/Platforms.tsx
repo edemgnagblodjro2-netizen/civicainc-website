@@ -13,9 +13,9 @@ export default async function Platforms() {
 
   const keys = ["agenthub", "nexhire", "attentezero", "nexhire_ca"] as const;
   const hrefs: Record<string, string> = {
-    agenthub: "/plateformes#agenthub",
-    nexhire: "/plateformes#nexhire",
-    attentezero: "/plateformes#attentezero",
+    agenthub: "/agenthub",
+    nexhire: "/nexhire",
+    attentezero: "/attentezero",
     nexhire_ca: "/plateformes#nexhire-ca",
   };
 

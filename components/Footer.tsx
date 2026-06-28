@@ -6,10 +6,10 @@ const FOOTER_LINKS = [
   {
     col: "Nos plateformes",
     items: [
-      { label: "AgentHub Platform", href: "/plateformes" as const },
-      { label: "ATLAS Insights", href: "/plateformes" as const },
-      { label: "AttenteZéro", href: "/plateformes" as const },
-      { label: "NexHire EIP", href: "/plateformes" as const },
+      { label: "AgentHub Platform", href: "/agenthub" as const },
+      { label: "ATLAS Insights", href: "/agenthub" as const },
+      { label: "AttenteZéro", href: "/attentezero" as const },
+      { label: "NexHire EIP", href: "/nexhire" as const },
     ],
   },
   {
