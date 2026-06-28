@@ -275,6 +275,17 @@
       "address": "Trois-Rivières, Québec, Canada"
     }
   },
+  "usecases": {
+    "lang": "fr",
+    "label": "Cas d'usage",
+    "title": "Cas d'usage de nos plateformes",
+    "subtitle": "Voici quelques exemples des résultats que nos solutions peuvent aider les organisations à atteindre, selon leur contexte et leurs objectifs.",
+    "challenge_label": "Défi",
+    "solution_label": "Solution",
+    "benefits_label": "Bénéfices attendus",
+    "trust_label": "Ce que CivicAI représente",
+    "disclaimer": "Ces scénarios illustrent des cas d'usage typiques de nos plateformes. Les résultats varient selon le contexte de chaque organisation."
+  },
   "credibility": {
     "label": "Confiance & sécurité",
     "title": "Sécurité, confiance et IA responsable",

@@ -21,11 +21,11 @@ const CONTENT = {
     features_label: "Fonctionnalités",
     features_title: "Tout ce qu'il vous faut pour piloter l'IA en organisation",
     features: [
-      { icon: "🧠", title: "Diagnostic de maturité IA", desc: "Évaluation automatisée de la posture IA de chaque PME membre en moins de 20 minutes." },
+      { icon: "🔎", title: "Diagnostic de maturité IA", desc: "Évaluation automatisée de la posture IA de chaque PME membre en moins de 20 minutes." },
       { icon: "🗺️", title: "Parcours personnalisés", desc: "11 phases d'accélération adaptées au niveau de chaque organisation — de la sensibilisation à la gouvernance." },
       { icon: "📈", title: "Tableau de bord Geneviève", desc: "Vue consolidée de toute votre cohorte : progression, alertes, actions prioritaires, en temps réel." },
       { icon: "🎓", title: "Certificats de parcours", desc: "Chaque PME membre reçoit un certificat attestant son niveau de maturité IA à l'issue du programme." },
-      { icon: "🤖", title: "ATLAS — IA conseillère", desc: "Votre assistante IA intégrée qui répond aux questions des membres et génère des recommandations contextuelles." },
+      { icon: "💬", title: "ATLAS — IA conseillère", desc: "Votre assistante IA intégrée qui répond aux questions des membres et génère des recommandations contextuelles." },
       { icon: "🔒", title: "Gouvernance & conformité", desc: "Cadre de gouvernance IA inclus, conforme à la Loi 25 et aligné sur les meilleures pratiques canadiennes." },
     ],
     journey_label: "Parcours type",
@@ -42,11 +42,6 @@ const CONTENT = {
       { value: "3×", label: "Gain de décision", sub: "Par rapport aux méthodes traditionnelles" },
       { value: "12", label: "PME par cohorte", sub: "Accompagnement personnalisé garanti" },
     ],
-    testimonial: {
-      quote: "AgentHub a radicalement changé notre façon de piloter la transformation numérique de nos membres. Le diagnostic de maturité IA nous a permis d'identifier en quelques jours ce qui aurait pris des mois à analyser.",
-      name: "Marie-Christine Bolduc",
-      role: "Directrice générale, Chambre de commerce régionale",
-    },
     faq_label: "Questions fréquentes",
     faqs: [
       { q: "Combien de PME peut-on accompagner par cohorte ?", a: "Une cohorte standard comprend 8 à 12 PME membres. Nous pouvons adapter la taille selon vos capacités d'accompagnement." },
@@ -71,11 +66,11 @@ const CONTENT = {
     features_label: "Features",
     features_title: "Everything you need to lead AI in your organization",
     features: [
-      { icon: "🧠", title: "AI maturity diagnostic", desc: "Automated assessment of each member SMB's AI posture in under 20 minutes." },
+      { icon: "🔎", title: "AI maturity diagnostic", desc: "Automated assessment of each member SMB's AI posture in under 20 minutes." },
       { icon: "🗺️", title: "Personalized journeys", desc: "11 acceleration phases adapted to each organization's level — from awareness to governance." },
       { icon: "📈", title: "Geneviève dashboard", desc: "Consolidated view of your entire cohort: progress, alerts, priority actions, in real time." },
       { icon: "🎓", title: "Journey certificates", desc: "Each member SMB receives a certificate attesting their AI maturity level upon program completion." },
-      { icon: "🤖", title: "ATLAS — AI advisor", desc: "Your integrated AI assistant that answers member questions and generates contextual recommendations." },
+      { icon: "💬", title: "ATLAS — AI advisor", desc: "Your integrated AI assistant that answers member questions and generates contextual recommendations." },
       { icon: "🔒", title: "Governance & compliance", desc: "Included AI governance framework, compliant with Quebec Law 25 and aligned with Canadian best practices." },
     ],
     journey_label: "Typical journey",
@@ -92,11 +87,6 @@ const CONTENT = {
       { value: "3×", label: "Decision speed gain", sub: "vs. traditional methods" },
       { value: "12", label: "SMBs per cohort", sub: "Guaranteed personalized support" },
     ],
-    testimonial: {
-      quote: "AgentHub radically changed how we drive digital transformation for our members. The AI maturity diagnostic helped us identify in days what would have taken months to analyze.",
-      name: "Marie-Christine Bolduc",
-      role: "Executive Director, Regional Chamber of Commerce",
-    },
     faq_label: "FAQ",
     faqs: [
       { q: "How many SMBs can we support per cohort?", a: "A standard cohort includes 8 to 12 member SMBs. We can adapt the size to your support capacity." },
@@ -238,24 +228,6 @@ export default async function AgentHubPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-1 mb-6">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
-                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-              </svg>
-            ))}
-          </div>
-          <blockquote className="text-xl text-slate-700 leading-relaxed mb-8 font-medium">
-            &ldquo;{c.testimonial.quote}&rdquo;
-          </blockquote>
-          <div className="text-sm font-bold text-slate-900">{c.testimonial.name}</div>
-          <div className="text-sm text-slate-400 mt-1">{c.testimonial.role}</div>
         </div>
       </section>
 

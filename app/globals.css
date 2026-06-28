@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
   --font-display: var(--font-poppins), system-ui, sans-serif;
 }
 
@@ -11,6 +11,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 17px;
 }
 
 body {

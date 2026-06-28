@@ -13,7 +13,7 @@ const PILLARS = {
       desc: "Architecture multi-tenant, chiffrement bout-en-bout, conformité Loi 25 du Québec et LPRPDE.",
     },
     {
-      icon: "🤖",
+      icon: "🎯",
       title: "IA responsable et centrée sur l'humain",
       desc: "Nos algorithmes sont auditables, nos recommandations explicables. L'humain décide — l'IA assiste.",
     },
@@ -45,7 +45,7 @@ const PILLARS = {
       desc: "Multi-tenant architecture, end-to-end encryption, compliance with Quebec Law 25 and PIPEDA.",
     },
     {
-      icon: "🤖",
+      icon: "🎯",
       title: "Responsible & human-centred AI",
       desc: "Our algorithms are auditable, our recommendations explainable. Humans decide — AI assists.",
     },

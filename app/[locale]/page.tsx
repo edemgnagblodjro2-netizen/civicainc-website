@@ -6,7 +6,7 @@ import ContentAlternating from "@/components/ContentAlternating";
 import WhyCivicAI from "@/components/WhyCivicAI";
 import Vision from "@/components/Vision";
 import Credibility from "@/components/Credibility";
-import Testimonials from "@/components/Testimonials";
+import UseCases from "@/components/UseCases";
 import Partners from "@/components/Partners";
 import Approach from "@/components/Approach";
 import LatestNews from "@/components/LatestNews";
@@ -24,7 +24,7 @@ export default function HomePage() {
       <WhyCivicAI />
       <Vision />
       <Credibility />
-      <Testimonials />
+      <UseCases />
       <Partners />
       <Approach />
       <LatestNews />

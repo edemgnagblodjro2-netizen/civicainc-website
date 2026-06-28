@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { DM_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-poppins" });
-const bodyClass = `${inter.variable} ${poppins.variable} font-sans antialiased flex flex-col min-h-screen`;
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-dm-sans" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"], variable: "--font-poppins" });
+const bodyClass = `${dmSans.variable} ${poppins.variable} font-sans antialiased flex flex-col min-h-screen`;
 
 export const metadata: Metadata = {
   title: "CivicAI Inc. — Plateformes d'intelligence artificielle",
