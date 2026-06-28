@@ -10,13 +10,12 @@ declare global {
       reset: (id: string) => void;
       remove: (id: string) => void;
     };
+    _civicaiTurnstileReady?: () => void;
   }
 }
 
 type Status = "idle" | "loading" | "success" | "error";
 
-// Replace with your real site key from Cloudflare Turnstile dashboard.
-// Test key (always passes in dev): 1x00000000000000000000AA
 const SITE_KEY =
   process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
 
@@ -32,47 +31,32 @@ export default function ContactForm({ labels }: {
   const t = useTranslations("contactForm");
   const [status, setStatus] = useState<Status>("idle");
   const [token, setToken] = useState<string | null>(null);
-  const widgetContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
 
-  // Load Turnstile script once
-  useEffect(() => {
-    if (!document.querySelector('script[src*="turnstile"]')) {
-      const script = document.createElement("script");
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    }
-  }, []);
-
-  // Render widget when container is mounted and script is ready
   useEffect(() => {
     const renderWidget = () => {
-      if (
-        widgetContainerRef.current &&
-        window.turnstile &&
-        !widgetIdRef.current
-      ) {
-        widgetIdRef.current = window.turnstile.render(widgetContainerRef.current, {
-          sitekey: SITE_KEY,
-          theme: "light",
-          callback: (t: string) => setToken(t),
-          "expired-callback": () => setToken(null),
-          "error-callback": () => setToken(null),
-        });
-      }
+      if (!containerRef.current || widgetIdRef.current || !window.turnstile) return;
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: SITE_KEY,
+        theme: "light",
+        callback: (t: string) => setToken(t),
+        "expired-callback": () => setToken(null),
+        "error-callback": () => setToken(null),
+      });
     };
-
-    const existingScript = document.querySelector<HTMLScriptElement>(
-      'script[src*="turnstile"]'
-    );
 
     if (window.turnstile) {
       renderWidget();
-    } else if (existingScript) {
-      existingScript.addEventListener("load", renderWidget);
-      return () => existingScript.removeEventListener("load", renderWidget);
+    } else {
+      window._civicaiTurnstileReady = renderWidget;
+      if (!document.querySelector('script[src*="turnstile"]')) {
+        const s = document.createElement("script");
+        s.src =
+          "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_civicaiTurnstileReady&render=explicit";
+        s.async = true;
+        document.head.appendChild(s);
+      }
     }
 
     return () => {
@@ -210,8 +194,8 @@ export default function ContactForm({ labels }: {
         />
       </div>
 
-      {/* Turnstile widget */}
-      <div ref={widgetContainerRef} />
+      {/* Turnstile widget — rendered explicitly via JS */}
+      <div ref={containerRef} />
 
       {!token && (
         <p className="text-xs text-slate-400">
