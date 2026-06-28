@@ -274,6 +274,13 @@
       "address": "Trois-Rivières, Québec, Canada"
     }
   },
+  "credibility": {
+    "label": "Trust & security",
+    "title": "Security, trust and responsible AI",
+    "trust_canada": "Quebec company — data in Canada",
+    "trust_law25": "Law 25 & PIPEDA compliant",
+    "trust_cloud": "Certified cloud infrastructure"
+  },
   "testimonials": {
     "label": "Testimonials",
     "title": "Trusted by organizations across Quebec",

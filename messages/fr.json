@@ -274,6 +274,13 @@
       "address": "Trois-Rivières, Québec, Canada"
     }
   },
+  "credibility": {
+    "label": "Confiance & sécurité",
+    "title": "Sécurité, confiance et IA responsable",
+    "trust_canada": "Entreprise québécoise — données au Canada",
+    "trust_law25": "Conforme Loi 25 & LPRPDE",
+    "trust_cloud": "Infrastructure infonuagique certifiée"
+  },
   "testimonials": {
     "label": "Témoignages",
     "title": "Ils font confiance à CivicAI",
