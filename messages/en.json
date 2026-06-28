@@ -175,7 +175,8 @@
     "success_body": "Your request has been received. Our team will get back to you within 24 to 48 hours.",
     "success_reset": "Send another message",
     "error_msg": "An error occurred. Please try again or write directly to",
-    "subject": "New demonstration request — CivicAI"
+    "captcha_required": "Please complete the security verification above.",
+    "subject":"New demonstration request — CivicAI"
   },
   "faq": {
     "title": "Frequently asked questions",

@@ -1,9 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+      reset: (id: string) => void;
+      remove: (id: string) => void;
+    };
+  }
+}
+
 type Status = "idle" | "loading" | "success" | "error";
+
+// Replace with your real site key from Cloudflare Turnstile dashboard.
+// Test key (always passes in dev): 1x00000000000000000000AA
+const SITE_KEY =
+  process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
 
 export default function ContactForm({ labels }: {
   labels: {
@@ -16,9 +31,69 @@ export default function ContactForm({ labels }: {
 }) {
   const t = useTranslations("contactForm");
   const [status, setStatus] = useState<Status>("idle");
+  const [token, setToken] = useState<string | null>(null);
+  const widgetContainerRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  // Load Turnstile script once
+  useEffect(() => {
+    if (!document.querySelector('script[src*="turnstile"]')) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  // Render widget when container is mounted and script is ready
+  useEffect(() => {
+    const renderWidget = () => {
+      if (
+        widgetContainerRef.current &&
+        window.turnstile &&
+        !widgetIdRef.current
+      ) {
+        widgetIdRef.current = window.turnstile.render(widgetContainerRef.current, {
+          sitekey: SITE_KEY,
+          theme: "light",
+          callback: (t: string) => setToken(t),
+          "expired-callback": () => setToken(null),
+          "error-callback": () => setToken(null),
+        });
+      }
+    };
+
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[src*="turnstile"]'
+    );
+
+    if (window.turnstile) {
+      renderWidget();
+    } else if (existingScript) {
+      existingScript.addEventListener("load", renderWidget);
+      return () => existingScript.removeEventListener("load", renderWidget);
+    }
+
+    return () => {
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.remove(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
+    };
+  }, []);
+
+  function resetWidget() {
+    if (widgetIdRef.current && window.turnstile) {
+      window.turnstile.reset(widgetIdRef.current);
+    }
+    setToken(null);
+  }
+
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!token) return;
+
     setStatus("loading");
 
     const form = e.currentTarget;
@@ -28,6 +103,7 @@ export default function ContactForm({ labels }: {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       _subject: t("subject"),
+      "cf-turnstile-response": token,
     };
 
     try {
@@ -40,11 +116,14 @@ export default function ContactForm({ labels }: {
       if (res.ok) {
         setStatus("success");
         form.reset();
+        resetWidget();
       } else {
         setStatus("error");
+        resetWidget();
       }
     } catch {
       setStatus("error");
+      resetWidget();
     }
   }
 
@@ -131,6 +210,15 @@ export default function ContactForm({ labels }: {
         />
       </div>
 
+      {/* Turnstile widget */}
+      <div ref={widgetContainerRef} />
+
+      {!token && (
+        <p className="text-xs text-slate-400">
+          {t("captcha_required")}
+        </p>
+      )}
+
       {status === "error" && (
         <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
           {t("error_msg")}{" "}
@@ -142,8 +230,8 @@ export default function ContactForm({ labels }: {
 
       <button
         type="submit"
-        disabled={status === "loading"}
-        className="w-full disabled:opacity-60 text-white font-semibold text-sm py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2"
+        disabled={status === "loading" || !token}
+        className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm py-3.5 rounded-xl transition-all flex items-center justify-center gap-2"
         style={{ background: "#7c3aed" }}
       >
         {status === "loading" ? (
