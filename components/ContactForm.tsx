@@ -1,23 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
-      reset: (id: string) => void;
-      remove: (id: string) => void;
-    };
-    _civicaiTurnstileReady?: () => void;
-  }
-}
-
 type Status = "idle" | "loading" | "success" | "error";
-
-const SITE_KEY =
-  process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
 
 export default function ContactForm({ labels }: {
   labels: {
@@ -30,54 +16,9 @@ export default function ContactForm({ labels }: {
 }) {
   const t = useTranslations("contactForm");
   const [status, setStatus] = useState<Status>("idle");
-  const [token, setToken] = useState<string | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
-
-  useEffect(() => {
-    const renderWidget = () => {
-      if (!containerRef.current || widgetIdRef.current || !window.turnstile) return;
-      widgetIdRef.current = window.turnstile.render(containerRef.current, {
-        sitekey: SITE_KEY,
-        theme: "light",
-        callback: (t: string) => setToken(t),
-        "expired-callback": () => setToken(null),
-        "error-callback": () => setToken(null),
-      });
-    };
-
-    if (window.turnstile) {
-      renderWidget();
-    } else {
-      window._civicaiTurnstileReady = renderWidget;
-      if (!document.querySelector('script[src*="turnstile"]')) {
-        const s = document.createElement("script");
-        s.src =
-          "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_civicaiTurnstileReady&render=explicit";
-        s.async = true;
-        document.head.appendChild(s);
-      }
-    }
-
-    return () => {
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.remove(widgetIdRef.current);
-        widgetIdRef.current = null;
-      }
-    };
-  }, []);
-
-  function resetWidget() {
-    if (widgetIdRef.current && window.turnstile) {
-      window.turnstile.reset(widgetIdRef.current);
-    }
-    setToken(null);
-  }
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!token) return;
-
     setStatus("loading");
 
     const form = e.currentTarget;
@@ -87,7 +28,7 @@ export default function ContactForm({ labels }: {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       _subject: t("subject"),
-      "cf-turnstile-response": token,
+      _honey: "",
     };
 
     try {
@@ -100,14 +41,11 @@ export default function ContactForm({ labels }: {
       if (res.ok) {
         setStatus("success");
         form.reset();
-        resetWidget();
       } else {
         setStatus("error");
-        resetWidget();
       }
     } catch {
       setStatus("error");
-      resetWidget();
     }
   }
 
@@ -146,6 +84,9 @@ export default function ContactForm({ labels }: {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot anti-spam — hidden from users */}
+      <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
       <div>
         <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">
           {labels.name} *
@@ -194,15 +135,6 @@ export default function ContactForm({ labels }: {
         />
       </div>
 
-      {/* Turnstile widget — rendered explicitly via JS */}
-      <div ref={containerRef} />
-
-      {!token && (
-        <p className="text-xs text-slate-400">
-          {t("captcha_required")}
-        </p>
-      )}
-
       {status === "error" && (
         <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
           {t("error_msg")}{" "}
@@ -214,7 +146,7 @@ export default function ContactForm({ labels }: {
 
       <button
         type="submit"
-        disabled={status === "loading" || !token}
+        disabled={status === "loading"}
         className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm py-3.5 rounded-xl transition-all flex items-center justify-center gap-2"
         style={{ background: "#7c3aed" }}
       >
@@ -224,7 +156,7 @@ export default function ContactForm({ labels }: {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
             </svg>
-            {t("success_reset")}
+            {t("loading")}
           </>
         ) : labels.submit}
       </button>

@@ -175,7 +175,7 @@
     "success_body": "Votre demande a bien été reçue. Notre équipe vous répondra dans les 24 à 48 heures.",
     "success_reset": "Envoyer un autre message",
     "error_msg": "Une erreur est survenue. Veuillez réessayer ou écrire directement à",
-    "captcha_required": "Veuillez compléter la vérification de sécurité ci-dessus.",
+    "loading": "Envoi en cours…",
     "subject":"Nouvelle demande de démonstration — CivicAI"
   },
   "faq": {
