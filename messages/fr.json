@@ -273,5 +273,11 @@
       "or": "Ou contactez-nous directement",
       "address": "Trois-Rivières, Québec, Canada"
     }
+  },
+  "testimonials": {
+    "label": "Témoignages",
+    "title": "Ils font confiance à CivicAI",
+    "subtitle": "Des résultats mesurables, documentés par nos clients pilotes à travers le Québec.",
+    "note": "Témoignages recueillis auprès d'organisations participantes au programme pilote CivicAI 2025–2026."
   }
 }

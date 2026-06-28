@@ -273,5 +273,11 @@
       "or": "Or contact us directly",
       "address": "Trois-Rivières, Québec, Canada"
     }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "Trusted by organizations across Quebec",
+    "subtitle": "Measurable results, documented by our pilot clients across Quebec.",
+    "note": "Testimonials collected from organizations participating in the CivicAI 2025–2026 pilot program."
   }
 }

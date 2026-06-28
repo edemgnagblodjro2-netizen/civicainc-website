@@ -5,6 +5,7 @@ import Sectors from "@/components/Sectors";
 import ContentAlternating from "@/components/ContentAlternating";
 import WhyCivicAI from "@/components/WhyCivicAI";
 import Vision from "@/components/Vision";
+import Testimonials from "@/components/Testimonials";
 import Partners from "@/components/Partners";
 import Approach from "@/components/Approach";
 import LatestNews from "@/components/LatestNews";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ContentAlternating />
       <WhyCivicAI />
       <Vision />
+      <Testimonials />
       <Partners />
       <Approach />
       <LatestNews />
