@@ -46,10 +46,10 @@ export default async function ContactPage() {
                   Courriel
                 </div>
                 <a
-                  href="mailto:contact@nexhire.ca"
+                  href="mailto:contact@civicainc.ca"
                   className="text-blue-700 font-medium hover:underline text-sm"
                 >
-                  contact@nexhire.ca
+                  contact@civicainc.ca
                 </a>
               </div>
               <div>

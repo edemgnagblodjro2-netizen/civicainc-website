@@ -32,7 +32,7 @@ export default function ContactForm({ labels }: {
     };
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/contact@nexhire.ca", {
+      const res = await fetch("https://formsubmit.co/ajax/contact@civicainc.ca", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data),
@@ -138,8 +138,8 @@ export default function ContactForm({ labels }: {
       {status === "error" && (
         <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
           {t("error_msg")}{" "}
-          <a href="mailto:contact@nexhire.ca" className="underline font-medium">
-            contact@nexhire.ca
+          <a href="mailto:contact@civicainc.ca" className="underline font-medium">
+            contact@civicainc.ca
           </a>.
         </p>
       )}

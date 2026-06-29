@@ -55,7 +55,7 @@ const CONTENT = {
       },
       {
         title: "12. Contact",
-        body: "Pour toute question relative aux présentes Conditions :\n\nCivicAI Inc.\ncourriel : contact@nexhire.ca\ntél. : 905 809-7798\nTrois-Rivières, Québec, Canada",
+        body: "Pour toute question relative aux présentes Conditions :\n\nCivicAI Inc.\ncourriel : contact@civicainc.ca\ntél. : 905 809-7798\nTrois-Rivières, Québec, Canada",
       },
     ],
   },
@@ -110,7 +110,7 @@ const CONTENT = {
       },
       {
         title: "12. Contact",
-        body: "For any questions regarding these Terms:\n\nCivicAI Inc.\nemail: contact@nexhire.ca\nphone: 905 809-7798\nTrois-Rivières, Quebec, Canada",
+        body: "For any questions regarding these Terms:\n\nCivicAI Inc.\nemail: contact@civicainc.ca\nphone: 905 809-7798\nTrois-Rivières, Quebec, Canada",
       },
     ],
   },

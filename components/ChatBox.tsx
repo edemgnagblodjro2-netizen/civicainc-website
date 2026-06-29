@@ -51,11 +51,11 @@ const KNOWLEDGE: { keywords: string[]; answer: string }[] = [
   },
   {
     keywords: ["contact", "joindre", "email", "courriel", "telephone", "appel", "appeler", "ecrire", "message"],
-    answer: "Vous pouvez nous joindre par courriel à **contact@nexhire.ca** ou via notre [formulaire de contact](/fr/contact). Notre équipe est basée à **Trois-Rivières, Québec** et répond dans les 24 à 48 h.",
+    answer: "Vous pouvez nous joindre par courriel à **contact@civicainc.ca** ou via notre [formulaire de contact](/fr/contact). Notre équipe est basée à **Trois-Rivières, Québec** et répond dans les 24 à 48 h.",
   },
   {
     keywords: ["carriere", "emploi", "travail", "poste", "job", "rejoindre", "equipe", "recrute", "recrutement", "candidature"],
-    answer: "Nous recrutons activement ! Postes ouverts : **Développeur·euse Full Stack**, **Architecte IA**, **Chargé·e de compte — Secteur public**. Envoyez votre CV à **contact@nexhire.ca** ou visitez [Carrières](/fr/carrieres).",
+    answer: "Nous recrutons activement ! Postes ouverts : **Développeur·euse Full Stack**, **Architecte IA**, **Chargé·e de compte — Secteur public**. Envoyez votre CV à **contact@civicainc.ca** ou visitez [Carrières](/fr/carrieres).",
   },
   {
     keywords: ["civicai", "civic ai", "qui etes vous", "l entreprise", "fondateur", "histoire", "a propos", "societe", "inc"],

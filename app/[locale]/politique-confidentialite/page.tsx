@@ -11,7 +11,7 @@ const CONTENT = {
     sections: [
       {
         title: "1. Qui sommes-nous",
-        body: "CivicAI Inc. est une société par actions constituée au Québec, dont le siège social est situé à Trois-Rivières, Québec, Canada. Nous développons des plateformes d'intelligence artificielle (AgentHub Platform, NexHire EIP, AttenteZéro) destinées aux entreprises, chambres de commerce, institutions publiques et organisations québécoises.\n\nResponsable de la protection des renseignements personnels :\nContact : contact@nexhire.ca\nTéléphone : 905 809-7798\nAdresse : Trois-Rivières, Québec, Canada",
+        body: "CivicAI Inc. est une société par actions constituée au Québec, dont le siège social est situé à Trois-Rivières, Québec, Canada. Nous développons des plateformes d'intelligence artificielle (AgentHub Platform, NexHire EIP, AttenteZéro) destinées aux entreprises, chambres de commerce, institutions publiques et organisations québécoises.\n\nResponsable de la protection des renseignements personnels :\nContact : contact@civicainc.ca\nTéléphone : 905 809-7798\nAdresse : Trois-Rivières, Québec, Canada",
       },
       {
         title: "2. Renseignements collectés",
@@ -43,7 +43,7 @@ const CONTENT = {
       },
       {
         title: "9. Vos droits",
-        body: "Conformément à la Loi 25, vous disposez des droits suivants :\n\n• Droit d'accès : connaître les renseignements que nous détenons sur vous.\n• Droit de rectification : corriger des renseignements inexacts.\n• Droit à la suppression : demander l'effacement de vos données.\n• Droit à la portabilité : recevoir vos données dans un format structuré.\n• Droit d'opposition : vous opposer à certains traitements.\n• Droit de retrait du consentement : à tout moment, sans préjudice des traitements antérieurs.\n\nPour exercer vos droits, écrivez à : contact@nexhire.ca\nNous répondrons dans un délai de 30 jours.",
+        body: "Conformément à la Loi 25, vous disposez des droits suivants :\n\n• Droit d'accès : connaître les renseignements que nous détenons sur vous.\n• Droit de rectification : corriger des renseignements inexacts.\n• Droit à la suppression : demander l'effacement de vos données.\n• Droit à la portabilité : recevoir vos données dans un format structuré.\n• Droit d'opposition : vous opposer à certains traitements.\n• Droit de retrait du consentement : à tout moment, sans préjudice des traitements antérieurs.\n\nPour exercer vos droits, écrivez à : contact@civicainc.ca\nNous répondrons dans un délai de 30 jours.",
       },
       {
         title: "10. Sécurité",
@@ -55,7 +55,7 @@ const CONTENT = {
       },
       {
         title: "12. Contact et plaintes",
-        body: "Pour toute question relative à cette politique ou à vos renseignements personnels :\n\nCivicAI Inc. — Responsable de la protection des renseignements personnels\ncourriel : contact@nexhire.ca\ntél. : 905 809-7798\nTrois-Rivières, Québec, Canada\n\nSi vous estimez que vos droits n'ont pas été respectés, vous pouvez déposer une plainte auprès de la Commission d'accès à l'information du Québec (CAI) : www.cai.gouv.qc.ca",
+        body: "Pour toute question relative à cette politique ou à vos renseignements personnels :\n\nCivicAI Inc. — Responsable de la protection des renseignements personnels\ncourriel : contact@civicainc.ca\ntél. : 905 809-7798\nTrois-Rivières, Québec, Canada\n\nSi vous estimez que vos droits n'ont pas été respectés, vous pouvez déposer une plainte auprès de la Commission d'accès à l'information du Québec (CAI) : www.cai.gouv.qc.ca",
       },
     ],
   },
@@ -66,7 +66,7 @@ const CONTENT = {
     sections: [
       {
         title: "1. Who We Are",
-        body: "CivicAI Inc. is a corporation incorporated in Quebec, headquartered in Trois-Rivières, Quebec, Canada. We develop artificial intelligence platforms (AgentHub Platform, NexHire EIP, AttenteZéro) for businesses, chambers of commerce, public institutions and Quebec organizations.\n\nPrivacy Officer:\nEmail: contact@nexhire.ca\nPhone: 905 809-7798\nAddress: Trois-Rivières, Quebec, Canada",
+        body: "CivicAI Inc. is a corporation incorporated in Quebec, headquartered in Trois-Rivières, Quebec, Canada. We develop artificial intelligence platforms (AgentHub Platform, NexHire EIP, AttenteZéro) for businesses, chambers of commerce, public institutions and Quebec organizations.\n\nPrivacy Officer:\nEmail: contact@civicainc.ca\nPhone: 905 809-7798\nAddress: Trois-Rivières, Quebec, Canada",
       },
       {
         title: "2. Information We Collect",
@@ -98,7 +98,7 @@ const CONTENT = {
       },
       {
         title: "9. Your Rights",
-        body: "Under Law 25, you have the following rights:\n\n• Right of access: know what information we hold about you.\n• Right of rectification: correct inaccurate information.\n• Right to deletion: request erasure of your data.\n• Right to portability: receive your data in a structured format.\n• Right to object: object to certain processing.\n• Right to withdraw consent: at any time, without prejudice to prior processing.\n\nTo exercise your rights, write to: contact@nexhire.ca\nWe will respond within 30 days.",
+        body: "Under Law 25, you have the following rights:\n\n• Right of access: know what information we hold about you.\n• Right of rectification: correct inaccurate information.\n• Right to deletion: request erasure of your data.\n• Right to portability: receive your data in a structured format.\n• Right to object: object to certain processing.\n• Right to withdraw consent: at any time, without prejudice to prior processing.\n\nTo exercise your rights, write to: contact@civicainc.ca\nWe will respond within 30 days.",
       },
       {
         title: "10. Security",
@@ -110,7 +110,7 @@ const CONTENT = {
       },
       {
         title: "12. Contact and Complaints",
-        body: "For any questions regarding this policy or your personal information:\n\nCivicAI Inc. — Privacy Officer\nemail: contact@nexhire.ca\nphone: 905 809-7798\nTrois-Rivières, Quebec, Canada\n\nIf you believe your rights have not been respected, you may file a complaint with the Commission d'accès à l'information du Québec (CAI): www.cai.gouv.qc.ca",
+        body: "For any questions regarding this policy or your personal information:\n\nCivicAI Inc. — Privacy Officer\nemail: contact@civicainc.ca\nphone: 905 809-7798\nTrois-Rivières, Quebec, Canada\n\nIf you believe your rights have not been respected, you may file a complaint with the Commission d'accès à l'information du Québec (CAI): www.cai.gouv.qc.ca",
       },
     ],
   },
