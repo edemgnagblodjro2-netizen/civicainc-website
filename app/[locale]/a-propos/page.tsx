@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "À Propos — CivicAI Inc., Éditeur de Logiciels IA à Trois-Rivières, Québec"
+      : "About — CivicAI Inc., AI Software Publisher in Trois-Rivières, Quebec",
+    description: isFr
+      ? "CivicAI Inc. est basée à Trois-Rivières, Québec. Découvrez notre mission, notre équipe et notre engagement pour une intelligence artificielle concrète et mesurable."
+      : "CivicAI Inc. is based in Trois-Rivières, Quebec. Discover our mission, team and commitment to concrete, measurable artificial intelligence.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/a-propos`,
+      languages: { fr: "https://civicainc.ca/fr/a-propos", en: "https://civicainc.ca/en/a-propos" },
+    },
+  };
+}
 
 const CONTENT = {
   fr: {

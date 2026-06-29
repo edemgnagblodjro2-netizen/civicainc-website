@@ -1,5 +1,25 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ContactCTA from "@/components/ContactCTA";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Carrières — Rejoindre CivicAI Inc., Éditeur IA au Québec"
+      : "Careers — Join CivicAI Inc., AI Publisher in Quebec",
+    description: isFr
+      ? "Rejoignez l'équipe CivicAI à Trois-Rivières. Développeur, analyste ou gestionnaire — construisez l'infrastructure IA de demain pour les organisations québécoises."
+      : "Join the CivicAI team in Trois-Rivières. Developer, analyst or manager — build tomorrow's AI infrastructure for Quebec organizations.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/carrieres`,
+      languages: { fr: "https://civicainc.ca/fr/carrieres", en: "https://civicainc.ca/en/carrieres" },
+    },
+  };
+}
 
 const ROLE_COLORS = ["#1857e8", "#6366f1", "#0891b2"];
 

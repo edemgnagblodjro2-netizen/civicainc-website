@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ContactCTA from "@/components/ContactCTA";
 import WhyCivicAIEditor from "@/components/WhyCivicAIEditor";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Pourquoi CivicAI — IA Mesurable et Gouvernée pour les Organisations"
+      : "Why CivicAI — Measurable and Governed AI for Organizations",
+    description: isFr
+      ? "Infrastructure IA québécoise, architecture multi-tenant sécurisée et résultats documentés. Pas une agence — un éditeur de logiciels sérieux basé à Trois-Rivières."
+      : "Quebec AI infrastructure, secure multi-tenant architecture and documented results. Not an agency — a serious software publisher based in Trois-Rivières.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/pourquoi`,
+      languages: { fr: "https://civicainc.ca/fr/pourquoi", en: "https://civicainc.ca/en/pourquoi" },
+    },
+  };
+}
 
 export default async function PourquoiPage() {
   const t = await getTranslations("pages.why");

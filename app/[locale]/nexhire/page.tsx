@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "NexHire EIP — Gouvernance Microsoft 365 & Optimisation SaaS | CivicAI"
+      : "NexHire EIP — Microsoft 365 Governance & SaaS Optimization | CivicAI",
+    description: isFr
+      ? "Plateforme de gouvernance SaaS et optimisation des licences Microsoft 365. Détectez les coûts cachés et mesurez la performance réelle de votre organisation."
+      : "SaaS governance platform and Microsoft 365 license optimization. Detect hidden costs and measure your organization's real performance.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/nexhire`,
+      languages: { fr: "https://civicainc.ca/fr/nexhire", en: "https://civicainc.ca/en/nexhire" },
+    },
+  };
+}
 
 const CONTENT = {
   fr: {

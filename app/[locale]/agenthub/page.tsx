@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "AgentHub Platform — Diagnostic IA & Gouvernance pour Chambres de Commerce | CivicAI"
+      : "AgentHub Platform — AI Diagnostic & Governance for Chambers of Commerce | CivicAI",
+    description: isFr
+      ? "Plateforme IA pour chambres de commerce : diagnostic de maturité IA, observatoire analytique et agent ATLAS. Accompagnez vos membres PME en 90 jours."
+      : "AI platform for chambers of commerce: AI maturity diagnostic, analytics observatory and ATLAS agent. Transform your SMB members in 90 days.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/agenthub`,
+      languages: { fr: "https://civicainc.ca/fr/agenthub", en: "https://civicainc.ca/en/agenthub" },
+    },
+  };
+}
 
 const CONTENT = {
   fr: {

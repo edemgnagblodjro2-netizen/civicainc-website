@@ -49,7 +49,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         telephone: "+1-905-809-7798",
         contactType: "customer service",
-        email: "contact@nexhire.ca",
+        email: "contact@civicainc.ca",
         availableLanguage: ["French", "English"],
       },
       sameAs: [
@@ -76,6 +76,16 @@ const jsonLd = {
       offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
       provider: { "@id": "https://civicainc.ca/#organization" },
       description: "Plateforme d'intelligence d'entreprise et gouvernance SaaS Microsoft 365.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://civicainc.ca/plateformes#attentezero",
+      name: "AttenteZéro",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+      provider: { "@id": "https://civicainc.ca/#organization" },
+      description: "Services communautaires géolocalisés et intelligents pour les municipalités et organismes publics québécois.",
     },
   ],
 };

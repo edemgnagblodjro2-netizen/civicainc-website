@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "AttenteZéro — Services Municipaux Intelligents par IA | CivicAI"
+      : "AttenteZéro — Smart Municipal Services Powered by AI | CivicAI",
+    description: isFr
+      ? "Plateforme IA et géolocalisation pour municipalités et organismes publics. Services communautaires en temps réel, accessibles et inclusifs au Québec."
+      : "AI and geolocation platform for municipalities and public organizations. Real-time, accessible and inclusive community services in Quebec.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/attentezero`,
+      languages: { fr: "https://civicainc.ca/fr/attentezero", en: "https://civicainc.ca/en/attentezero" },
+    },
+  };
+}
 
 const CONTENT = {
   fr: {

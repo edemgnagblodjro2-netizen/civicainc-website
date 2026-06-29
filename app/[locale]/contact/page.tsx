@@ -1,5 +1,25 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ContactForm from "@/components/ContactForm";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Demander une Démo — Contactez CivicAI Inc."
+      : "Request a Demo — Contact CivicAI Inc.",
+    description: isFr
+      ? "Planifiez une démonstration de nos plateformes IA. Notre équipe à Trois-Rivières, Québec, vous répond dans les 24 à 48 heures."
+      : "Schedule a demo of our AI platforms. Our team in Trois-Rivières, Quebec, responds within 24 to 48 hours.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/contact`,
+      languages: { fr: "https://civicainc.ca/fr/contact", en: "https://civicainc.ca/en/contact" },
+    },
+  };
+}
 
 export default async function ContactPage() {
   const t = await getTranslations("pages.contact");

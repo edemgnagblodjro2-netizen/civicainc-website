@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Innovation IA — Recherche, Développement & Conformité Loi 25 | CivicAI"
+      : "AI Innovation — Research, Development & Compliance | CivicAI",
+    description: isFr
+      ? "Découvrez les axes d'innovation de CivicAI : IA responsable, gouvernance des données, automatisation intelligente et conformité Loi 25 au Québec."
+      : "Discover CivicAI's innovation focus: responsible AI, data governance, intelligent automation and compliance in Quebec.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/innovation`,
+      languages: { fr: "https://civicainc.ca/fr/innovation", en: "https://civicainc.ca/en/innovation" },
+    },
+  };
+}
 
 const STATUS_STYLE: Record<string, { bg: string; color: string }> = {
   Actif:           { bg: "#dcfce7", color: "#16a34a" },

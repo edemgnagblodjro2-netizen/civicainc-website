@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Nos Plateformes IA — AgentHub, NexHire EIP, AttenteZéro | CivicAI"
+      : "Our AI Platforms — AgentHub, NexHire EIP, AttenteZéro | CivicAI",
+    description: isFr
+      ? "Quatre plateformes d'intelligence artificielle modulaires pour les entreprises, chambres de commerce, municipalités et organismes publics québécois."
+      : "Four modular AI platforms for businesses, chambers of commerce, municipalities and Quebec public organizations.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/plateformes`,
+      languages: { fr: "https://civicainc.ca/fr/plateformes", en: "https://civicainc.ca/en/plateformes" },
+    },
+  };
+}
 
 export default async function PlatesformesPage() {
   const t = await getTranslations("pages.platforms");

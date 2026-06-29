@@ -1,7 +1,27 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import ContactCTA from "@/components/ContactCTA";
 import { Link } from "@/i18n/navigation";
 import ARTICLES from "@/lib/articles";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isFr = locale !== "en";
+  return {
+    title: isFr
+      ? "Actualités — Nouvelles IA et Mises à Jour CivicAI"
+      : "News — AI Updates and Announcements | CivicAI",
+    description: isFr
+      ? "Suivez les dernières nouvelles de CivicAI : nouvelles fonctionnalités, partenariats, innovations IA et événements au Québec."
+      : "Follow CivicAI's latest news: new features, partnerships, AI innovations and events in Quebec.",
+    alternates: {
+      canonical: `https://civicainc.ca/${locale}/actualites`,
+      languages: { fr: "https://civicainc.ca/fr/actualites", en: "https://civicainc.ca/en/actualites" },
+    },
+  };
+}
 
 export default function ActualitesPage() {
   const [featured, ...rest] = ARTICLES;
