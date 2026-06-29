@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "CivicAI développe des plateformes d'IA pour les entreprises, institutions et organismes publics.",
   metadataBase: new URL("https://civicainc.ca"),
+  verification: {
+    google: "d9U4aIdgTVEIKb7XxN0aj3QTCCsviaEWu1HicT2-oIc",
+  },
   icons: {
     icon: [
       { url: "/logo-civicai.png", type: "image/png" },
